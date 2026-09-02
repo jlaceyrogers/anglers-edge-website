@@ -36,7 +36,7 @@
   {"@type":"Question","name":"Which lakes does Anglers Edge cover?","acceptedAnswer":{"@type":"Answer","text":"42 Ontario lakes including Lake Muskoka, Lake Rosseau, Lake Joseph, Lake of Bays, Lake Temagami, Lake Scugog, Pigeon Lake, Rice Lake and Balsam Lake, with more lakes across Canada and the United States in development."}},
   {"@type":"Question","name":"Is it a navigation app?","acceptedAnswer":{"@type":"Answer","text":"No. Anglers Edge is an analysis tool. It never routes you anywhere and the source bathymetry is not navigation-grade. Carry official charts."}},
   {"@type":"Question","name":"What data does the app collect?","acceptedAnswer":{"@type":"Answer","text":"Nothing. There is no account. Location is used on the phone to show your position on the map and never leaves the device."}},
-  {"@type":"Question","name":"Will features be paywalled later?","acceptedAnswer":{"@type":"Answer","text":"No. Nothing that is free today will ever move behind a paywall. Edge Pro only ever adds new capabilities."}}
+  {"@type":"Question","name":"Will features be paywalled later?","acceptedAnswer":{"@type":"Answer","text":"No. Nothing that is free today will ever move behind a paywall. Any paid extras would only ever be things that did not exist before."}}
  ]}
 ]}
 </script>
@@ -123,13 +123,13 @@ section{padding:88px 0}
 .check li::before{content:"";position:absolute;left:0;top:10px;width:14px;height:14px;border-radius:50%;background:var(--good)}
 .check{list-style:none;padding:0;margin:18px 0 0}
 /* pricing */
-.dark{background:var(--deep);color:var(--paper)}.dark .lede,.dark .card p,.dark .tier li{color:#B8C4B5}.dark .eyebrow{color:#E0A83C}.dark h2{color:var(--paper)}
-.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
-@media(max-width:860px){.tiers{grid-template-columns:1fr}}
+.dark{background:var(--deep);color:var(--paper)}.dark .lede,.dark .card p{color:#B8C4B5}.dark .eyebrow{color:#E0A83C}.dark h2{color:var(--paper)}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}.tiers.two{grid-template-columns:repeat(2,1fr);max-width:820px}
+@media(max-width:860px){.tiers,.tiers.two{grid-template-columns:1fr}}
 .tier{background:var(--card);color:var(--ink);border-radius:20px;padding:26px 24px}
 .tier.free{background:#E9F0EA}
 .tier h3{margin-bottom:2px}.tier .price{color:var(--orange);font-weight:700;margin-bottom:12px}
-.tier ul{padding-left:18px;margin:0}.tier li{margin:6px 0;font-size:14.5px;color:var(--dim)}
+.tier ul{padding-left:18px;margin:0}.tier li{margin:7px 0;font-size:15px;color:#33402F}
 .promise{margin-top:26px;font-family:var(--serif);font-style:italic;font-size:20px;color:#E0A83C;text-align:center}
 /* table */
 .cmp{width:100%;min-width:600px;border-collapse:collapse;margin-top:22px;font-size:15px;overflow:hidden;border-radius:16px;box-shadow:0 1px 2px rgba(40,40,20,.06)}
@@ -251,9 +251,8 @@ footer a{margin-right:16px}
   <div class="eyebrow">Pricing</div>
   <h2>Free stays free. We only ever sell more.</h2>
   <p class="lede">You've seen what happens when a fishing app locks the good stuff behind a monthly fee. We're not doing that — and we've written it down.</p>
-  <div class="tiers">
+  <div class="tiers two">
     <div class="tier free"><h3>Free — forever</h3><div class="price">$0 · extra lakes 99¢ each</div><ul><li>The full scoring engine and every breakdown</li><li>GPS, tracks, waypoints, one-tap catch log</li><li>19 bundled lakes; any other lake is a 99¢ one-time add</li><li>No account. No ads. No tracking.</li></ul></div>
-    <div class="tier"><h3>Edge Pro</h3><div class="price">$29.99 / year · optional</div><ul><li>Only things that didn't exist before</li><li>Bite forecasts beyond 48 hours, lake history, multi-day planning</li><li>Cloud backup &amp; sync, Apple Watch glance</li><li>For the angler who fishes forty days a year</li></ul></div>
     <div class="tier"><h3>Partners</h3><div class="price">Brands pay. You don't.</div><ul><li>The lure that works at this spot, in these conditions — labelled, useful, optional</li><li>Lodges and guides with packs of their own water</li><li>Never your data. Never required.</li></ul></div>
   </div>
   <div class="promise">"Nothing that is free today will ever move behind a paywall."</div>
@@ -302,7 +301,7 @@ footer a{margin-right:16px}
   <details><summary>Which lakes?</summary><p>19 Ontario lakes are built in, with 23 more downloadable today — 42 in all, from Muskoka to Temagami — and packs are being built for the rest of Canada and the United States. Missing yours? Request it from inside the app.</p></details>
   <details><summary>Is it a navigation app?</summary><p>No. Anglers Edge is an analysis tool. It never routes you anywhere and the source bathymetry is not navigation-grade. Carry official charts.</p></details>
   <details><summary>What do you collect about me?</summary><p>Nothing. There's no account. Your location is used on your phone to show your position on the map and never leaves it. Waypoints and catches are stored on the device.</p></details>
-  <details><summary>Will you paywall features later?</summary><p>No. Nothing that is free today will ever move behind a paywall. Edge Pro only ever adds things that didn't exist before.</p></details>
+  <details><summary>Will you paywall features later?</summary><p>No. Nothing that is free today will ever move behind a paywall. If we ever add paid extras, they will only ever be things that didn't exist before.</p></details>
 </div></section>
 
 <section id="get" class="dark" style="text-align:center"><div class="wrap">
