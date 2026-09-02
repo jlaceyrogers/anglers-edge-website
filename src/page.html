@@ -3,19 +3,49 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Anglers Edge — Where to fish today, and why</title>
-<meta name="description" content="Anglers Edge scores every part of the lake for your species and today's conditions, ranks the best spots, and shows its work — fully offline, no account, free forever.">
+<title>Anglers Edge — Offline Fishing Maps for Ontario Lakes | Where to Fish Today</title>
+<meta name="description" content="Anglers Edge is a free offline fishing app for 42 Ontario lakes. It scores every spot on the lake for your species and today's conditions, ranks the best fishing spots, and explains why — no account, no signal needed.">
+<link rel="canonical" href="https://anglersedge.fishing/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#F7F2E6">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Anglers Edge">
+<meta property="og:url" content="https://anglersedge.fishing/">
 <meta property="og:title" content="Anglers Edge — Where to fish today, and why">
-<meta property="og:description" content="The offline fishing-intelligence app. Cast three times and see if you can out-fish the model.">
-<link rel="icon" href="{{ICON}}">
+<meta property="og:description" content="Free offline fishing maps for 42 Ontario lakes. The app scores every spot for your species and conditions and shows its work. Cast three times — can you out-fish the model?">
+<meta property="og:image" content="https://anglersedge.fishing/assets/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Anglers Edge — Where to fish today, and why. Offline fishing maps for Ontario lakes.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Anglers Edge — Where to fish today, and why">
+<meta name="twitter:description" content="Free offline fishing maps for 42 Ontario lakes that score every spot and explain the answer.">
+<meta name="twitter:image" content="https://anglersedge.fishing/assets/og.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,700;1,8..60,400;1,8..60,700&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Organization","@id":"https://anglersedge.fishing/#org","name":"Anglers Edge","url":"https://anglersedge.fishing/","logo":"https://anglersedge.fishing/assets/icon.png","email":"jlr@backroadscarclub.com"},
+ {"@type":"WebSite","@id":"https://anglersedge.fishing/#site","url":"https://anglersedge.fishing/","name":"Anglers Edge","publisher":{"@id":"https://anglersedge.fishing/#org"}},
+ {"@type":"MobileApplication","name":"Anglers Edge","operatingSystem":"iOS","applicationCategory":"SportsApplication","description":"Offline fishing intelligence for Ontario lakes: scores every spot for your species and today's conditions, ranks the best spots, and explains why.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@id":"https://anglersedge.fishing/#org"},"url":"https://anglersedge.fishing/","image":"https://anglersedge.fishing/assets/icon.png","featureList":"Offline bathymetry maps for 42 Ontario lakes; 11-factor spot scoring; plain-language score breakdowns; 48-hour bite window; GPS tracks and waypoints; one-tap catch log; GPX export"},
+ {"@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"Does it really work with no signal?","acceptedAnswer":{"@type":"Answer","text":"Yes. The lake maps, structure layers and the scoring model are all inside the app. Only optional live weather and the 48-hour forecast need a connection."}},
+  {"@type":"Question","name":"Which lakes does Anglers Edge cover?","acceptedAnswer":{"@type":"Answer","text":"42 Ontario lakes including Lake Muskoka, Lake Rosseau, Lake Joseph, Lake of Bays, Lake Temagami, Lake Scugog, Pigeon Lake, Rice Lake and Balsam Lake, with more lakes across Canada and the United States in development."}},
+  {"@type":"Question","name":"Is it a navigation app?","acceptedAnswer":{"@type":"Answer","text":"No. Anglers Edge is an analysis tool. It never routes you anywhere and the source bathymetry is not navigation-grade. Carry official charts."}},
+  {"@type":"Question","name":"What data does the app collect?","acceptedAnswer":{"@type":"Answer","text":"Nothing. There is no account. Location is used on the phone to show your position on the map and never leaves the device."}},
+  {"@type":"Question","name":"Will features be paywalled later?","acceptedAnswer":{"@type":"Answer","text":"No. Nothing that is free today will ever move behind a paywall. Edge Pro only ever adds new capabilities."}}
+ ]}
+]}
+</script>
 <style>{{CSS}}</style>
 </head>
 <body>
 <nav class="nav">
   <a class="brand" href="#top"><img src="{{ICON}}" alt="">Anglers Edge</a>
-  <div class="nav-links"><a href="#why">Why</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#compare">Compare</a><a class="cta" href="#get">Get the app</a></div>
+  <div class="nav-links"><a href="#why">Why</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#compare">Compare</a><a href="#lakes">Lakes</a><a class="cta" href="#get">Get the app</a></div>
 </nav>
 
 <header class="hero" id="top">
@@ -75,13 +105,13 @@
         <div class="factor"><b>Thermocline</b><span>the temperature layer, modelled per lake</span></div>
       </div>
     </div>
-    <img class="phone" src="{{IMG_02}}" alt="A spot's factor-by-factor breakdown in Anglers Edge">
+    <img class="phone" src="{{IMG_02}}" width="520" height="1125" loading="lazy" alt="Anglers Edge spot breakdown: a 0.76 Excellent score with depth, hump, break and point factors explained">
   </div>
 </div></section>
 
 <section id="honest" style="padding-top:0"><div class="wrap">
   <div class="split">
-    <img class="phone" src="{{IMG_03}}" alt="Lake list with survey-grade data badges">
+    <img class="phone" src="{{IMG_03}}" width="520" height="1125" loading="lazy" alt="Anglers Edge lake switcher listing Ontario lakes with survey-grade data badges">
     <div>
       <div class="eyebrow">Honest by design</div>
       <h2>We tell you what we know — and what we don't.</h2>
@@ -128,13 +158,21 @@
   <div class="eyebrow">A look inside</div>
   <h2>Built like a fieldbook, not a dashboard.</h2>
   <div class="gallery">
-    <figure><img src="{{IMG_01}}" alt="Map with ranked spots"><figcaption>Ranked spots on your lake</figcaption></figure>
-    <figure><img src="{{IMG_02}}" alt="Spot breakdown"><figcaption>Why a spot rates</figcaption></figure>
-    <figure><img src="{{IMG_04}}" alt="48-hour bite window and conditions"><figcaption>When to go: the 48-hour bite window</figcaption></figure>
-    <figure><img src="{{IMG_05}}" alt="Map layers"><figcaption>Structure layers, one tap each</figcaption></figure>
-    <figure><img src="{{IMG_03}}" alt="Lake switcher"><figcaption>42 Ontario lakes and counting</figcaption></figure>
-    <figure><img src="{{IMG_06}}" alt="Night colour scheme"><figcaption>Night Ops for the dawn run</figcaption></figure>
+    <figure><img src="{{IMG_01}}" width="520" height="1125" loading="lazy" alt="Anglers Edge map of Lake Muskoka with ranked fishing spots"><figcaption>Ranked spots on your lake</figcaption></figure>
+    <figure><img src="{{IMG_02}}" width="520" height="1125" loading="lazy" alt="Fishing spot score breakdown in Anglers Edge"><figcaption>Why a spot rates</figcaption></figure>
+    <figure><img src="{{IMG_04}}" width="520" height="1125" loading="lazy" alt="48-hour bite window forecast and conditions in Anglers Edge"><figcaption>When to go: the 48-hour bite window</figcaption></figure>
+    <figure><img src="{{IMG_05}}" width="520" height="1125" loading="lazy" alt="Bathymetry, contours and structure layers in Anglers Edge"><figcaption>Structure layers, one tap each</figcaption></figure>
+    <figure><img src="{{IMG_03}}" width="520" height="1125" loading="lazy" alt="Lake switcher with 42 Ontario lakes in Anglers Edge"><figcaption>42 Ontario lakes and counting</figcaption></figure>
+    <figure><img src="{{IMG_06}}" width="520" height="1125" loading="lazy" alt="Anglers Edge Night Ops dark map for dawn and dusk fishing"><figcaption>Night Ops for the dawn run</figcaption></figure>
   </div>
+</div></section>
+
+<section id="lakes" style="padding-top:0"><div class="wrap">
+  <div class="eyebrow">Lakes we cover</div>
+  <h2>42 Ontario lakes, mapped and scored. More on the way.</h2>
+  <p class="lede">Every lake ships with detailed bathymetry, structure layers and its own calibrated scoring model — from Muskoka and the Kawarthas to Temagami and the Northwest. Packs for the rest of Canada and the United States are in development.</p>
+  <ul class="lakes"><li>Abram Lake</li><li>Balsam Lake</li><li>Bigwind Lake</li><li>Black Sturgeon Lakes</li><li>Charleston Lake</li><li>Chemong Lake</li><li>Drag Lake</li><li>Dryberry Lake</li><li>Fairy Lake</li><li>Hay Bay</li><li>Kakagi Lake</li><li>Kashagawigamog Lake</li><li>Kawagama Lake</li><li>Kennisis Lake</li><li>Kushog Lake</li><li>Lac des Mille Lacs</li><li>Lake Bernard</li><li>Lake Joseph</li><li>Lake Muskoka</li><li>Lake Rosseau</li><li>Lake Scugog</li><li>Lake Temagami</li><li>Lake Vernon</li><li>Lake Wanapitei</li><li>Lake of Bays</li><li>Long Lake</li><li>Mary Lake</li><li>McFarlane Lake</li><li>Mindemoya Lake</li><li>Minnitaki Lake</li><li>Muldrew Lakes</li><li>Pakwash Lake</li><li>Pelican Lake</li><li>Peninsula Lake</li><li>Perrault Lake</li><li>Pigeon Lake</li><li>Ramsey Lake</li><li>Rice Lake</li><li>Skeleton Lake</li><li>Vermilion Lake</li><li>Wabaskang Lake</li><li>Wabigoon Lake</li></ul>
+  <p class="dim" style="font-size:14px;margin-top:14px">Don't see your lake? Request it from inside the app — requests drive what we build next.</p>
 </div></section>
 
 <section id="faq" style="padding-top:0"><div class="wrap faq">
@@ -159,7 +197,7 @@
   <div><a href="{{PRIVACY}}">Privacy</a><a href="mailto:jlr@backroadscarclub.com">Support</a><a href="#top">Top</a></div>
 </div></footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
-<script>{{JS}}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js" defer></script>
+{{GAME_SCRIPT}}
 </body>
 </html>
