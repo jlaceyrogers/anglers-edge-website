@@ -76,7 +76,7 @@ section{padding:88px 0}
 /* split */
 .split{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
 @media(max-width:860px){.split{grid-template-columns:1fr}}
-.phone{width:min(300px,80%);border-radius:36px;border:8px solid var(--deep);box-shadow:0 20px 50px rgba(40,40,20,.25);display:block;margin:0 auto}
+.phone{width:min(300px,80%);height:auto;border-radius:36px;border:8px solid var(--deep);box-shadow:0 20px 50px rgba(40,40,20,.25);display:block;margin:0 auto}
 .check li{margin:10px 0;padding-left:28px;position:relative;color:var(--ink)}
 .check li::before{content:"";position:absolute;left:0;top:10px;width:14px;height:14px;border-radius:50%;background:var(--good)}
 .check{list-style:none;padding:0;margin:18px 0 0}
@@ -100,7 +100,7 @@ section{padding:88px 0}
 .gallery{display:flex;gap:18px;overflow-x:auto;padding:12px 4px 20px;scroll-snap-type:x mandatory;scrollbar-width:none}
 .gallery::-webkit-scrollbar{display:none}
 .gallery figure{flex:none;margin:0;scroll-snap-align:start;width:220px}
-.gallery img{width:100%;border-radius:22px;border:6px solid var(--deep);display:block;box-shadow:0 10px 30px rgba(40,40,20,.18)}
+.gallery img{width:100%;height:auto;border-radius:22px;border:6px solid var(--deep);display:block;box-shadow:0 10px 30px rgba(40,40,20,.18)}
 .gallery figcaption{font-size:13px;color:var(--dim);margin-top:10px;text-align:center}
 /* faq */
 .faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:10px 0}

@@ -174,7 +174,7 @@
   }
   function cast(p) {
     if (casts <= 0) return;
-    var c = toCell(p), sc = scoreAt(c.i, c.j);
+    var c = waterCellNear(toCell(p)), sc = scoreAt(c.i, c.j);
     if (!sc) { showCard('That\'s dry land. Try the water.', '', 'poor'); return; }
     casts--; total += sc.score;
     castsEl.textContent = casts; totalEl.textContent = total.toFixed(2);
@@ -213,6 +213,23 @@
   var down = null;
   function toNDC(e) { var r = host.getBoundingClientRect(); ndc.set(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1); }
   function project() { ray.setFromCamera(ndc, cam); return ray.ray.intersectPlane(plane, hit) ? hit : null; }
+  /* casts hit the DRAWN basin (displaced mesh), not the flat surface plane —
+   * near shorelines the two diverge under perspective and a click on visible
+   * water used to map to a shore cell. */
+  function projectBasin() {
+    ray.setFromCamera(ndc, cam);
+    var hits = ray.intersectObject(basin, false);
+    return hits.length ? hits[0].point : project();
+  }
+  /* snap a shoreline click to the nearest water cell within one cell */
+  function waterCellNear(c) {
+    if (scoreAt(c.i, c.j)) return c;
+    var best = null, bd = 99;
+    for (var dj = -2; dj <= 2; dj++) for (var di = -2; di <= 2; di++) {
+      if (scoreAt(c.i + di, c.j + dj)) { var d = di * di + dj * dj; if (d < bd) { bd = d; best = { i: c.i + di, j: c.j + dj }; } }
+    }
+    return best || c;
+  }
   host.addEventListener('pointermove', function (e) {
     toNDC(e); var p = project(); if (!p) return;
     var lim = SIZE * 0.49; p.x = Math.max(-lim, Math.min(lim, p.x)); p.z = Math.max(-lim, Math.min(lim, p.z));
@@ -223,7 +240,7 @@
   host.addEventListener('pointerup', function (e) {
     if (!down) return; var moved = Math.hypot(e.clientX - down[0], e.clientY - down[1]); down = null;
     if (moved > 8) return;                     // a scroll or drag, not a cast
-    toNDC(e); var p = project(); if (p) cast(p.clone());
+    toNDC(e); var p = projectBasin(); if (p) cast(p.clone());
   });
 
   /* ---------------- loop ---------------- */
