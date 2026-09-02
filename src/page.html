@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anglers Edge — Where to fish today, and why</title>
+<meta name="description" content="Anglers Edge scores every part of the lake for your species and today's conditions, ranks the best spots, and shows its work — fully offline, no account, free forever.">
+<meta property="og:title" content="Anglers Edge — Where to fish today, and why">
+<meta property="og:description" content="The offline fishing-intelligence app. Cast three times and see if you can out-fish the model.">
+<link rel="icon" href="{{ICON}}">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,700;1,8..60,400;1,8..60,700&display=swap">
+<style>{{CSS}}</style>
+</head>
+<body>
+<nav class="nav">
+  <a class="brand" href="#top"><img src="{{ICON}}" alt="">Anglers Edge</a>
+  <div class="nav-links"><a href="#why">Why</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#compare">Compare</a><a class="cta" href="#get">Get the app</a></div>
+</nav>
+
+<header class="hero" id="top">
+  <div id="lake" aria-label="Interactive lake: move to aim, click to cast"></div>
+  <div class="hero-copy">
+    <h1>Where to fish today —<br><em>and why.</em></h1>
+    <p>Anglers Edge scores every part of the lake for your species and today's conditions, ranks the best spots, and explains each one. Offline. No account. Free.</p>
+    <div class="hero-actions"><a class="btn primary" href="#get">Get it on the App Store</a><a class="btn ghost" href="#how">See how it scores</a></div>
+  </div>
+  <div class="game-hud" id="hud">
+    <div class="gh-t">Out-fish the model</div>
+    <div class="gh-row"><span>Casts left</span><b id="casts-left">3</b></div>
+    <div class="gh-row"><span>Your score</span><b id="your-score">0.00</b></div>
+    <div class="gh-hint"><span class="hint-mouse">Move to aim · click to cast.</span><span class="hint-touch">Tap the lake to cast.</span> Smallmouth, summer.</div>
+  </div>
+  <div class="cast-card" id="cast-card"><div class="cc-title"></div><div class="cc-sub"></div></div>
+  <div class="reveal" id="reveal"><div class="rv">
+    <div class="eyebrow">The model's picks are on the map</div>
+    <h3 class="serif" style="font-size:26px">Three casts each. Who read the lake better?</h3>
+    <div class="rv-nums"><div class="rv-you"><b>0.00</b><span>You</span></div><div class="rv-model"><b>0.00</b><span>The model</span></div></div>
+    <p class="rv-verdict"></p>
+    <a class="btn orange" href="#get">Get the app</a> <button class="btn ghost" id="reset-game">Cast again</button>
+  </div></div>
+  <div class="scroll-hint">Scroll</div>
+</header>
+
+<section id="why"><div class="wrap">
+  <div class="eyebrow">Why Anglers Edge</div>
+  <h2>Every other app shows you a map. This one gives you an answer.</h2>
+  <p class="lede">Depth charts leave the hard part to you: reading structure, wind, season and temperature together to decide where fish hold today. Anglers Edge does that reading — and then shows its work.</p>
+  <div class="grid3" style="margin-top:34px">
+    <div class="card"><div class="n">1</div><h3>Scores, not just charts</h3><p>An eleven-factor model rates every square of the lake for your species, season, date, wind and pressure, then ranks the best spots.</p></div>
+    <div class="card"><div class="n">2</div><h3>Shows its work</h3><p>Tap any spot for a plain-language breakdown: which factors drove the score and by how much. No black box, ever.</p></div>
+    <div class="card"><div class="n">3</div><h3>Works where the fish are</h3><p>Maps, structure layers and the model ship inside the app. Zero signal, zero problem — it runs entirely on your phone.</p></div>
+  </div>
+</div></section>
+
+<section id="how" style="padding-top:0"><div class="wrap">
+  <div class="split">
+    <div>
+      <div class="eyebrow">How it scores a lake</div>
+      <h2>Eleven things a great angler reads at once.</h2>
+      <p class="lede">Each factor is weighted for the species and the season. Hard rules come first: unsurveyed water scores zero rather than guessing, and water below the oxygen limit is out.</p>
+      <div class="factors">
+        <div class="factor"><b>Depth band</b><span>the range they hold at right now</span></div>
+        <div class="factor"><b>Breaks &amp; ledges</b><span>steep drops fish travel along</span></div>
+        <div class="factor"><b>Humps</b><span>underwater hills — ambush points</span></div>
+        <div class="factor"><b>Saddles</b><span>low crossings between humps</span></div>
+        <div class="factor"><b>Points</b><span>structure jutting into the lake</span></div>
+        <div class="factor"><b>Inside turns</b><span>bends in the contour that gather fish</span></div>
+        <div class="factor"><b>Flats</b><span>even feeding shelves</span></div>
+        <div class="factor"><b>Wind fetch</b><span>where today's wind pushes bait</span></div>
+        <div class="factor"><b>Bottom type</b><span>rock, sand, muck or weed — satellite-measured where we can</span></div>
+        <div class="factor"><b>Light</b><span>dawn, dusk and shade</span></div>
+        <div class="factor"><b>Thermocline</b><span>the temperature layer, modelled per lake</span></div>
+      </div>
+    </div>
+    <img class="phone" src="{{IMG_02}}" alt="A spot's factor-by-factor breakdown in Anglers Edge">
+  </div>
+</div></section>
+
+<section id="honest" style="padding-top:0"><div class="wrap">
+  <div class="split">
+    <img class="phone" src="{{IMG_03}}" alt="Lake list with survey-grade data badges">
+    <div>
+      <div class="eyebrow">Honest by design</div>
+      <h2>We tell you what we know — and what we don't.</h2>
+      <p class="lede">Bad data costs you a day on the water. So the app never pretends.</p>
+      <ul class="check">
+        <li>Unsurveyed water is marked, never guessed.</li>
+        <li>Measured versus inferred data is labelled everywhere.</li>
+        <li>Every lake publishes its survey year, sounding count and measured model error.</li>
+        <li>Your own sonar logs can improve your map — and are credited back to you.</li>
+        <li>Analysis only, not a navigation aid. It says so, in the app.</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="pricing" class="dark"><div class="wrap">
+  <div class="eyebrow">Pricing</div>
+  <h2>Free stays free. We only ever sell more.</h2>
+  <p class="lede">You've seen what happens when a fishing app locks the good stuff behind a monthly fee. We're not doing that — and we've written it down.</p>
+  <div class="tiers">
+    <div class="tier free"><h3>Free — forever</h3><div class="price">$0 · extra lakes 99¢ each</div><ul><li>The full scoring engine and every breakdown</li><li>GPS, tracks, waypoints, one-tap catch log</li><li>19 bundled lakes; any other lake is a 99¢ one-time add</li><li>No account. No ads. No tracking.</li></ul></div>
+    <div class="tier"><h3>Edge Pro</h3><div class="price">$29.99 / year · optional</div><ul><li>Only things that didn't exist before</li><li>Bite forecasts beyond 48 hours, lake history, multi-day planning</li><li>Cloud backup &amp; sync, Apple Watch glance</li><li>For the angler who fishes forty days a year</li></ul></div>
+    <div class="tier"><h3>Partners</h3><div class="price">Brands pay. You don't.</div><ul><li>The lure that works at this spot, in these conditions — labelled, useful, optional</li><li>Lodges and guides with packs of their own water</li><li>Never your data. Never required.</li></ul></div>
+  </div>
+  <div class="promise">"Nothing that is free today will ever move behind a paywall."</div>
+</div></section>
+
+<section id="compare"><div class="wrap">
+  <div class="eyebrow">Compare</div>
+  <h2>Everyone has maps. Nobody has the answer.</h2>
+  <div class="tablewrap"><table class="cmp">
+    <tr><th></th><th>Anglers Edge</th><th>Fishbrain</th><th>Navionics</th><th>onX Fish</th></tr>
+    <tr><td>Scores spots with a model</td><td class="us">Yes</td><td class="p">Paid tier</td><td class="n">No</td><td class="n">No</td></tr>
+    <tr><td>Explains why</td><td class="us">Yes</td><td class="n">No</td><td class="n">No</td><td class="n">No</td></tr>
+    <tr><td>Works fully offline</td><td class="us">Yes</td><td class="n">No</td><td class="p">Paid tier</td><td class="y">Yes</td></tr>
+    <tr><td>Canadian lakes</td><td class="us">Yes</td><td class="p">Partial</td><td class="y">Yes</td><td class="n">No</td></tr>
+    <tr><td>No account required</td><td class="us">Yes</td><td class="n">No</td><td class="n">No</td><td class="n">No</td></tr>
+    <tr><td>Core features free</td><td class="us">Yes</td><td class="n">No</td><td class="n">No</td><td class="n">No</td></tr>
+    <tr><td>Price</td><td class="us">Free · 99¢ a lake</td><td>$10–13 / month</td><td>~$50 / year</td><td>$35 / year</td></tr>
+  </table></div>
+</div></section>
+
+<section id="screens" style="padding-top:0"><div class="wrap">
+  <div class="eyebrow">A look inside</div>
+  <h2>Built like a fieldbook, not a dashboard.</h2>
+  <div class="gallery">
+    <figure><img src="{{IMG_01}}" alt="Map with ranked spots"><figcaption>Ranked spots on your lake</figcaption></figure>
+    <figure><img src="{{IMG_02}}" alt="Spot breakdown"><figcaption>Why a spot rates</figcaption></figure>
+    <figure><img src="{{IMG_04}}" alt="48-hour bite window and conditions"><figcaption>When to go: the 48-hour bite window</figcaption></figure>
+    <figure><img src="{{IMG_05}}" alt="Map layers"><figcaption>Structure layers, one tap each</figcaption></figure>
+    <figure><img src="{{IMG_03}}" alt="Lake switcher"><figcaption>42 Ontario lakes and counting</figcaption></figure>
+    <figure><img src="{{IMG_06}}" alt="Night colour scheme"><figcaption>Night Ops for the dawn run</figcaption></figure>
+  </div>
+</div></section>
+
+<section id="faq" style="padding-top:0"><div class="wrap faq">
+  <div class="eyebrow">Questions</div>
+  <h2>Straight answers.</h2>
+  <details><summary>Does it really work with no signal?</summary><p>Yes. The lake maps, structure layers and the scoring model are all inside the app. The only things that need a connection are optional live weather and the 48-hour forecast — and the app tells you plainly when they're unavailable.</p></details>
+  <details><summary>Which lakes?</summary><p>19 Ontario lakes are built in, with 23 more downloadable today — 42 in all, from Muskoka to Temagami — and packs are being built for the rest of Canada and the United States. Missing yours? Request it from inside the app.</p></details>
+  <details><summary>Is it a navigation app?</summary><p>No. Anglers Edge is an analysis tool. It never routes you anywhere and the source bathymetry is not navigation-grade. Carry official charts.</p></details>
+  <details><summary>What do you collect about me?</summary><p>Nothing. There's no account. Your location is used on your phone to show your position on the map and never leaves it. Waypoints and catches are stored on the device.</p></details>
+  <details><summary>Will you paywall features later?</summary><p>No. Nothing that is free today will ever move behind a paywall. Edge Pro only ever adds things that didn't exist before.</p></details>
+</div></section>
+
+<section id="get" class="dark" style="text-align:center"><div class="wrap">
+  <div class="eyebrow">Get the app</div>
+  <h2>Your water, scored.</h2>
+  <p class="lede" style="margin:0 auto 24px">Free on the App Store. No account, no card, no catch.</p>
+  <a class="badge" href="{{APPSTORE}}"><span style="font-size:22px">&#63743;</span><span><small>Download on the</small>App Store</span></a>
+</div></section>
+
+<footer><div class="wrap row">
+  <div>© 2026 Anglers Edge · Analysis only — not for navigation.</div>
+  <div><a href="{{PRIVACY}}">Privacy</a><a href="mailto:jlr@backroadscarclub.com">Support</a><a href="#top">Top</a></div>
+</div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+<script>{{JS}}</script>
+</body>
+</html>
