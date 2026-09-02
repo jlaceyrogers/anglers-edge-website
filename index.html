@@ -32,6 +32,7 @@ section{padding:88px 0}
 @media(max-width:760px){.nav-links a:not(.cta){display:none}}
 /* hero */
 .hero{position:relative;height:100svh;min-height:640px;overflow:hidden;background:var(--paper)}
+.stage{position:absolute;inset:0}
 #lake{position:absolute;inset:0;cursor:crosshair;opacity:0;transition:opacity .8s ease}
 #lake.ready{opacity:1}#lake canvas{display:block;width:100%!important;height:100%!important}
 .hero-copy{position:absolute;left:24px;top:96px;max-width:520px;z-index:5;pointer-events:none}
@@ -62,7 +63,17 @@ section{padding:88px 0}
 .reveal .rv-you{color:var(--ink)}.reveal .rv-model{color:var(--pine)}
 .reveal p{color:var(--dim);margin:8px 0 18px}
 .scroll-hint{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:5;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
-@media(max-width:760px){.hero-copy{top:84px;max-width:none;right:24px}.hero p{max-width:none}.game-hud{position:static;margin:16px 24px 0;display:inline-block}.hero h1{font-size:40px}.hero p{font-size:16px}.game-hud{left:24px;right:auto;top:auto;bottom:130px;position:absolute;min-width:0}.cast-card{bottom:40px}}
+@media(max-width:760px){
+.hero{height:auto;min-height:0;display:flex;flex-direction:column;padding-top:76px}
+.hero-copy{position:static!important;order:-1;max-width:none;padding:8px 20px 18px;top:auto;left:auto}
+.hero h1{font-size:40px}.hero p{font-size:16px;max-width:none}
+.stage{position:relative;inset:auto;height:64vh;min-height:420px;margin:0 12px 22px;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 10px 30px rgba(40,40,20,.14);background:#EDE6D6}
+.game-hud{position:absolute;left:10px;top:10px;right:auto;bottom:auto;min-width:0;padding:10px 12px;border-radius:14px}
+.game-hud .gh-t{font-size:15px;margin-bottom:2px}.game-hud .gh-row{font-size:12px;gap:14px}.game-hud .gh-hint{font-size:11px;margin-top:6px;padding-top:6px}
+.cast-card{bottom:14px;padding:10px 16px}.cast-card .cc-title{font-size:20px}
+.reveal .rv{padding:22px 18px}.reveal .rv-nums div{font-size:36px}
+.scroll-hint{display:none}
+}
 /* pillars */
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 @media(max-width:860px){.grid3{grid-template-columns:1fr}}
@@ -91,12 +102,12 @@ section{padding:88px 0}
 .tier ul{padding-left:18px;margin:0}.tier li{margin:6px 0;font-size:14.5px;color:var(--dim)}
 .promise{margin-top:26px;font-family:var(--serif);font-style:italic;font-size:20px;color:#E0A83C;text-align:center}
 /* table */
-.cmp{width:100%;border-collapse:collapse;margin-top:22px;font-size:15px;overflow:hidden;border-radius:16px;box-shadow:0 1px 2px rgba(40,40,20,.06)}
+.cmp{width:100%;min-width:600px;border-collapse:collapse;margin-top:22px;font-size:15px;overflow:hidden;border-radius:16px;box-shadow:0 1px 2px rgba(40,40,20,.06)}
 .cmp th,.cmp td{padding:12px 14px;text-align:center;border-bottom:1px solid var(--line);background:var(--card)}
 .cmp th{background:var(--pine);color:var(--paper);font-family:var(--serif);font-size:15px}
 .cmp td:first-child{text-align:left;font-weight:600}.cmp td.us{background:#E9F0EA;color:var(--pine);font-weight:700}
 .cmp .y{color:var(--good);font-weight:700}.cmp .n{color:var(--bad)}.cmp .p{color:var(--ochre)}
-.tablewrap{overflow-x:auto}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -24px;padding:0 24px}
 /* gallery */
 .gallery{display:flex;gap:18px;overflow-x:auto;padding:12px 4px 20px;scroll-snap-type:x mandatory;scrollbar-width:none}
 .gallery::-webkit-scrollbar{display:none}
@@ -125,12 +136,13 @@ footer a{margin-right:16px}
 </nav>
 
 <header class="hero" id="top">
-  <div id="lake" aria-label="Interactive lake: move to aim, click to cast"></div>
   <div class="hero-copy">
     <h1>Where to fish today —<br><em>and why.</em></h1>
     <p>Anglers Edge scores every part of the lake for your species and today's conditions, ranks the best spots, and explains each one. Offline. No account. Free.</p>
     <div class="hero-actions"><a class="btn primary" href="#get">Get it on the App Store</a><a class="btn ghost" href="#how">See how it scores</a></div>
   </div>
+  <div class="stage">
+  <div id="lake" aria-label="Interactive lake: move to aim, click to cast"></div>
   <div class="game-hud" id="hud">
     <div class="gh-t">Out-fish the model</div>
     <div class="gh-row"><span>Casts left</span><b id="casts-left">3</b></div>
@@ -145,6 +157,7 @@ footer a{margin-right:16px}
     <p class="rv-verdict"></p>
     <a class="btn orange" href="#get">Get the app</a> <button class="btn ghost" id="reset-game">Cast again</button>
   </div></div>
+  </div>
   <div class="scroll-hint">Scroll</div>
 </header>
 
