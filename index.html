@@ -160,6 +160,15 @@ footer a{margin-right:16px}
 
 .lakes{list-style:none;padding:0;margin:22px 0 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:8px 18px}
 .lakes li{font-size:15px;padding:8px 0;border-bottom:1px solid var(--line);color:var(--ink)}
+
+.pricing-layout{display:grid;grid-template-columns:1.45fr 1fr;gap:18px;max-width:980px;margin:30px auto 0;align-items:stretch}
+.tier.big{padding:30px 32px}.big-price{font-family:var(--serif);font-weight:700;font-size:84px;line-height:1;color:var(--pine);display:flex;align-items:baseline;gap:6px;margin-bottom:6px}
+.big-price .cur{font-size:40px}.big-price .per{font:600 13px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-left:8px}
+.tier.big h3{font-size:24px;margin:4px 0 14px}
+.tier ul.two-col{display:grid;grid-template-columns:1fr 1fr;gap:4px 24px}
+.tier .fine{margin-top:18px;padding-top:14px;border-top:1px solid var(--line);font-size:14px;color:var(--dim)}
+.tier.partners{display:flex;flex-direction:column}.tier.partners ul{flex:1}.tier.partners .eyebrow{margin-bottom:6px}
+@media(max-width:860px){.pricing-layout{grid-template-columns:1fr}.tier ul.two-col{grid-template-columns:1fr}.big-price{font-size:64px}}
 </style>
 </head>
 <body>
@@ -251,9 +260,30 @@ footer a{margin-right:16px}
   <div class="eyebrow">Pricing</div>
   <h2>Free stays free. We only ever sell more.</h2>
   <p class="lede">You've seen what happens when a fishing app locks the good stuff behind a monthly fee. We're not doing that — and we've written it down.</p>
-  <div class="tiers two">
-    <div class="tier free"><h3>Free — forever</h3><div class="price">$0 · extra lakes 99¢ each</div><ul><li>The full scoring engine and every breakdown</li><li>GPS, tracks, waypoints, one-tap catch log</li><li>19 bundled lakes; any other lake is a 99¢ one-time add</li><li>No account. No ads. No tracking.</li></ul></div>
-    <div class="tier"><h3>Partners</h3><div class="price">Brands pay. You don't.</div><ul><li>The lure that works at this spot, in these conditions — labelled, useful, optional</li><li>Lodges and guides with packs of their own water</li><li>Never your data. Never required.</li></ul></div>
+  <div class="pricing-layout">
+    <div class="tier free big">
+      <div class="big-price"><span class="cur">$</span>0<span class="per">forever</span></div>
+      <h3>Everything the app does, free.</h3>
+      <ul class="two-col">
+        <li>The full scoring engine and every breakdown</li>
+        <li>19 bundled lakes, more downloadable</li>
+        <li>GPS, tracks and waypoints</li>
+        <li>One-tap catch log</li>
+        <li>48-hour bite window</li>
+        <li>No account. No ads. No tracking.</li>
+      </ul>
+      <div class="fine">Extra lakes are 99¢ each, one-time — you own them.</div>
+    </div>
+    <div class="tier partners">
+      <div class="eyebrow" style="color:var(--orange)">For brands, lodges &amp; guides</div>
+      <h3>Partners pay. Anglers don't.</h3>
+      <ul>
+        <li>The lure that works at this spot, in these conditions — labelled, useful, optional</li>
+        <li>Lodges and guides get packs of their own water to hand to guests</li>
+        <li>Never your data. Never required.</li>
+      </ul>
+      <a class="btn ghost" href="mailto:jlr@backroadscarclub.com?subject=Anglers%20Edge%20partnership" style="margin-top:14px">Talk to us</a>
+    </div>
   </div>
   <div class="promise">"Nothing that is free today will ever move behind a paywall."</div>
 </div></section>
