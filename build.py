@@ -1,10 +1,18 @@
 #!/usr/bin/env python3
 """Assemble src/ into index.html (assets as files — fast, cacheable, SEO-friendly)
 and artifact.html (everything inlined, for the claude.ai preview)."""
+import hashlib
 import base64, pathlib, mimetypes, re
 root = pathlib.Path(__file__).parent
 APPSTORE = 'https://apps.apple.com/app/anglers-edge/id0000000000'   # replace with the real listing URL
 PRIVACY = 'privacy.html'
+def stamped(name):
+    # assets are served immutable for a year (vercel.json); a content hash in
+    # the URL makes every browser and the CDN fetch a changed file immediately
+    h = hashlib.sha1(open('assets/' + name, 'rb').read()).hexdigest()[:8]
+    return 'assets/' + name + '?v=' + h
+
+
 def data_uri(name):
     p = root / 'assets' / name
     return f"data:{mimetypes.guess_type(str(p))[0]};base64," + base64.b64encode(p.read_bytes()).decode()
@@ -17,8 +25,8 @@ def render(inline):
     html = page.replace('{{CSS}}', css)
     html = html.replace('{{APPSTORE}}', APPSTORE).replace('{{PRIVACY}}', PRIVACY)
     for n, name in imgs.items():
-        html = html.replace('{{IMG_' + n + '}}', data_uri(name) if inline else 'assets/' + name)
-    html = html.replace('{{ICON}}', data_uri('icon.png') if inline else 'assets/icon.png')
+        html = html.replace('{{IMG_' + n + '}}', data_uri(name) if inline else stamped(name))
+    html = html.replace('{{ICON}}', data_uri('icon.png') if inline else stamped('icon.png'))
     html = html.replace('{{GAME_SCRIPT}}',
         '<script>' + js + '</script>' if inline else '<script src="game.js" defer></script>')
     return html
