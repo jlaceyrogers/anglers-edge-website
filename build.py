@@ -4,7 +4,7 @@ and artifact.html (everything inlined, for the claude.ai preview)."""
 import hashlib
 import base64, pathlib, mimetypes, re
 root = pathlib.Path(__file__).parent
-APPSTORE = 'https://apps.apple.com/app/anglers-edge/id0000000000'   # replace with the real listing URL
+APPSTORE = 'https://apps.apple.com/app/anglers-edge/id6798728175'   # replace with the real listing URL
 PRIVACY = 'privacy.html'
 def stamped(name):
     # assets are served immutable for a year (vercel.json); a content hash in
