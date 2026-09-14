@@ -56,6 +56,9 @@ def svg_of(r):
     return (f'<svg viewBox="0 0 {W} {H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Outline of {esc(r["name"])} with its top ranked fishing spots">'
             f'<rect width="{W}" height="{H}" fill="#F3ECDB" rx="14"/>'
             f'<path d="{d}" fill="#9EBCCB" stroke="#5F7F8E" stroke-width="1.2" fill-rule="evenodd"/>{coins}</svg>')
+def og_of(r):
+    p = root / 'assets' / 'og' / (r['id'] + '.png')
+    return SITE + '/' + stamped('og/' + r['id'] + '.png') if p.exists() else SITE + '/assets/og.png'
 def facts_of(r):
     f = []
     if r.get('area_km2'): f.append(('Water area', f"{r['area_km2']:g} km²", ''))
@@ -101,7 +104,7 @@ def render_lake(r):
          "geo": {"@type": "GeoCoordinates", "latitude": round(r['center'][1], 4), "longitude": round(r['center'][0], 4)},
          "containedInPlace": {"@type": "AdministrativeArea", "name": reg['name']},
          "subjectOf": {"@type": "WebPage", "url": f"{SITE}/lakes/{r['id']}", "name": title}}], ensure_ascii=False)
-    out = lake_tpl
+    out = lake_tpl.replace('https://anglersedge.fishing/assets/og.png', og_of(r))
     for k, v in {'TITLE': esc(title), 'DESC': esc(desc), 'URL': f"{SITE}/lakes/{r['id']}", 'CSS': css, 'NAV': NAV, 'FOOTER': FOOTER,
                  'ADMIN': reg['admin'], 'ADMIN_NAME': esc(reg['name']), 'EYEBROW': esc(region_label(r)), 'H1': esc(name) + ' fishing map',
                  'LEDE': esc(f"Surveyed depth, structure and ranked fishing spots for {name} — scored for your species and the day's conditions, and it all works with no signal. Free."),
