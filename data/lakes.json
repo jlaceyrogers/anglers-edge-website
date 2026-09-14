@@ -1,0 +1,502 @@
+{
+  "lakes": [
+    {
+      "id": "muskoka",
+      "name": "Lake Muskoka",
+      "region": {
+        "admin": "CA-ON",
+        "area": "Muskoka"
+      },
+      "enabled": true,
+      "center": [
+        -79.4933,
+        45.0107
+      ],
+      "zoom": 10.5,
+      "area_km2": 121,
+      "dataPath": "data/lakes/muskoka/",
+      "features": {
+        "waterlevel": true
+      },
+      "_notes": "sounding-derived from Ontario LIO bathymetry; provenance metadata not bundled (legacy pack)"
+    },
+    {
+      "id": "rosseau",
+      "name": "Lake Rosseau",
+      "region": {
+        "admin": "CA-ON",
+        "area": "Muskoka"
+      },
+      "enabled": true,
+      "center": [
+        -79.5971,
+        45.183
+      ],
+      "zoom": 10.5,
+      "area_km2": 63,
+      "dataPath": "data/lakes/rosseau/",
+      "features": {
+        "waterlevel": true
+      },
+      "species_extra": "Muskellunge",
+      "_notes": "sounding-derived from Ontario LIO bathymetry; provenance metadata not bundled (legacy pack)"
+    },
+    {
+      "id": "joseph",
+      "name": "Lake Joseph",
+      "region": {
+        "admin": "CA-ON",
+        "area": "Muskoka"
+      },
+      "enabled": true,
+      "center": [
+        -79.7003,
+        45.1802
+      ],
+      "zoom": 10.5,
+      "area_km2": 52,
+      "dataPath": "data/lakes/joseph/",
+      "species_extra": "Muskellunge",
+      "features": {
+        "waterlevel": false
+      },
+      "_notes": "sounding-derived from Ontario LIO bathymetry; provenance metadata not bundled (legacy pack)"
+    },
+    {
+      "id": "bays",
+      "name": "Lake of Bays",
+      "region": {
+        "admin": "CA-ON",
+        "area": "Muskoka"
+      },
+      "enabled": true,
+      "center": [
+        -79.0312,
+        45.2527
+      ],
+      "zoom": 11,
+      "area_km2": 67.4,
+      "dataPath": "data/lakes/bays/",
+      "species_extra": [],
+      "features": {
+        "waterlevel": true
+      },
+      "vintage": true,
+      "cv": {
+        "mae_m": 2.622,
+        "rmse_m": 4.068,
+        "median_abs_err_m": 1.615,
+        "n": 364,
+        "depth_band_mae": {
+          "0-5": 1.52,
+          "5-10": 2.12,
+          "10-20": 2.51,
+          "20-30": 4.0,
+          "30-50": 3.74,
+          "50-80": 2.75
+        }
+      },
+      "_notes": "1969 transect-digitized survey (1969-08-20), 3609 soundings inside (11198 envelope incl. Peninsula/Grandview/Shoe same survey block); CV MAE 2.622/RMSE 4.068, 0-5m median 0.70; Secchi 5.9; gauge 02EB019 (outlet dam, assumed datum); BsM 67 sets 2008+2013, 67 sites; no muskie evidence"
+    },
+    {
+      "id": "bigwind",
+      "name": "Bigwind Lake",
+      "region": {
+        "admin": "CA-ON",
+        "area": "Muskoka"
+      },
+      "enabled": true,
+      "center": [
+        -79.0547,
+        45.0571
+      ],
+      "zoom": 12,
+      "area_km2": 1.07,
+      "dataPath": "data/lakes/bigwind/",
+      "species_extra": [],
+      "features": {
+        "waterlevel": false
+      },
+      "cv": {
+        "mae_m": 0.615,
+        "rmse_m": 0.901,
+        "median_abs_err_m": 0.413,
+        "n": 92
+      },
+      "_notes": "2002 GPS survey, 4908 soundings inside (6308 envelope); CV MAE 0.615/RMSE 0.901, 0-5m stats in manifest; step12 contour validation run (index record: Bigwind Lake 2002 GPS BATHYMETRY_LINE_IND=Yes, 152 lines touch lake); Secchi 7.1 (ARA); ARA cold, max 36m (measured 34.7m consistent), mean 8m; fish LT/Brook Trout/SMB/LMB - NO walleye/pike/muskie -> species_extra []; no on-lake gauge (South Branch Muskoka River/Lake of Bays at Baysville/Black River nearby); BsM 15 sites, 0 muskie sets; NOTE honest-empty structure layers (0 humps, 0 saddles - small low-relief lake; step04 honest-empty patch)"
+    },
+    {
+      "id": "fairy",
+      "name": "Fairy Lake",
+      "region": {
+        "admin": "CA-ON",
+        "area": "Muskoka"
+      },
+      "enabled": true,
+      "center": [
+        -79.1807,
+        45.3288
+      ],
+      "zoom": 11.5,
+      "area_km2": 6.99,
+      "dataPath": "data/lakes/fairy/",
+      "species_extra": [],
+      "features": {
+        "waterlevel": true
+      },
+      "cv": {
+        "mae_m": 0.202,
+        "rmse_m": 0.591,
+        "median_abs_err_m": 0.083,
+        "n": 179
+      },
+      "_notes": "2004 GPS survey (main 2004-06-15), 78311 soundings; CV MAE 0.202/RMSE 0.591; Secchi 4.0 (ARA); gauge 02EB016 FAIRY LAKE AT HUNTSVILLE, ref 6.486m gauge scale (median +/-1wk around survey, n=15, assumed datum); BsM 0 records for LID 17-6425-50209 (honest empty layer); ARA cold, max 69m, mean 22m; LT/SMB/LMB/walleye/pike community, no muskie -> species_extra []; ARA name-collision fixed (4 'Fairy Lake' records province-wide; selected by OGF_ID 113737536)"
+    },
+    {
+      "id": "kawagama",
+      "name": "Kawagama Lake",
+      "region": {
+        "admin": "CA-ON",
+        "area": "Haliburton"
+      },
+      "enabled": true,
+      "center": [
+        -78.7526,
+        45.2986
+      ],
+      "zoom": 11,
+      "area_km2": 31.6,
+      "dataPath": "data/lakes/kawagama/",
+      "species_extra": [],
+      "features": {
+        "waterlevel": true
+      },
+      "cv": {
+        "mae_m": 0.607,
+        "rmse_m": 0.932,
+        "median_abs_err_m": 0.376,
+        "n": 871
+      },
+      "_notes": "2018 GPS survey (main 2018-07-12), 20228 soundings inside; CV MAE 0.607/RMSE 0.932, 0-5m med 0.366; Secchi 6.9 (ARA); fetch 5.6km, thermal z_max 13.7; gauge 02EB017 KAWAGAMA LAKE AT RUSSELL LANDING (on-lake, MNR contributor, ref 9.403m gauge) -> waterlevel.json built; NO BsM records for WATERBODY_LID 17-6767-50182 (honest empty layer); ARA cold, max 77m, mean 22m; fish community LT/cisco/burbot/Round Whitefish/SMB - NO walleye/pike/LMB/muskie in ARA -> species_extra []"
+    },
+    {
+      "id": "mary",
+      "name": "Mary Lake",
+      "region": {
+        "admin": "CA-ON",
+        "area": "Muskoka"
+      },
+      "enabled": true,
+      "center": [
+        -79.2584,
+        45.2443
+      ],
+      "zoom": 11.5,
+      "area_km2": 10.6,
+      "dataPath": "data/lakes/mary/",
+      "species_extra": [],
+      "features": {
+        "waterlevel": true
+      },
+      "cv": {
+        "mae_m": 0.249,
+        "rmse_m": 0.495,
+        "median_abs_err_m": 0.101,
+        "n": 619
+      },
+      "_notes": "2003 GPS survey (main 2003-07-23), 20301 soundings inside (20662 envelope); CV MAE 0.249/RMSE 0.495; step12 contour validation run (239 LIO contour lines touch lake; bathymetry-index PROJECT_NAME 'Mary Lake' GPS record BATHYMETRY_LINE_IND=Yes - table said no contours, corrected with lead approval); Secchi 3.0 (ARA); gauge 02EB021 MARY LAKE AT PORT SYDNEY, ref 8.665m gauge scale (median +/-1wk around survey date, n=15, assumed datum); BsM 35 records, 0 muskie sets, no ARA muskie -> species_extra []; ARA cold, max 56m, mean 25m; LT/burbot/lake whitefish/walleye/pike/SMB/LMB community"
+    },
+    {
+      "id": "muldrew",
+      "name": "Muldrew Lakes",
+      "region": {
+        "admin": "CA-ON",
+        "area": "Muskoka"
+      },
+      "enabled": true,
+      "center": [
+        -79.4334,
+        44.8973
+      ],
+      "zoom": 12,
+      "area_km2": 4.17,
+      "dataPath": "data/lakes/muldrew/",
+      "species_extra": [],
+      "features": {
+        "waterlevel": false
+      },
+      "cv": {
+        "mae_m": 0.5,
+        "rmse_m": 0.742,
+        "median_abs_err_m": 0.313,
+        "n": 145
+      },
+      "_notes": "2014 GPS survey, 3636 soundings inside (7118 envelope incl. neighbouring lakes' 2000/2012 surveys); chain of 4 OHN segments dissolved: South 114309501 + Middle 114308930 + North 114309499 (Lake type) + South Channel 114309513 (River type; ARA groups all 4 as 'Muldrew Lakes' LID 17-6234-49731); table's original Algoma-chain OGF_IDs dropped (lead-approved; unsurveyed, 116225610 is a creek); CV MAE 0.5/RMSE 0.742 (0-5m med 0.305) - passes 2m gate despite sparse multi-basin spread; step12 contour validation run (LINE_IND=Yes, 67 lines touch lake); Secchi 3.2, ARA Cool regime (NOT cold), max 17m (measured 19.8m), mean 6.6m; fish SMB/LMB/pike/crappie/cisco - NO walleye/LT/muskie -> species_extra []; no on-lake gauge (Hawkrock River/Severn River nearby); BsM 21 sites from 21 sets (2014), top SMB x12/cisco x10, 0 muskie sets"
+    },
+    {
+      "id": "peninsula",
+      "name": "Peninsula Lake",
+      "region": {
+        "admin": "CA-ON",
+        "area": "Muskoka"
+      },
+      "enabled": true,
+      "center": [
+        -79.0992,
+        45.3429
+      ],
+      "zoom": 11.5,
+      "area_km2": 8.42,
+      "dataPath": "data/lakes/peninsula/",
+      "species_extra": [],
+      "features": {
+        "waterlevel": false
+      },
+      "cv": {
+        "mae_m": 0.204,
+        "rmse_m": 0.478,
+        "median_abs_err_m": 0.092,
+        "n": 512
+      },
+      "_notes": "2005 GPS survey, 22309 soundings inside (22334 envelope); CV MAE 0.204/RMSE 0.478, 0-5m med 0.139; Secchi 4.4 (ARA); ARA cold, max 37m (measured 36.6m consistent); fish community LT/cisco/SMB/LMB/walleye/pike - no muskie -> species_extra []; NO on-lake gauge (Big East River/Oxtongue River/Fairy Lake at Huntsville stations nearby but not on Peninsula Lake); BsM 0 records for LID 17-6488-50221 (honest empty layer)"
+    },
+    {
+      "id": "skeleton",
+      "name": "Skeleton Lake",
+      "region": {
+        "admin": "CA-ON",
+        "area": "Muskoka"
+      },
+      "enabled": true,
+      "center": [
+        -79.4532,
+        45.2513
+      ],
+      "zoom": 11,
+      "area_km2": 20.5,
+      "dataPath": "data/lakes/skeleton/",
+      "species_extra": [],
+      "features": {
+        "waterlevel": false
+      },
+      "cv": {
+        "mae_m": 0.544,
+        "rmse_m": 1.354,
+        "median_abs_err_m": 0.2,
+        "n": 487
+      },
+      "_notes": "2004 GPS survey (main 2004-06-30), 15265 soundings inside (envelope 15290); CV MAE 0.544/RMSE 1.354, 0-5m med 0.186; Secchi 12.0 (ARA); ARA cold regime, max depth 79.9m measured (stale ARA 64m overridden, documented); NO gauge (search documented: Rosseau River/Dee River not on lake); BsM 41 records/40 sites, 0 muskie sets, no muskie in ARA -> species_extra []; contour survey present (step12 run)"
+    },
+    {
+      "id": "vernon",
+      "name": "Lake Vernon",
+      "region": {
+        "admin": "CA-ON",
+        "area": "Muskoka"
+      },
+      "enabled": true,
+      "center": [
+        -79.2933,
+        45.3322
+      ],
+      "zoom": 11,
+      "area_km2": 15.69,
+      "dataPath": "data/lakes/vernon/",
+      "species_extra": [],
+      "features": {
+        "waterlevel": false
+      },
+      "cv": {
+        "mae_m": 0.22,
+        "rmse_m": 0.443,
+        "median_abs_err_m": 0.103,
+        "n": 639
+      },
+      "_notes": "2005 GPS survey, 21628 soundings inside; CV MAE 0.22/RMSE 0.443; Secchi 3.2 (ARA); ARA cold, max 38m (measured sounding max 42.9m - deeper than ARA, documented); fish community LT/cisco/SMB/LMB/walleye/pike - no muskie -> species_extra []; NO on-lake gauge (Big East River/Fairy Lake at Huntsville nearby but not on Lake Vernon); BsM 0 records for LID 17-6337-50206 (honest empty layer)"
+    },
+    {
+      "id": "charleston",
+      "name": "Charleston Lake",
+      "region": {
+        "admin": "CA-ON",
+        "area": "Eastern Ontario"
+      },
+      "enabled": true,
+      "center": [
+        -76.0155,
+        44.5347
+      ],
+      "zoom": 11,
+      "area_km2": 26.04,
+      "dataPath": "data/lakes/charleston/",
+      "species_extra": [],
+      "features": {
+        "waterlevel": false
+      },
+      "cv": {
+        "mae_m": 0.977,
+        "rmse_m": 1.71,
+        "median_abs_err_m": 0.492,
+        "n": 2160
+      },
+      "_notes": "2004-08-01 GPS survey (161857 soundings; +6364 from 2009-08-01), 168221 inside polygon; CV MAE 0.977/RMSE 1.71, n 2160 - PASSES 2m gate; Secchi 5.3 (ARA); ARA Cold regime, max 91.1m (measured sounding max 97.3m - deeper than ARA, documented); fish LT/burbot/cisco/alewife/eel/lake whitefish/SMB/LMB/walleye/pike - no muskie (BsM 0 muskie sets, ARA fish community none) -> species_extra []; NO on-lake gauge (nearest 02MA001 LYNDHURST CREEK AT LYNDHURST not on lake) -> waterlevel feature omitted; BsM 79 sites/79 sets (2008+2014); DD openmeteo_local (2000-2025, median ice-off DOY 100, Aug-1 dd mean 1839); step12 contour validation run; S2 weed 2022-2025 4 scenes; access_points 12 (LIO retry after initial 500)"
+    },
+    {
+      "id": "haybay",
+      "name": "Hay Bay",
+      "region": {
+        "admin": "CA-ON",
+        "area": "Eastern Ontario"
+      },
+      "enabled": true,
+      "center": [
+        -77.0124,
+        44.1044
+      ],
+      "zoom": 12,
+      "area_km2": 55.6,
+      "dataPath": "data/lakes/haybay/",
+      "species_extra": [],
+      "features": {
+        "waterlevel": false
+      },
+      "cv": null,
+      "_notes": "HYBRID: CHS NONNA-10 multibeam (2018 MBES + lidar, CATZOC A1) in channel/Bygotts zone ~24% of water; Ontario LIO transect-survey depth contours (interpolated, no sounding validation) in upper Hay Bay arm"
+    },
+    {
+      "id": "ramsey",
+      "name": "Ramsey Lake",
+      "region": {
+        "admin": "CA-ON",
+        "area": "Sudbury"
+      },
+      "enabled": true,
+      "center": [
+        -80.9531,
+        46.4754
+      ],
+      "zoom": 12,
+      "area_km2": 8.0,
+      "dataPath": "data/lakes/ramsey/",
+      "species_extra": [],
+      "features": {
+        "waterlevel": false
+      },
+      "cv": {
+        "mae_m": 0.252,
+        "rmse_m": 0.556,
+        "median_abs_err_m": 0.1,
+        "n": 623
+      },
+      "_notes": "2005 GPS survey (2005-06-15), 26447 soundings inside; CV MAE 0.252/RMSE 0.556, 0-5m med 0.174; step12 contour validation (331 lines): MAE 0.44; ARA FMZ10 cold, Secchi 6.0, max 21.3m (deepest sounding 25.4m documented in manifest), mean 9.3m; fish LT/BT/splake/RBT/walleye/pike/SMB - NO muskie -> species_extra []; no on-lake WSC gauge (waterlevel off, search documented); BsM 0 records for LID 17-5038-51474 (honest empty layer)"
+    },
+    {
+      "id": "vermilion",
+      "name": "Vermilion Lake",
+      "region": {
+        "admin": "CA-ON",
+        "area": "Sudbury"
+      },
+      "enabled": true,
+      "center": [
+        -81.4002,
+        46.5199
+      ],
+      "zoom": 11.5,
+      "area_km2": 11.2,
+      "dataPath": "data/lakes/vermilion/",
+      "species_extra": [],
+      "features": {
+        "waterlevel": false
+      },
+      "cv": {
+        "mae_m": 0.105,
+        "rmse_m": 0.21,
+        "median_abs_err_m": 0.055,
+        "n": 650
+      },
+      "_notes": "GPS survey (collection year not recorded in LIO - null dates), 18957 soundings inside; CV MAE 0.105/RMSE 0.210, 0-5m med 0.059; step12 contour validation (74 lines): MAE 0.154; ARA FMZ10 warm, Secchi 3.7, max 13.1m (DEM 13.0 consistent); fish pike/walleye/SMB/cisco/whitefish - NO muskie -> species_extra []; no gauge; BsM 0 records (honest empty layer)"
+    },
+    {
+      "id": "long",
+      "name": "Long Lake",
+      "region": {
+        "admin": "CA-ON",
+        "area": "Sudbury"
+      },
+      "enabled": true,
+      "center": [
+        -81.0885,
+        46.3673
+      ],
+      "zoom": 12,
+      "area_km2": 8.67,
+      "dataPath": "data/lakes/long/",
+      "species_extra": [],
+      "features": {
+        "waterlevel": false
+      },
+      "cv": {
+        "mae_m": 0.317,
+        "rmse_m": 0.612,
+        "median_abs_err_m": 0.144,
+        "n": 817
+      },
+      "_notes": "GPS survey (collection year not recorded in LIO - null dates), 57986 soundings inside; CV MAE 0.317/RMSE 0.612, 0-5m med 0.181; step12 contour validation (374 lines): MAE 0.38; ARA FMZ10 warm, Secchi 4.5, max 36.5m (deepest sounding 38.5m), mean 9.3m; fish LT/cisco/walleye/pike/LMB/SMB - NO muskie -> species_extra []; no gauge (search documented); BsM 0 records (honest empty layer)"
+    },
+    {
+      "id": "mcfarlane",
+      "name": "McFarlane Lake",
+      "region": {
+        "admin": "CA-ON",
+        "area": "Sudbury"
+      },
+      "enabled": true,
+      "center": [
+        -80.9602,
+        46.4175
+      ],
+      "zoom": 12.5,
+      "area_km2": 1.69,
+      "dataPath": "data/lakes/mcfarlane/",
+      "species_extra": [],
+      "features": {
+        "waterlevel": false
+      },
+      "cv": {
+        "mae_m": 0.293,
+        "rmse_m": 0.555,
+        "median_abs_err_m": 0.118,
+        "n": 195
+      },
+      "_notes": "GPS survey (collection year not recorded in LIO - null dates), 17498 soundings inside; CV MAE 0.293/RMSE 0.555, 0-5m med 0.257; step12 contour validation (139 lines): MAE 0.287; ARA FMZ10 warm, Secchi 2.4, max 20.1m (soundings 21.1m); MUSKIE present in ARA + walleye/pike/LMB/SMB; no gauge; BsM 0 records (honest empty layer)"
+    },
+    {
+      "id": "wanapitei",
+      "name": "Lake Wanapitei",
+      "region": {
+        "admin": "CA-ON",
+        "area": "Sudbury"
+      },
+      "enabled": true,
+      "center": [
+        -80.735,
+        46.736
+      ],
+      "zoom": 10.5,
+      "area_km2": 133.2,
+      "dataPath": "data/lakes/wanapitei/",
+      "species_extra": [],
+      "features": {
+        "waterlevel": true
+      },
+      "cv": null,
+      "vintage": true,
+      "aliases": [
+        "wahnapitae",
+        "lake wahnapitae"
+      ],
+      "_notes": "CONTOUR-DERIVED: vintage imperial transect survey (no spot soundings exist - bathymetry index POINT_IND=No); 196 contour features, 36994 vertices, 3.7-124.4m at 12ft intervals; NO hold-out CV possible - cross_validation null, in-sample consistency MAE 0.090 (documented, not validation); deepest measured contour 124.4m - basin floor to DEM max 127.7m is extrapolated (stated in manifest); ARA max 141.7m is record-only; confidence = distance-to-contour; ARA cold FMZ10, Secchi 6.2, mean 38.3m; fish LT/cisco/whitefish/burbot/walleye/pike/SMB/RBT/BT - NO muskie, NO LMB -> species_extra []; gauge 02DA002 WANAPITEI LAKE AT BOWLANDS BAY (1953-1992 discontinued, ref 267.556m) -> waterlevel.json built; BsM 63 sites 2010, 0 muskie; search alias: wahnapitae"
+    }
+  ]
+}

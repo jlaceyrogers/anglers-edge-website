@@ -4,21 +4,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Anglers Edge — Offline Fishing Maps for Ontario Lakes | Where to Fish Today</title>
-<meta name="description" content="Anglers Edge is a free offline fishing app for 42 Ontario lakes. It scores every spot on the lake for your species and today's conditions, ranks the best fishing spots, and explains why — no account, no signal needed.">
+<meta name="description" content="Anglers Edge is a free offline fishing app for 70 lakes across Ontario and Quebec. It scores every spot on the lake for your species and today's conditions, ranks the best fishing spots, and explains why — no account, no signal needed.">
 <link rel="canonical" href="https://anglersedge.fishing/">
+<meta name="apple-itunes-app" content="app-id=6798728175">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#F7F2E6">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Anglers Edge">
 <meta property="og:url" content="https://anglersedge.fishing/">
 <meta property="og:title" content="Anglers Edge — Where to fish today, and why">
-<meta property="og:description" content="Free offline fishing maps for 42 Ontario lakes. The app scores every spot for your species and conditions and shows its work. Cast three times — can you out-fish the model?">
+<meta property="og:description" content="Free offline fishing maps for 70 lakes across Ontario and Quebec. The app scores every spot for your species and conditions and shows its work. Cast three times — can you out-fish the model?">
 <meta property="og:image" content="https://anglersedge.fishing/assets/og.png">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Anglers Edge — Where to fish today, and why. Offline fishing maps for Ontario lakes.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Anglers Edge — Where to fish today, and why">
-<meta name="twitter:description" content="Free offline fishing maps for 42 Ontario lakes that score every spot and explain the answer.">
+<meta name="twitter:description" content="Free offline fishing maps for 70 lakes across Ontario and Quebec that score every spot and explain the answer.">
 <meta name="twitter:image" content="https://anglersedge.fishing/assets/og.png">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
@@ -30,10 +31,10 @@
 {"@context":"https://schema.org","@graph":[
  {"@type":"Organization","@id":"https://anglersedge.fishing/#org","name":"Anglers Edge","url":"https://anglersedge.fishing/","logo":"https://anglersedge.fishing/assets/icon.png","email":"jlr@backroadscarclub.com"},
  {"@type":"WebSite","@id":"https://anglersedge.fishing/#site","url":"https://anglersedge.fishing/","name":"Anglers Edge","publisher":{"@id":"https://anglersedge.fishing/#org"}},
- {"@type":"MobileApplication","name":"Anglers Edge","operatingSystem":"iOS","applicationCategory":"SportsApplication","description":"Offline fishing intelligence for Ontario lakes: scores every spot for your species and today's conditions, ranks the best spots, and explains why.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@id":"https://anglersedge.fishing/#org"},"url":"https://anglersedge.fishing/","image":"https://anglersedge.fishing/assets/icon.png","featureList":"Offline bathymetry maps for 42 Ontario lakes; 11-factor spot scoring; plain-language score breakdowns; 48-hour bite window; GPS tracks and waypoints; one-tap catch log; GPX export"},
+ {"@type":"MobileApplication","name":"Anglers Edge","operatingSystem":"iOS","applicationCategory":"SportsApplication","description":"Offline fishing intelligence for Ontario lakes: scores every spot for your species and today's conditions, ranks the best spots, and explains why.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@id":"https://anglersedge.fishing/#org"},"url":"https://anglersedge.fishing/","image":"https://anglersedge.fishing/assets/icon.png","featureList":"Offline bathymetry maps for 70 lakes across Ontario and Quebec; 11-factor spot scoring; plain-language score breakdowns; 48-hour bite window; GPS tracks and waypoints; one-tap catch log; GPX export"},
  {"@type":"FAQPage","mainEntity":[
   {"@type":"Question","name":"Does it really work with no signal?","acceptedAnswer":{"@type":"Answer","text":"Yes. The lake maps, structure layers and the scoring model are all inside the app. Only optional live weather and the 48-hour forecast need a connection."}},
-  {"@type":"Question","name":"Which lakes does Anglers Edge cover?","acceptedAnswer":{"@type":"Answer","text":"42 Ontario lakes including Lake Muskoka, Lake Rosseau, Lake Joseph, Lake of Bays, Lake Temagami, Lake Scugog, Pigeon Lake, Rice Lake and Balsam Lake, with more lakes across Canada and the United States in development."}},
+  {"@type":"Question","name":"Which lakes does Anglers Edge cover?","acceptedAnswer":{"@type":"Answer","text":"70 lakes across Ontario and Quebec including Lake Muskoka, Lake Rosseau, Lake Joseph, Lake of Bays, Lake Temagami, Lake Scugog, Pigeon Lake, Rice Lake and Balsam Lake, with more lakes across Canada and the United States in development."}},
   {"@type":"Question","name":"Is it a navigation app?","acceptedAnswer":{"@type":"Answer","text":"No. Anglers Edge is an analysis tool. It never routes you anywhere and the source bathymetry is not navigation-grade. Carry official charts."}},
   {"@type":"Question","name":"What data does the app collect?","acceptedAnswer":{"@type":"Answer","text":"Nothing. There is no account. Location is used on the phone to show your position on the map and never leaves the device."}},
   {"@type":"Question","name":"Will features be paywalled later?","acceptedAnswer":{"@type":"Answer","text":"No. Nothing that is free today will ever move behind a paywall. Any paid extras would only ever be things that did not exist before."}}
@@ -169,6 +170,36 @@ footer a{margin-right:16px}
 .tier .fine{margin-top:18px;padding-top:14px;border-top:1px solid var(--line);font-size:14px;color:var(--dim)}
 .tier.partners{display:flex;flex-direction:column}.tier.partners ul{flex:1}.tier.partners .eyebrow{margin-bottom:6px}
 @media(max-width:860px){.pricing-layout{grid-template-columns:1fr}.tier ul.two-col{grid-template-columns:1fr}.big-price{font-size:64px}}
+
+/* ---------- lake pages ---------- */
+.lakepage main{display:block}
+.crumbs{font-size:13px;color:var(--dim);margin-bottom:14px}.crumbs a{color:var(--dim);text-decoration:none}.crumbs a:hover{color:var(--pine)}
+.lakehero{padding:120px 0 28px}.lakehero h1{font-size:clamp(36px,6vw,64px);line-height:1.02;margin:0 0 14px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.lakemap-sec{padding:0 0 40px}.lakemap{margin:0;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:0 2px 8px rgba(40,40,20,.08)}
+.lakemap svg{display:block;width:100%;height:auto;max-height:520px}
+.lakemap figcaption{font-size:13px;color:var(--dim);margin-top:10px;text-align:center}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:18px 0 0}
+.facts div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.facts dt{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.facts dd{margin:4px 0 0;font-family:var(--serif);font-size:22px;font-weight:700;color:var(--ink);line-height:1.15}
+.facts dd small{display:block;font:500 12px/1.4 var(--sans);color:var(--dim);margin-top:2px}
+.spots-sec{padding:20px 0 40px}.spots{list-style:none;padding:0;margin:22px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.spots li{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px}
+.spots .rank{flex:none;width:40px;height:40px;border-radius:12px;color:#FDF9EE;font-family:var(--serif);font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center}
+.spots .rank.good{background:var(--good)}.spots .rank.fair{background:var(--ochre)}
+.spots .meta{font-size:13px;color:var(--dim);margin-bottom:4px}.spots .meta b{color:var(--ink)}
+.spots ul{margin:0;padding-left:18px;font-size:14px;color:var(--ink)}.spots ul li{display:list-item;background:none;border:0;padding:0;margin:0}
+.inapp-sec{padding:30px 0 40px}.inapp-sec .two{display:grid;grid-template-columns:1.3fr 1fr;gap:40px}
+.inapp-sec .side{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px}
+.inapp-sec h3{font-size:16px;margin:0 0 8px}.inapp-sec .side h3+p{margin-top:0}.inapp-sec .side p{margin:0 0 20px;font-size:14px;color:var(--dim)}
+.tags,.nearby{line-height:2}.tags span{display:inline-block;background:var(--inset);border-radius:999px;padding:2px 10px;font-size:13px;color:var(--ink);margin:0 6px 4px 0}
+.nearby a{display:inline-block;margin:0 10px 4px 0;font-weight:600}
+.ticks{list-style:none;padding:0;margin:0 0 22px}.ticks li{padding-left:24px;position:relative;margin:6px 0;color:var(--ink)}.ticks li::before{content:"✓";position:absolute;left:0;color:var(--good);font-weight:700}
+.honest-sec{padding:0 0 60px}.honest-sec p{font-size:14px;max-width:70ch}
+.lakes-index h1{font-size:clamp(34px,5vw,56px)}.lakes-index h2{font-size:26px;margin:36px 0 8px}.lakes-index h3{font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin:22px 0 8px}
+.lakes-index .lakes{margin-top:0}.lakes-index .lakes a{text-decoration:none;color:var(--ink);font-weight:600}.lakes-index .lakes li{display:flex;justify-content:space-between;gap:10px}.lakes-index .lakes small{color:var(--dim);font-weight:500}
+@media (max-width:760px){.inapp-sec .two{grid-template-columns:1fr}.lakehero{padding-top:96px}}
 </style>
 </head>
 <body>
@@ -311,24 +342,24 @@ footer a{margin-right:16px}
     <figure><img src="assets/02-breakdown.jpg?v=d48c698e" width="1040" height="2250" loading="lazy" alt="Fishing spot score breakdown in Anglers Edge"><figcaption>Why a spot rates</figcaption></figure>
     <figure><img src="assets/04-conditions.jpg?v=c4d4ff68" width="1040" height="2250" loading="lazy" alt="48-hour bite window forecast and conditions in Anglers Edge"><figcaption>When to go: the 48-hour bite window</figcaption></figure>
     <figure><img src="assets/05-layers.jpg?v=4a51ac29" width="1040" height="2250" loading="lazy" alt="Bathymetry, contours and structure layers in Anglers Edge"><figcaption>Structure layers, one tap each</figcaption></figure>
-    <figure><img src="assets/03-lakes.jpg?v=87e3f7e4" width="1040" height="2250" loading="lazy" alt="Lake switcher with 42 Ontario lakes in Anglers Edge"><figcaption>42 Ontario lakes and counting</figcaption></figure>
+    <figure><img src="assets/03-lakes.jpg?v=87e3f7e4" width="1040" height="2250" loading="lazy" alt="Lake switcher with 70 lakes across Ontario and Quebec in Anglers Edge"><figcaption>70 lakes across Ontario and Quebec and counting</figcaption></figure>
     <figure><img src="assets/06-night.jpg?v=849fcaa0" width="1040" height="2250" loading="lazy" alt="Anglers Edge Night Ops dark map for dawn and dusk fishing"><figcaption>Night Ops for the dawn run</figcaption></figure>
   </div>
 </div></section>
 
 <section id="lakes" style="padding-top:0"><div class="wrap">
   <div class="eyebrow">Lakes we cover</div>
-  <h2>42 Ontario lakes, mapped and scored. More on the way.</h2>
-  <p class="lede">Every lake ships with detailed bathymetry, structure layers and its own calibrated scoring model — from Muskoka and the Kawarthas to Temagami and the Northwest. Packs for the rest of Canada and the United States are in development.</p>
-  <ul class="lakes"><li>Abram Lake</li><li>Balsam Lake</li><li>Bigwind Lake</li><li>Black Sturgeon Lakes</li><li>Charleston Lake</li><li>Chemong Lake</li><li>Drag Lake</li><li>Dryberry Lake</li><li>Fairy Lake</li><li>Hay Bay</li><li>Kakagi Lake</li><li>Kashagawigamog Lake</li><li>Kawagama Lake</li><li>Kennisis Lake</li><li>Kushog Lake</li><li>Lac des Mille Lacs</li><li>Lake Bernard</li><li>Lake Joseph</li><li>Lake Muskoka</li><li>Lake Rosseau</li><li>Lake Scugog</li><li>Lake Temagami</li><li>Lake Vernon</li><li>Lake Wanapitei</li><li>Lake of Bays</li><li>Long Lake</li><li>Mary Lake</li><li>McFarlane Lake</li><li>Mindemoya Lake</li><li>Minnitaki Lake</li><li>Muldrew Lakes</li><li>Pakwash Lake</li><li>Pelican Lake</li><li>Peninsula Lake</li><li>Perrault Lake</li><li>Pigeon Lake</li><li>Ramsey Lake</li><li>Rice Lake</li><li>Skeleton Lake</li><li>Vermilion Lake</li><li>Wabaskang Lake</li><li>Wabigoon Lake</li></ul>
-  <p class="dim" style="font-size:14px;margin-top:14px">Don't see your lake? Request it from inside the app — requests drive what we build next.</p>
+  <h2>70 lakes, mapped and scored. More on the way.</h2>
+  <p class="lede">Every lake ships with detailed bathymetry, structure layers and its own calibrated scoring model — from Muskoka and the Kawarthas to Temagami, the Northwest and Quebec's Eastern Townships. Each lake has its own page. Packs for the rest of Canada and the United States are in development.</p>
+  <ul class="lakes"><li><a href="/lakes/abram">Abram Lake</a></li><li><a href="/lakes/balsam">Balsam Lake</a></li><li><a href="/lakes/biggull">Big Gull Lake</a></li><li><a href="/lakes/bigrideau">Big Rideau Lake</a></li><li><a href="/lakes/bigwind">Bigwind Lake</a></li><li><a href="/lakes/blacksturgeon">Black Sturgeon Lakes</a></li><li><a href="/lakes/blackstone">Blackstone Lake</a></li><li><a href="/lakes/bobs">Bobs Lake</a></li><li><a href="/lakes/boshkung">Boshkung Lake</a></li><li><a href="/lakes/qc-brome">Brome, Lac</a></li><li><a href="/lakes/buckhorn">Buckhorn Lake</a></li><li><a href="/lakes/cameron">Cameron Lake</a></li><li><a href="/lakes/charleston">Charleston Lake</a></li><li><a href="/lakes/chemong">Chemong Lake</a></li><li><a href="/lakes/crane">Crane Lake</a></li><li><a href="/lakes/drag">Drag Lake</a></li><li><a href="/lakes/dryberry">Dryberry Lake</a></li><li><a href="/lakes/fairy">Fairy Lake</a></li><li><a href="/lakes/haybay">Hay Bay</a></li><li><a href="/lakes/head">Head Lake</a></li><li><a href="/lakes/kakagi">Kakagi Lake</a></li><li><a href="/lakes/kashagawigamog">Kashagawigamog Lake</a></li><li><a href="/lakes/kawagama">Kawagama Lake</a></li><li><a href="/lakes/kennisis">Kennisis Lake</a></li><li><a href="/lakes/kushog">Kushog Lake</a></li><li><a href="/lakes/lacdesmillelacs">Lac des Mille Lacs</a></li><li><a href="/lakes/bernard">Lake Bernard</a></li><li><a href="/lakes/joseph">Lake Joseph</a></li><li><a href="/lakes/manitou">Lake Manitou</a></li><li><a href="/lakes/muskoka">Lake Muskoka</a></li><li><a href="/lakes/rosseau">Lake Rosseau</a></li><li><a href="/lakes/scugog">Lake Scugog</a></li><li><a href="/lakes/temagami">Lake Temagami</a></li><li><a href="/lakes/vernon">Lake Vernon</a></li><li><a href="/lakes/wanapitei">Lake Wanapitei</a></li><li><a href="/lakes/bays">Lake of Bays</a></li><li><a href="/lakes/long">Long Lake</a></li><li><a href="/lakes/lowerbuckhorn">Lower Buckhorn Lake</a></li><li><a href="/lakes/mary">Mary Lake</a></li><li><a href="/lakes/qc-massawippi">Massawippi, Lac</a></li><li><a href="/lakes/mcfarlane">McFarlane Lake</a></li><li><a href="/lakes/qc-memphremagog">Memphrémagog, Lac</a></li><li><a href="/lakes/mindemoya">Mindemoya Lake</a></li><li><a href="/lakes/minnitaki">Minnitaki Lake</a></li><li><a href="/lakes/mountain">Mountain Lake</a></li><li><a href="/lakes/muldrew">Muldrew Lakes</a></li><li><a href="/lakes/newboro">Newboro Lake</a></li><li><a href="/lakes/qc-nemiscachingue">Némiscachingue, Lac</a></li><li><a href="/lakes/qc-ouareau">Ouareau, Lac</a></li><li><a href="/lakes/pakwash">Pakwash Lake</a></li><li><a href="/lakes/pelican">Pelican Lake</a></li><li><a href="/lakes/peninsula">Peninsula Lake</a></li><li><a href="/lakes/perrault">Perrault Lake</a></li><li><a href="/lakes/pickerel">Pickerel Lake</a></li><li><a href="/lakes/pigeon">Pigeon Lake</a></li><li><a href="/lakes/ramsey">Ramsey Lake</a></li><li><a href="/lakes/rice">Rice Lake</a></li><li><a href="/lakes/sharbot">Sharbot Lake</a></li><li><a href="/lakes/skeleton">Skeleton Lake</a></li><li><a href="/lakes/stony">Stony Lake</a></li><li><a href="/lakes/sturgeon">Sturgeon Lake</a></li><li><a href="/lakes/qc-tourbis">Tourbis, Lac</a></li><li><a href="/lakes/qc-tremblant">Tremblant, Lac</a></li><li><a href="/lakes/trout">Trout Lake</a></li><li><a href="/lakes/twelvemile">Twelve Mile Lake</a></li><li><a href="/lakes/vermilion">Vermilion Lake</a></li><li><a href="/lakes/wabaskang">Wabaskang Lake</a></li><li><a href="/lakes/wabigoon">Wabigoon Lake</a></li><li><a href="/lakes/white">White Lake</a></li><li><a href="/lakes/qc-iles">Îles, Lac des</a></li></ul>
+  <p class="dim" style="font-size:14px;margin-top:14px"><a href="/lakes">See every lake by province and area →</a> Don't see yours? Request it from inside the app — requests drive what we build next.</p>
 </div></section>
 
 <section id="faq" style="padding-top:0"><div class="wrap faq">
   <div class="eyebrow">Questions</div>
   <h2>Straight answers.</h2>
   <details><summary>Does it really work with no signal?</summary><p>Yes. The lake maps, structure layers and the scoring model are all inside the app. The only things that need a connection are optional live weather and the 48-hour forecast — and the app tells you plainly when they're unavailable.</p></details>
-  <details><summary>Which lakes?</summary><p>19 Ontario lakes are built in, with 23 more downloadable today — 42 in all, from Muskoka to Temagami — and packs are being built for the rest of Canada and the United States. Missing yours? Request it from inside the app.</p></details>
+  <details><summary>Which lakes?</summary><p>19 Ontario lakes are built in, with 51 more downloadable free inside the app — 70 in all, from Muskoka to Temagami — and packs are being built for the rest of Canada and the United States. Missing yours? Request it from inside the app.</p></details>
   <details><summary>Is it a navigation app?</summary><p>No. Anglers Edge is an analysis tool. It never routes you anywhere and the source bathymetry is not navigation-grade. Carry official charts.</p></details>
   <details><summary>What do you collect about me?</summary><p>Nothing. There's no account. Your location is used on your phone to show your position on the map and never leaves it. Waypoints and catches are stored on the device.</p></details>
   <details><summary>Will you paywall features later?</summary><p>No. Nothing that is free today will ever move behind a paywall. If we ever add paid extras, they will only ever be things that didn't exist before.</p></details>

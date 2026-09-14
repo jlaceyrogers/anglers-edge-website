@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fairy Lake Fishing Map — Depth, Structure &amp; Ranked Spots | Anglers Edge</title>
+<meta name="description" content="Free offline fishing map for Fairy Lake (Muskoka, Ontario): surveyed depth, humps, breaklines and 8 ranked spots with reasons, for Smallmouth Bass, Largemouth Bass, Walleye. Analysis only, not for navigation.">
+<link rel="canonical" href="https://anglersedge.fishing/lakes/fairy">
+<meta name="apple-itunes-app" content="app-id=6798728175">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Anglers Edge">
+<meta property="og:url" content="https://anglersedge.fishing/lakes/fairy">
+<meta property="og:title" content="Fairy Lake Fishing Map — Depth, Structure &amp; Ranked Spots | Anglers Edge">
+<meta property="og:description" content="Free offline fishing map for Fairy Lake (Muskoka, Ontario): surveyed depth, humps, breaklines and 8 ranked spots with reasons, for Smallmouth Bass, Largemouth Bass, Walleye. Analysis only, not for navigation.">
+<meta property="og:image" content="https://anglersedge.fishing/assets/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fairy Lake Fishing Map — Depth, Structure &amp; Ranked Spots | Anglers Edge">
+<meta name="twitter:description" content="Free offline fishing map for Fairy Lake (Muskoka, Ontario): surveyed depth, humps, breaklines and 8 ranked spots with reasons, for Smallmouth Bass, Largemouth Bass, Walleye. Analysis only, not for navigation.">
+<meta name="twitter:image" content="https://anglersedge.fishing/assets/og.png">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,600;0,8..60,700;1,8..60,600&display=swap">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Anglers Edge", "item": "https://anglersedge.fishing/"}, {"@type": "ListItem", "position": 2, "name": "Lakes", "item": "https://anglersedge.fishing/lakes"}, {"@type": "ListItem", "position": 3, "name": "Fairy Lake", "item": "https://anglersedge.fishing/lakes/fairy"}]}, {"@context": "https://schema.org", "@type": "LakeBodyOfWater", "name": "Fairy Lake", "geo": {"@type": "GeoCoordinates", "latitude": 45.3288, "longitude": -79.1807}, "containedInPlace": {"@type": "AdministrativeArea", "name": "Ontario"}, "subjectOf": {"@type": "WebPage", "url": "https://anglersedge.fishing/lakes/fairy", "name": "Fairy Lake Fishing Map — Depth, Structure & Ranked Spots | Anglers Edge"}}]</script>
+<style>:root{--paper:#F7F2E6;--card:#FFFDF6;--inset:#EFE7D4;--ink:#22301F;--dim:#5F6D5C;--pine:#2C5942;--deep:#1B2A21;--orange:#D9480F;--ochre:#C08A12;--good:#217A4B;--bad:#A63A2B;--line:rgba(38,48,38,.16);--serif:"Source Serif 4",ui-serif,Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--pine)}h1,h2,h3,.serif{font-family:var(--serif);letter-spacing:-.01em;text-wrap:balance}
+h2{font-size:clamp(30px,4.2vw,44px);line-height:1.08;margin:0 0 14px;font-weight:700}
+h3{font-size:22px;margin:0 0 6px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:10px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+.lede{font-size:19px;color:var(--dim);max-width:62ch;margin:0}
+/* nav */
+.nav{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;pointer-events:none}
+.nav>*{pointer-events:auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:var(--serif);font-weight:700;font-size:20px}
+.brand img{width:36px;height:36px;border-radius:10px}
+.nav-links{display:flex;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px;box-shadow:0 2px 8px rgba(40,40,20,.12)}
+.nav-links a{text-decoration:none;color:var(--ink);font-weight:600;font-size:14px;padding:8px 14px;border-radius:999px}
+.nav-links a:hover{background:var(--inset)}
+.nav-links a.cta{background:var(--ink);color:var(--paper)}
+@media(max-width:760px){.nav-links a:not(.cta){display:none}}
+/* hero */
+.hero{position:relative;height:100svh;min-height:640px;overflow:hidden;background:var(--paper)}
+.stage{position:absolute;inset:0}
+#lake{position:absolute;inset:0;cursor:crosshair;opacity:0;transition:opacity .8s ease}
+#lake.ready{opacity:1}#lake canvas{display:block;width:100%!important;height:100%!important}
+.hero-copy{position:absolute;left:24px;top:96px;max-width:520px;z-index:5;pointer-events:none}
+.hero-copy>*{pointer-events:auto}
+.hero h1{font-size:clamp(42px,6.4vw,76px);line-height:1.0;margin:0 0 14px;font-weight:700}
+.hero h1 em{font-style:italic;color:var(--orange)}
+.hero p{font-size:18px;color:var(--dim);max-width:44ch;margin:0 0 20px}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:14px 22px;font-weight:700;text-decoration:none;font-size:15px;border:1px solid transparent;cursor:pointer;font-family:var(--sans)}
+.btn.primary{background:var(--ink);color:var(--paper)}.btn.ghost{background:var(--card);color:var(--ink);border-color:var(--line)}
+.btn.orange{background:var(--orange);color:#fff}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap}
+.game-hud{position:absolute;right:24px;top:96px;z-index:5;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 18px;box-shadow:0 2px 8px rgba(40,40,20,.12);min-width:220px}
+.game-hud .gh-t{font-family:var(--serif);font-weight:700;font-size:18px;margin-bottom:6px}
+.game-hud .gh-row{display:flex;justify-content:space-between;font-size:14px;color:var(--dim);margin:3px 0}
+.game-hud b{color:var(--ink);font-variant-numeric:tabular-nums}
+.game-hud .gh-hint{font-size:12px;color:var(--dim);margin-top:8px;border-top:1px solid var(--line);padding-top:8px}
+.cast-card{position:absolute;left:50%;bottom:110px;transform:translate(-50%,20px);z-index:5;background:var(--ink);color:var(--paper);border-radius:16px;padding:14px 20px;box-shadow:0 10px 30px rgba(40,40,20,.25);opacity:0;transition:all .25s ease;text-align:center;max-width:90vw}
+.cast-card.show{opacity:1;transform:translate(-50%,0)}
+.cast-card .cc-title{font-family:var(--serif);font-weight:700;font-size:24px}
+.cast-card.excellent .cc-title,.cast-card.good .cc-title{color:#8FD0A8}.cast-card.fair .cc-title{color:#E0B860}.cast-card.poor .cc-title{color:#E59A8A}
+.cast-card .cc-sub{font-size:13px;opacity:.8;margin-top:2px}
+.reveal{position:absolute;inset:0;z-index:8;display:flex;align-items:center;justify-content:center;background:rgba(247,242,230,.72);backdrop-filter:blur(4px);opacity:0;pointer-events:none;transition:opacity .35s ease}
+.reveal.show{opacity:1;pointer-events:auto}
+.reveal .rv{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px 30px;max-width:520px;text-align:center;box-shadow:0 10px 40px rgba(40,40,20,.2);margin:0 20px}
+.reveal .rv-nums{display:flex;gap:28px;justify-content:center;margin:12px 0}
+.reveal .rv-nums div{font-family:var(--serif);font-size:44px;font-weight:700;line-height:1}.reveal .rv-nums b{font-weight:700}
+.reveal .rv-nums span{display:block;font:600 12px var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-top:6px}
+.reveal .rv-you{color:var(--ink)}.reveal .rv-model{color:var(--pine)}
+.reveal p{color:var(--dim);margin:8px 0 18px}
+.scroll-hint{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:5;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+@media(max-width:760px){
+.hero{height:auto;min-height:0;display:flex;flex-direction:column;padding-top:76px}
+.hero-copy{position:static!important;order:-1;max-width:none;padding:8px 20px 18px;top:auto;left:auto}
+.hero h1{font-size:40px}.hero p{font-size:16px;max-width:none}
+.stage{position:relative;inset:auto;height:64vh;min-height:420px;margin:0 12px 22px;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 10px 30px rgba(40,40,20,.14);background:#EDE6D6}
+.game-hud{position:absolute;left:10px;top:10px;right:auto;bottom:auto;min-width:0;padding:10px 12px;border-radius:14px}
+.game-hud .gh-t{font-size:15px;margin-bottom:2px}.game-hud .gh-row{font-size:12px;gap:14px}.game-hud .gh-hint{font-size:11px;margin-top:6px;padding-top:6px}
+.cast-card{bottom:14px;padding:10px 16px}.cast-card .cc-title{font-size:20px}
+.reveal .rv{padding:22px 18px}.reveal .rv-nums div{font-size:36px}
+.scroll-hint{display:none}
+}
+/* pillars */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:860px){.grid3{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px 24px;box-shadow:0 1px 2px rgba(40,40,20,.06)}
+.card .n{width:44px;height:44px;border-radius:14px;background:var(--pine);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:700;font-size:20px;margin-bottom:14px}
+.card p{color:var(--dim);margin:6px 0 0;font-size:15px}
+/* factors */
+.factors{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:22px}
+.factor{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:14px}
+.factor b{display:block;font-family:var(--serif);font-size:16px}
+.factor span{color:var(--dim);font-size:13px}
+/* split */
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+@media(max-width:860px){.split{grid-template-columns:1fr}}
+.phone{width:min(300px,80%);height:auto;border-radius:36px;border:8px solid var(--deep);box-shadow:0 20px 50px rgba(40,40,20,.25);display:block;margin:0 auto}
+.check li{margin:10px 0;padding-left:28px;position:relative;color:var(--ink)}
+.check li::before{content:"";position:absolute;left:0;top:10px;width:14px;height:14px;border-radius:50%;background:var(--good)}
+.check{list-style:none;padding:0;margin:18px 0 0}
+/* pricing */
+.dark{background:var(--deep);color:var(--paper)}.dark .lede,.dark .card p{color:#B8C4B5}.dark .eyebrow{color:#E0A83C}.dark h2{color:var(--paper)}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}.tiers.two{grid-template-columns:repeat(2,1fr);max-width:820px}
+@media(max-width:860px){.tiers,.tiers.two{grid-template-columns:1fr}}
+.tier{background:var(--card);color:var(--ink);border-radius:20px;padding:26px 24px}
+.tier.free{background:#E9F0EA}
+.tier h3{margin-bottom:2px}.tier .price{color:var(--orange);font-weight:700;margin-bottom:12px}
+.tier ul{padding-left:18px;margin:0}.tier li{margin:7px 0;font-size:15px;color:#33402F}
+.promise{margin-top:26px;font-family:var(--serif);font-style:italic;font-size:20px;color:#E0A83C;text-align:center}
+/* table */
+.cmp{width:100%;min-width:600px;border-collapse:collapse;margin-top:22px;font-size:15px;overflow:hidden;border-radius:16px;box-shadow:0 1px 2px rgba(40,40,20,.06)}
+.cmp th,.cmp td{padding:12px 14px;text-align:center;border-bottom:1px solid var(--line);background:var(--card)}
+.cmp th{background:var(--pine);color:var(--paper);font-family:var(--serif);font-size:15px}
+.cmp td:first-child{text-align:left;font-weight:600}.cmp td.us{background:#E9F0EA;color:var(--pine);font-weight:700}
+.cmp .y{color:var(--good);font-weight:700}.cmp .n{color:var(--bad)}.cmp .p{color:var(--ochre)}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -24px;padding:0 24px}
+/* gallery */
+.gallery{display:flex;gap:18px;overflow-x:auto;padding:12px 4px 20px;scroll-snap-type:x mandatory;scrollbar-width:none}
+.gallery::-webkit-scrollbar{display:none}
+.gallery figure{flex:none;margin:0;scroll-snap-align:start;width:220px}
+.gallery img{width:100%;height:auto;border-radius:22px;border:6px solid var(--deep);display:block;box-shadow:0 10px 30px rgba(40,40,20,.18)}
+.gallery figcaption{font-size:13px;color:var(--dim);margin-top:10px;text-align:center}
+/* faq */
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:10px 0}
+.faq summary{cursor:pointer;font-weight:700;font-family:var(--serif);font-size:18px}
+.faq p{color:var(--dim);margin:8px 0 0}
+/* footer */
+footer{padding:48px 0 60px;border-top:1px solid var(--line);color:var(--dim);font-size:14px}
+footer .row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer a{margin-right:16px}
+.badge{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--paper);border-radius:12px;padding:10px 16px;text-decoration:none;font-weight:700}
+.badge small{display:block;font-weight:500;font-size:11px;opacity:.75;line-height:1}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cast-card,.reveal,#lake{transition:none}}
+
+.hint-touch{display:none}@media(hover:none){.hint-mouse{display:none}.hint-touch{display:inline}}
+
+.lakes{list-style:none;padding:0;margin:22px 0 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:8px 18px}
+.lakes li{font-size:15px;padding:8px 0;border-bottom:1px solid var(--line);color:var(--ink)}
+
+.pricing-layout{display:grid;grid-template-columns:1.45fr 1fr;gap:18px;max-width:980px;margin:30px auto 0;align-items:stretch}
+.tier.big{padding:30px 32px}.big-price{font-family:var(--serif);font-weight:700;font-size:84px;line-height:1;color:var(--pine);display:flex;align-items:baseline;gap:6px;margin-bottom:6px}
+.big-price .cur{font-size:40px}.big-price .per{font:600 13px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-left:8px}
+.tier.big h3{font-size:24px;margin:4px 0 14px}
+.tier ul.two-col{display:grid;grid-template-columns:1fr 1fr;gap:4px 24px}
+.tier .fine{margin-top:18px;padding-top:14px;border-top:1px solid var(--line);font-size:14px;color:var(--dim)}
+.tier.partners{display:flex;flex-direction:column}.tier.partners ul{flex:1}.tier.partners .eyebrow{margin-bottom:6px}
+@media(max-width:860px){.pricing-layout{grid-template-columns:1fr}.tier ul.two-col{grid-template-columns:1fr}.big-price{font-size:64px}}
+
+/* ---------- lake pages ---------- */
+.lakepage main{display:block}
+.crumbs{font-size:13px;color:var(--dim);margin-bottom:14px}.crumbs a{color:var(--dim);text-decoration:none}.crumbs a:hover{color:var(--pine)}
+.lakehero{padding:120px 0 28px}.lakehero h1{font-size:clamp(36px,6vw,64px);line-height:1.02;margin:0 0 14px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.lakemap-sec{padding:0 0 40px}.lakemap{margin:0;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:0 2px 8px rgba(40,40,20,.08)}
+.lakemap svg{display:block;width:100%;height:auto;max-height:520px}
+.lakemap figcaption{font-size:13px;color:var(--dim);margin-top:10px;text-align:center}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:18px 0 0}
+.facts div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.facts dt{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.facts dd{margin:4px 0 0;font-family:var(--serif);font-size:22px;font-weight:700;color:var(--ink);line-height:1.15}
+.facts dd small{display:block;font:500 12px/1.4 var(--sans);color:var(--dim);margin-top:2px}
+.spots-sec{padding:20px 0 40px}.spots{list-style:none;padding:0;margin:22px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.spots li{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px}
+.spots .rank{flex:none;width:40px;height:40px;border-radius:12px;color:#FDF9EE;font-family:var(--serif);font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center}
+.spots .rank.good{background:var(--good)}.spots .rank.fair{background:var(--ochre)}
+.spots .meta{font-size:13px;color:var(--dim);margin-bottom:4px}.spots .meta b{color:var(--ink)}
+.spots ul{margin:0;padding-left:18px;font-size:14px;color:var(--ink)}.spots ul li{display:list-item;background:none;border:0;padding:0;margin:0}
+.inapp-sec{padding:30px 0 40px}.inapp-sec .two{display:grid;grid-template-columns:1.3fr 1fr;gap:40px}
+.inapp-sec .side{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px}
+.inapp-sec h3{font-size:16px;margin:0 0 8px}.inapp-sec .side h3+p{margin-top:0}.inapp-sec .side p{margin:0 0 20px;font-size:14px;color:var(--dim)}
+.tags,.nearby{line-height:2}.tags span{display:inline-block;background:var(--inset);border-radius:999px;padding:2px 10px;font-size:13px;color:var(--ink);margin:0 6px 4px 0}
+.nearby a{display:inline-block;margin:0 10px 4px 0;font-weight:600}
+.ticks{list-style:none;padding:0;margin:0 0 22px}.ticks li{padding-left:24px;position:relative;margin:6px 0;color:var(--ink)}.ticks li::before{content:"✓";position:absolute;left:0;color:var(--good);font-weight:700}
+.honest-sec{padding:0 0 60px}.honest-sec p{font-size:14px;max-width:70ch}
+.lakes-index h1{font-size:clamp(34px,5vw,56px)}.lakes-index h2{font-size:26px;margin:36px 0 8px}.lakes-index h3{font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin:22px 0 8px}
+.lakes-index .lakes{margin-top:0}.lakes-index .lakes a{text-decoration:none;color:var(--ink);font-weight:600}.lakes-index .lakes li{display:flex;justify-content:space-between;gap:10px}.lakes-index .lakes small{color:var(--dim);font-weight:500}
+@media (max-width:760px){.inapp-sec .two{grid-template-columns:1fr}.lakehero{padding-top:96px}}
+</style>
+</head>
+<body class="lakepage">
+<nav class="nav">
+  <a class="brand" href="/#top"><img src="/assets/icon.png?v=757a77b5" alt="">Anglers Edge</a>
+  <div class="nav-links"><a href="/#why">Why</a><a href="/#how">How it works</a><a href="/#pricing">Pricing</a><a href="/#compare">Compare</a><a href="/#lakes">Lakes</a><a class="cta" href="/#get">Get the app</a></div>
+</nav>
+<main>
+<section class="lakehero"><div class="wrap">
+  <div class="crumbs"><a href="/">Anglers Edge</a> · <a href="/lakes">Lakes</a> · <a href="/lakes#CA-ON">Ontario</a></div>
+  <div class="eyebrow">Muskoka, Ontario</div>
+  <h1>Fairy Lake fishing map</h1>
+  <p class="lede">Surveyed depth, structure and ranked fishing spots for Fairy Lake — scored for your species and the day&#x27;s conditions, and it all works with no signal. Free.</p>
+  <div class="cta-row">
+    <a class="btn primary" href="https://apps.apple.com/app/anglers-edge/id6798728175">Get it free on the App Store</a>
+    <a class="btn ghost" href="/#how">How the scoring works</a>
+  </div>
+</div></section>
+
+<section class="lakemap-sec"><div class="wrap">
+  <figure class="lakemap">
+    <svg viewBox="0 0 688 552" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Outline of Fairy Lake with its top ranked fishing spots"><rect width="688" height="552" fill="#F3ECDB" rx="14"/><path d="M563.5 24.0 L556.4 32.2 L559.3 39.1 L567.7 40.9 L570.3 46.8 L570.3 50.2 L566.3 53.7 L566.3 61.6 L572.6 74.8 L575.4 91.9 L570.7 107.0 L564.0 109.3 L555.3 102.5 L518.1 99.5 L502.5 100.9 L496.8 107.1 L477.3 114.6 L459.4 110.1 L456.1 111.6 L455.7 115.1 L451.5 114.8 L440.3 107.1 L431.9 110.7 L428.6 106.2 L430.5 96.3 L427.1 96.3 L425.3 92.8 L425.3 82.1 L421.5 81.1 L415.1 86.9 L409.5 84.1 L406.8 77.1 L407.2 69.7 L398.4 64.2 L392.3 64.0 L385.4 66.4 L374.6 77.8 L361.1 79.7 L350.2 87.9 L348.8 85.8 L351.1 78.1 L330.8 82.7 L325.2 90.3 L325.1 96.0 L316.3 99.5 L313.2 106.1 L306.7 99.3 L266.8 112.4 L266.2 97.9 L258.7 91.5 L259.9 85.7 L279.4 75.2 L278.1 71.7 L252.6 83.2 L253.7 89.1 L250.9 82.5 L247.1 84.0 L252.8 93.6 L251.5 98.7 L247.9 93.0 L243.2 95.1 L233.2 108.3 L217.4 116.0 L215.3 113.5 L219.0 108.5 L218.1 101.5 L208.7 97.3 L196.8 97.1 L188.4 102.8 L176.0 102.9 L160.9 108.5 L157.6 105.2 L151.8 104.4 L150.3 100.5 L150.0 109.1 L142.4 115.2 L131.5 120.5 L128.2 119.7 L123.7 126.1 L110.6 132.6 L110.1 134.8 L101.8 137.1 L95.5 136.7 L94.0 133.2 L97.3 126.2 L96.4 121.7 L93.5 119.9 L89.3 121.2 L87.9 125.5 L92.6 138.4 L89.0 151.5 L95.8 158.5 L100.3 168.6 L97.2 176.0 L102.6 185.1 L100.4 190.3 L87.7 201.7 L81.6 217.2 L88.6 226.6 L105.2 219.4 L113.5 219.2 L124.2 215.0 L131.9 217.7 L131.5 221.0 L105.4 234.4 L95.2 234.0 L87.8 236.9 L83.4 234.1 L79.9 226.2 L71.0 224.3 L57.0 226.2 L42.7 233.4 L33.4 234.1 L24.0 240.7 L26.4 249.9 L42.0 258.7 L45.3 264.7 L58.3 269.5 L78.3 289.1 L91.1 290.4 L96.8 295.4 L91.9 305.1 L106.7 328.4 L108.6 345.6 L124.9 357.4 L118.4 372.7 L106.5 390.2 L107.5 403.7 L109.9 399.7 L113.2 400.0 L122.2 390.7 L157.3 388.0 L168.8 395.0 L180.2 396.0 L179.8 398.7 L170.6 403.8 L167.3 420.7 L174.5 426.7 L180.5 421.1 L185.9 423.4 L183.4 428.9 L186.8 435.6 L180.8 455.6 L164.9 461.0 L149.4 471.5 L137.2 469.0 L118.0 480.8 L108.7 479.7 L79.3 498.6 L57.4 504.5 L53.7 508.2 L57.8 514.1 L77.4 512.8 L77.6 521.3 L80.5 524.1 L97.6 528.0 L99.9 527.2 L103.4 516.9 L119.1 520.6 L128.9 517.8 L145.0 508.2 L156.0 510.3 L166.2 507.0 L189.5 508.7 L203.0 505.7 L212.3 506.4 L218.9 500.6 L226.6 486.1 L221.1 472.7 L216.0 469.9 L221.8 459.1 L215.3 447.1 L220.5 433.4 L260.7 412.6 L273.3 412.8 L285.6 402.0 L296.6 398.8 L303.6 401.3 L315.9 398.0 L323.6 394.2 L332.9 384.5 L335.4 368.6 L326.3 347.3 L319.5 341.6 L322.0 335.1 L322.3 316.5 L337.9 296.9 L352.6 289.2 L364.0 289.6 L367.3 293.0 L375.2 315.7 L384.4 321.8 L418.9 325.6 L421.2 327.5 L420.9 332.6 L428.5 336.1 L440.1 328.5 L443.0 323.9 L442.5 319.4 L430.9 309.6 L425.7 297.0 L431.5 289.1 L441.7 291.3 L436.8 289.5 L447.3 266.9 L447.5 251.7 L451.0 247.9 L451.2 236.4 L461.4 216.9 L458.4 210.0 L464.6 193.7 L502.7 170.3 L508.6 171.9 L510.0 168.2 L521.4 165.8 L540.1 169.4 L551.9 180.0 L557.3 178.2 L571.6 195.2 L590.3 202.1 L598.3 200.0 L612.2 202.3 L653.1 193.9 L657.2 190.0 L663.9 173.3 L664.0 152.3 L659.0 144.3 L649.6 140.4 L647.3 134.8 L635.1 132.8 L627.9 126.6 L600.2 115.9 L600.1 109.3 L589.9 111.8 L589.7 97.9 L593.0 98.3 L597.4 93.9 L597.7 89.3 L606.0 80.8 L610.0 69.1 L599.5 49.2 L585.9 30.1 L572.0 30.1 L563.5 24.0ZM237.2 319.9 L245.9 307.6 L253.0 305.3 L260.7 308.0 L265.4 316.3 L252.8 332.1 L263.8 340.6 L259.5 352.5 L242.7 367.8 L238.0 368.5 L235.7 362.3 L231.2 357.2 L224.0 354.6 L219.7 345.1 L212.7 343.9 L209.0 348.0 L205.1 345.3 L212.8 326.1 L221.4 320.4 L223.5 326.1 L227.8 327.7 L237.2 319.9ZM342.8 242.7 L347.4 244.0 L344.8 250.0 L336.7 253.3 L335.7 247.5 L342.8 242.7ZM326.8 248.4 L328.1 251.1 L323.1 258.2 L323.7 261.1 L318.6 262.4 L317.1 260.6 L322.3 250.3 L326.8 248.4Z" fill="#9EBCCB" stroke="#5F7F8E" stroke-width="1.2" fill-rule="evenodd"/><g><circle cx="320.2" cy="178.2" r="13" fill="#217A4B" stroke="#FFFDF6" stroke-width="2.5"/><text x="320.2" y="182.7" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">1</text></g><g><circle cx="257.9" cy="359.9" r="13" fill="#217A4B" stroke="#FFFDF6" stroke-width="2.5"/><text x="257.9" y="364.4" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">2</text></g><g><circle cx="542.7" cy="162.1" r="13" fill="#217A4B" stroke="#FFFDF6" stroke-width="2.5"/><text x="542.7" y="166.6" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">3</text></g><g><circle cx="321.0" cy="317.5" r="13" fill="#217A4B" stroke="#FFFDF6" stroke-width="2.5"/><text x="321.0" y="322.0" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">4</text></g><g><circle cx="353.0" cy="243.9" r="13" fill="#C08A12" stroke="#FFFDF6" stroke-width="2.5"/><text x="353.0" y="248.4" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">5</text></g><g><circle cx="277.9" cy="117.6" r="13" fill="#C08A12" stroke="#FFFDF6" stroke-width="2.5"/><text x="277.9" y="122.1" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">6</text></g><g><circle cx="138.1" cy="217.8" r="13" fill="#C08A12" stroke="#FFFDF6" stroke-width="2.5"/><text x="138.1" y="222.3" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">7</text></g><g><circle cx="355.0" cy="156.4" r="13" fill="#C08A12" stroke="#FFFDF6" stroke-width="2.5"/><text x="355.0" y="160.9" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">8</text></g></svg>
+    <figcaption>Top 8 ranked spots for Smallmouth Bass in summer, on the surveyed outline. Analysis only — not for navigation.</figcaption>
+  </figure>
+  <dl class="facts"><div><dt>Water area</dt><dd>6.99 km²</dd></div><div><dt>Survey</dt><dd>2004<small>GPS</small></dd></div><div><dt>Soundings</dt><dd>78,311<small>measured depth points</small></dd></div><div><dt>Model accuracy</dt><dd>±0.202 m<small>cross-validated</small></dd></div><div><dt>Data</dt><dd>Survey Grade<small>built in, free</small></dd></div></dl>
+</div></section>
+
+<section class="spots-sec"><div class="wrap">
+  <div class="eyebrow">Where it rates, and why</div>
+  <h2>The top spots on Fairy Lake, explained.</h2>
+  <p class="lede">Every spot carries its reasons. In the app the ranking changes with your species, the season, the date, wind and pressure — this is the default read.</p>
+  <ol class="spots"><li><div class="rank good">1</div><div><div class="meta"><b>5.95 m</b> deep · score <b>0.65</b> · good</div><ul><li>Depth 6.0 m in band 4-12 m</li><li>On 8.9 m rise hump (crown 3.4 m)</li><li>Point (289 m, 6 m contour) 7 m away</li></ul></div></li><li><div class="rank good">2</div><div><div class="meta"><b>10.42 m</b> deep · score <b>0.64</b> · good</div><ul><li>Depth 10.4 m in band 4-12 m</li><li>Steep break (14 deg mean) 42 m away</li><li>Point (283 m, 8 m contour) 15 m away</li></ul></div></li><li><div class="rank good">3</div><div><div class="meta"><b>11.85 m</b> deep · score <b>0.61</b> · good</div><ul><li>Depth 11.8 m in band 4-12 m</li><li>Steep break (11 deg mean) 32 m away</li><li>Point (279 m, 12 m contour) 1 m away</li></ul></div></li><li><div class="rank good">4</div><div><div class="meta"><b>10.87 m</b> deep · score <b>0.60</b> · good</div><ul><li>Depth 10.9 m in band 4-12 m</li><li>Steep break (18 deg mean) 77 m away</li><li>Point (755 m, 10 m contour) 4 m away</li></ul></div></li><li><div class="rank fair">5</div><div><div class="meta"><b>11.78 m</b> deep · score <b>0.59</b> · fair</div><ul><li>Depth 11.8 m in band 4-12 m</li><li>Steep break (12 deg mean) 78 m away</li><li>Point (834 m, 14 m contour) 3 m away</li></ul></div></li><li><div class="rank fair">6</div><div><div class="meta"><b>11.9 m</b> deep · score <b>0.55</b> · fair</div><ul><li>Depth 11.9 m in band 4-12 m</li><li>Steep break (11 deg mean) 63 m away</li><li>Inside turn 3 m away</li></ul></div></li><li><div class="rank fair">7</div><div><div class="meta"><b>11.61 m</b> deep · score <b>0.53</b> · fair</div><ul><li>Depth 11.6 m in band 4-12 m</li><li>Steep break (12 deg mean) 92 m away</li><li>Point (355 m, 14 m contour) 1 m away</li></ul></div></li><li><div class="rank fair">8</div><div><div class="meta"><b>10.8 m</b> deep · score <b>0.52</b> · fair</div><ul><li>Depth 10.8 m in band 4-12 m</li><li>Saddle at 12.3 m (hump-shore) 70 m away</li><li>Point (517 m, 12 m contour) 3 m away</li></ul></div></li></ol>
+</div></section>
+
+<section class="inapp-sec"><div class="wrap two">
+  <div>
+    <div class="eyebrow">In the app</div>
+    <h2>Fairy Lake is built into Anglers Edge.</h2>
+    <p>Open the app and it&#x27;s already there — no download, no signal needed.</p>
+    <ul class="ticks">
+      <li>Full-resolution depth map, contours and hillshade</li>
+      <li>Humps, saddles, breaklines, points, flats and weed as layers</li>
+      <li>Every spot re-scored for your species, date, wind and pressure</li>
+      <li>48-hour bite window, one-tap catch log, waypoints and GPX export</li>
+      <li>Works with no signal, forever</li>
+    </ul>
+    <a class="btn primary" href="https://apps.apple.com/app/anglers-edge/id6798728175">Download Anglers Edge</a>
+  </div>
+  <div class="side">
+    <h3>Species scored here</h3>
+    <p class="tags"><span>Smallmouth Bass</span><span>Largemouth Bass</span><span>Walleye</span><span>Northern Pike</span><span>Lake Trout</span><span>Lake Whitefish</span></p>
+    <h3>Named water</h3><p class="tags"><span>Timber Bay</span><span>Alice Island</span><span>Antler Island</span><span>One Tree Island</span><span>Rock Island</span></p>
+    <h3>Nearby lakes</h3>
+    <p class="nearby"><a href="/lakes/peninsula">Peninsula Lake</a> <a href="/lakes/vernon">Lake Vernon</a> <a href="/lakes/mary">Mary Lake</a> <a href="/lakes/bays">Lake of Bays</a> <a href="/lakes/skeleton">Skeleton Lake</a> <a href="/lakes/bigwind">Bigwind Lake</a></p>
+  </div>
+</div></section>
+
+<section class="honest-sec"><div class="wrap">
+  <div class="eyebrow">Where the data comes from</div>
+  <p class="dim">Bathymetry for Fairy Lake comes from a 2004 GPS with 78,311 measured soundings; the depth model cross-validates to ±0.202 m on held-out points. Source: Land Information Ontario (Open Government Licence – Ontario). Anglers Edge is an analysis tool, not a navigation aid — carry official charts.</p>
+</div></section>
+</main>
+<footer><div class="wrap row">
+  <div>© 2026 Anglers Edge · Analysis only — not for navigation.</div>
+  <div><a href="/privacy.html">Privacy</a><a href="mailto:jlr@backroadscarclub.com">Support</a><a href="/#top">Top</a></div>
+</div></footer>
+</body>
+</html>

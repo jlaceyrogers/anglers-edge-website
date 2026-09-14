@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tourbis, Lac Fishing Map — Depth, Structure &amp; Ranked Spots | Anglers Edge</title>
+<meta name="description" content="Free offline fishing map for Tourbis, Lac (Lanaudière, Quebec): surveyed depth, humps, breaklines and 8 ranked spots with reasons, for Smallmouth Bass, Largemouth Bass, Walleye. Analysis only, not for navigation.">
+<link rel="canonical" href="https://anglersedge.fishing/lakes/qc-tourbis">
+<meta name="apple-itunes-app" content="app-id=6798728175">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Anglers Edge">
+<meta property="og:url" content="https://anglersedge.fishing/lakes/qc-tourbis">
+<meta property="og:title" content="Tourbis, Lac Fishing Map — Depth, Structure &amp; Ranked Spots | Anglers Edge">
+<meta property="og:description" content="Free offline fishing map for Tourbis, Lac (Lanaudière, Quebec): surveyed depth, humps, breaklines and 8 ranked spots with reasons, for Smallmouth Bass, Largemouth Bass, Walleye. Analysis only, not for navigation.">
+<meta property="og:image" content="https://anglersedge.fishing/assets/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tourbis, Lac Fishing Map — Depth, Structure &amp; Ranked Spots | Anglers Edge">
+<meta name="twitter:description" content="Free offline fishing map for Tourbis, Lac (Lanaudière, Quebec): surveyed depth, humps, breaklines and 8 ranked spots with reasons, for Smallmouth Bass, Largemouth Bass, Walleye. Analysis only, not for navigation.">
+<meta name="twitter:image" content="https://anglersedge.fishing/assets/og.png">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,600;0,8..60,700;1,8..60,600&display=swap">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Anglers Edge", "item": "https://anglersedge.fishing/"}, {"@type": "ListItem", "position": 2, "name": "Lakes", "item": "https://anglersedge.fishing/lakes"}, {"@type": "ListItem", "position": 3, "name": "Tourbis, Lac", "item": "https://anglersedge.fishing/lakes/qc-tourbis"}]}, {"@context": "https://schema.org", "@type": "LakeBodyOfWater", "name": "Tourbis, Lac", "geo": {"@type": "GeoCoordinates", "latitude": 47.303, "longitude": -74.2231}, "containedInPlace": {"@type": "AdministrativeArea", "name": "Quebec"}, "subjectOf": {"@type": "WebPage", "url": "https://anglersedge.fishing/lakes/qc-tourbis", "name": "Tourbis, Lac Fishing Map — Depth, Structure & Ranked Spots | Anglers Edge"}}]</script>
+<style>:root{--paper:#F7F2E6;--card:#FFFDF6;--inset:#EFE7D4;--ink:#22301F;--dim:#5F6D5C;--pine:#2C5942;--deep:#1B2A21;--orange:#D9480F;--ochre:#C08A12;--good:#217A4B;--bad:#A63A2B;--line:rgba(38,48,38,.16);--serif:"Source Serif 4",ui-serif,Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--pine)}h1,h2,h3,.serif{font-family:var(--serif);letter-spacing:-.01em;text-wrap:balance}
+h2{font-size:clamp(30px,4.2vw,44px);line-height:1.08;margin:0 0 14px;font-weight:700}
+h3{font-size:22px;margin:0 0 6px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:10px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+.lede{font-size:19px;color:var(--dim);max-width:62ch;margin:0}
+/* nav */
+.nav{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;pointer-events:none}
+.nav>*{pointer-events:auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:var(--serif);font-weight:700;font-size:20px}
+.brand img{width:36px;height:36px;border-radius:10px}
+.nav-links{display:flex;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px;box-shadow:0 2px 8px rgba(40,40,20,.12)}
+.nav-links a{text-decoration:none;color:var(--ink);font-weight:600;font-size:14px;padding:8px 14px;border-radius:999px}
+.nav-links a:hover{background:var(--inset)}
+.nav-links a.cta{background:var(--ink);color:var(--paper)}
+@media(max-width:760px){.nav-links a:not(.cta){display:none}}
+/* hero */
+.hero{position:relative;height:100svh;min-height:640px;overflow:hidden;background:var(--paper)}
+.stage{position:absolute;inset:0}
+#lake{position:absolute;inset:0;cursor:crosshair;opacity:0;transition:opacity .8s ease}
+#lake.ready{opacity:1}#lake canvas{display:block;width:100%!important;height:100%!important}
+.hero-copy{position:absolute;left:24px;top:96px;max-width:520px;z-index:5;pointer-events:none}
+.hero-copy>*{pointer-events:auto}
+.hero h1{font-size:clamp(42px,6.4vw,76px);line-height:1.0;margin:0 0 14px;font-weight:700}
+.hero h1 em{font-style:italic;color:var(--orange)}
+.hero p{font-size:18px;color:var(--dim);max-width:44ch;margin:0 0 20px}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:14px 22px;font-weight:700;text-decoration:none;font-size:15px;border:1px solid transparent;cursor:pointer;font-family:var(--sans)}
+.btn.primary{background:var(--ink);color:var(--paper)}.btn.ghost{background:var(--card);color:var(--ink);border-color:var(--line)}
+.btn.orange{background:var(--orange);color:#fff}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap}
+.game-hud{position:absolute;right:24px;top:96px;z-index:5;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 18px;box-shadow:0 2px 8px rgba(40,40,20,.12);min-width:220px}
+.game-hud .gh-t{font-family:var(--serif);font-weight:700;font-size:18px;margin-bottom:6px}
+.game-hud .gh-row{display:flex;justify-content:space-between;font-size:14px;color:var(--dim);margin:3px 0}
+.game-hud b{color:var(--ink);font-variant-numeric:tabular-nums}
+.game-hud .gh-hint{font-size:12px;color:var(--dim);margin-top:8px;border-top:1px solid var(--line);padding-top:8px}
+.cast-card{position:absolute;left:50%;bottom:110px;transform:translate(-50%,20px);z-index:5;background:var(--ink);color:var(--paper);border-radius:16px;padding:14px 20px;box-shadow:0 10px 30px rgba(40,40,20,.25);opacity:0;transition:all .25s ease;text-align:center;max-width:90vw}
+.cast-card.show{opacity:1;transform:translate(-50%,0)}
+.cast-card .cc-title{font-family:var(--serif);font-weight:700;font-size:24px}
+.cast-card.excellent .cc-title,.cast-card.good .cc-title{color:#8FD0A8}.cast-card.fair .cc-title{color:#E0B860}.cast-card.poor .cc-title{color:#E59A8A}
+.cast-card .cc-sub{font-size:13px;opacity:.8;margin-top:2px}
+.reveal{position:absolute;inset:0;z-index:8;display:flex;align-items:center;justify-content:center;background:rgba(247,242,230,.72);backdrop-filter:blur(4px);opacity:0;pointer-events:none;transition:opacity .35s ease}
+.reveal.show{opacity:1;pointer-events:auto}
+.reveal .rv{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px 30px;max-width:520px;text-align:center;box-shadow:0 10px 40px rgba(40,40,20,.2);margin:0 20px}
+.reveal .rv-nums{display:flex;gap:28px;justify-content:center;margin:12px 0}
+.reveal .rv-nums div{font-family:var(--serif);font-size:44px;font-weight:700;line-height:1}.reveal .rv-nums b{font-weight:700}
+.reveal .rv-nums span{display:block;font:600 12px var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-top:6px}
+.reveal .rv-you{color:var(--ink)}.reveal .rv-model{color:var(--pine)}
+.reveal p{color:var(--dim);margin:8px 0 18px}
+.scroll-hint{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:5;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+@media(max-width:760px){
+.hero{height:auto;min-height:0;display:flex;flex-direction:column;padding-top:76px}
+.hero-copy{position:static!important;order:-1;max-width:none;padding:8px 20px 18px;top:auto;left:auto}
+.hero h1{font-size:40px}.hero p{font-size:16px;max-width:none}
+.stage{position:relative;inset:auto;height:64vh;min-height:420px;margin:0 12px 22px;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 10px 30px rgba(40,40,20,.14);background:#EDE6D6}
+.game-hud{position:absolute;left:10px;top:10px;right:auto;bottom:auto;min-width:0;padding:10px 12px;border-radius:14px}
+.game-hud .gh-t{font-size:15px;margin-bottom:2px}.game-hud .gh-row{font-size:12px;gap:14px}.game-hud .gh-hint{font-size:11px;margin-top:6px;padding-top:6px}
+.cast-card{bottom:14px;padding:10px 16px}.cast-card .cc-title{font-size:20px}
+.reveal .rv{padding:22px 18px}.reveal .rv-nums div{font-size:36px}
+.scroll-hint{display:none}
+}
+/* pillars */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:860px){.grid3{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px 24px;box-shadow:0 1px 2px rgba(40,40,20,.06)}
+.card .n{width:44px;height:44px;border-radius:14px;background:var(--pine);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:700;font-size:20px;margin-bottom:14px}
+.card p{color:var(--dim);margin:6px 0 0;font-size:15px}
+/* factors */
+.factors{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:22px}
+.factor{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:14px}
+.factor b{display:block;font-family:var(--serif);font-size:16px}
+.factor span{color:var(--dim);font-size:13px}
+/* split */
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+@media(max-width:860px){.split{grid-template-columns:1fr}}
+.phone{width:min(300px,80%);height:auto;border-radius:36px;border:8px solid var(--deep);box-shadow:0 20px 50px rgba(40,40,20,.25);display:block;margin:0 auto}
+.check li{margin:10px 0;padding-left:28px;position:relative;color:var(--ink)}
+.check li::before{content:"";position:absolute;left:0;top:10px;width:14px;height:14px;border-radius:50%;background:var(--good)}
+.check{list-style:none;padding:0;margin:18px 0 0}
+/* pricing */
+.dark{background:var(--deep);color:var(--paper)}.dark .lede,.dark .card p{color:#B8C4B5}.dark .eyebrow{color:#E0A83C}.dark h2{color:var(--paper)}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}.tiers.two{grid-template-columns:repeat(2,1fr);max-width:820px}
+@media(max-width:860px){.tiers,.tiers.two{grid-template-columns:1fr}}
+.tier{background:var(--card);color:var(--ink);border-radius:20px;padding:26px 24px}
+.tier.free{background:#E9F0EA}
+.tier h3{margin-bottom:2px}.tier .price{color:var(--orange);font-weight:700;margin-bottom:12px}
+.tier ul{padding-left:18px;margin:0}.tier li{margin:7px 0;font-size:15px;color:#33402F}
+.promise{margin-top:26px;font-family:var(--serif);font-style:italic;font-size:20px;color:#E0A83C;text-align:center}
+/* table */
+.cmp{width:100%;min-width:600px;border-collapse:collapse;margin-top:22px;font-size:15px;overflow:hidden;border-radius:16px;box-shadow:0 1px 2px rgba(40,40,20,.06)}
+.cmp th,.cmp td{padding:12px 14px;text-align:center;border-bottom:1px solid var(--line);background:var(--card)}
+.cmp th{background:var(--pine);color:var(--paper);font-family:var(--serif);font-size:15px}
+.cmp td:first-child{text-align:left;font-weight:600}.cmp td.us{background:#E9F0EA;color:var(--pine);font-weight:700}
+.cmp .y{color:var(--good);font-weight:700}.cmp .n{color:var(--bad)}.cmp .p{color:var(--ochre)}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -24px;padding:0 24px}
+/* gallery */
+.gallery{display:flex;gap:18px;overflow-x:auto;padding:12px 4px 20px;scroll-snap-type:x mandatory;scrollbar-width:none}
+.gallery::-webkit-scrollbar{display:none}
+.gallery figure{flex:none;margin:0;scroll-snap-align:start;width:220px}
+.gallery img{width:100%;height:auto;border-radius:22px;border:6px solid var(--deep);display:block;box-shadow:0 10px 30px rgba(40,40,20,.18)}
+.gallery figcaption{font-size:13px;color:var(--dim);margin-top:10px;text-align:center}
+/* faq */
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:10px 0}
+.faq summary{cursor:pointer;font-weight:700;font-family:var(--serif);font-size:18px}
+.faq p{color:var(--dim);margin:8px 0 0}
+/* footer */
+footer{padding:48px 0 60px;border-top:1px solid var(--line);color:var(--dim);font-size:14px}
+footer .row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer a{margin-right:16px}
+.badge{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--paper);border-radius:12px;padding:10px 16px;text-decoration:none;font-weight:700}
+.badge small{display:block;font-weight:500;font-size:11px;opacity:.75;line-height:1}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cast-card,.reveal,#lake{transition:none}}
+
+.hint-touch{display:none}@media(hover:none){.hint-mouse{display:none}.hint-touch{display:inline}}
+
+.lakes{list-style:none;padding:0;margin:22px 0 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:8px 18px}
+.lakes li{font-size:15px;padding:8px 0;border-bottom:1px solid var(--line);color:var(--ink)}
+
+.pricing-layout{display:grid;grid-template-columns:1.45fr 1fr;gap:18px;max-width:980px;margin:30px auto 0;align-items:stretch}
+.tier.big{padding:30px 32px}.big-price{font-family:var(--serif);font-weight:700;font-size:84px;line-height:1;color:var(--pine);display:flex;align-items:baseline;gap:6px;margin-bottom:6px}
+.big-price .cur{font-size:40px}.big-price .per{font:600 13px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-left:8px}
+.tier.big h3{font-size:24px;margin:4px 0 14px}
+.tier ul.two-col{display:grid;grid-template-columns:1fr 1fr;gap:4px 24px}
+.tier .fine{margin-top:18px;padding-top:14px;border-top:1px solid var(--line);font-size:14px;color:var(--dim)}
+.tier.partners{display:flex;flex-direction:column}.tier.partners ul{flex:1}.tier.partners .eyebrow{margin-bottom:6px}
+@media(max-width:860px){.pricing-layout{grid-template-columns:1fr}.tier ul.two-col{grid-template-columns:1fr}.big-price{font-size:64px}}
+
+/* ---------- lake pages ---------- */
+.lakepage main{display:block}
+.crumbs{font-size:13px;color:var(--dim);margin-bottom:14px}.crumbs a{color:var(--dim);text-decoration:none}.crumbs a:hover{color:var(--pine)}
+.lakehero{padding:120px 0 28px}.lakehero h1{font-size:clamp(36px,6vw,64px);line-height:1.02;margin:0 0 14px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.lakemap-sec{padding:0 0 40px}.lakemap{margin:0;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:0 2px 8px rgba(40,40,20,.08)}
+.lakemap svg{display:block;width:100%;height:auto;max-height:520px}
+.lakemap figcaption{font-size:13px;color:var(--dim);margin-top:10px;text-align:center}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:18px 0 0}
+.facts div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.facts dt{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.facts dd{margin:4px 0 0;font-family:var(--serif);font-size:22px;font-weight:700;color:var(--ink);line-height:1.15}
+.facts dd small{display:block;font:500 12px/1.4 var(--sans);color:var(--dim);margin-top:2px}
+.spots-sec{padding:20px 0 40px}.spots{list-style:none;padding:0;margin:22px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.spots li{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px}
+.spots .rank{flex:none;width:40px;height:40px;border-radius:12px;color:#FDF9EE;font-family:var(--serif);font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center}
+.spots .rank.good{background:var(--good)}.spots .rank.fair{background:var(--ochre)}
+.spots .meta{font-size:13px;color:var(--dim);margin-bottom:4px}.spots .meta b{color:var(--ink)}
+.spots ul{margin:0;padding-left:18px;font-size:14px;color:var(--ink)}.spots ul li{display:list-item;background:none;border:0;padding:0;margin:0}
+.inapp-sec{padding:30px 0 40px}.inapp-sec .two{display:grid;grid-template-columns:1.3fr 1fr;gap:40px}
+.inapp-sec .side{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px}
+.inapp-sec h3{font-size:16px;margin:0 0 8px}.inapp-sec .side h3+p{margin-top:0}.inapp-sec .side p{margin:0 0 20px;font-size:14px;color:var(--dim)}
+.tags,.nearby{line-height:2}.tags span{display:inline-block;background:var(--inset);border-radius:999px;padding:2px 10px;font-size:13px;color:var(--ink);margin:0 6px 4px 0}
+.nearby a{display:inline-block;margin:0 10px 4px 0;font-weight:600}
+.ticks{list-style:none;padding:0;margin:0 0 22px}.ticks li{padding-left:24px;position:relative;margin:6px 0;color:var(--ink)}.ticks li::before{content:"✓";position:absolute;left:0;color:var(--good);font-weight:700}
+.honest-sec{padding:0 0 60px}.honest-sec p{font-size:14px;max-width:70ch}
+.lakes-index h1{font-size:clamp(34px,5vw,56px)}.lakes-index h2{font-size:26px;margin:36px 0 8px}.lakes-index h3{font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin:22px 0 8px}
+.lakes-index .lakes{margin-top:0}.lakes-index .lakes a{text-decoration:none;color:var(--ink);font-weight:600}.lakes-index .lakes li{display:flex;justify-content:space-between;gap:10px}.lakes-index .lakes small{color:var(--dim);font-weight:500}
+@media (max-width:760px){.inapp-sec .two{grid-template-columns:1fr}.lakehero{padding-top:96px}}
+</style>
+</head>
+<body class="lakepage">
+<nav class="nav">
+  <a class="brand" href="/#top"><img src="/assets/icon.png?v=757a77b5" alt="">Anglers Edge</a>
+  <div class="nav-links"><a href="/#why">Why</a><a href="/#how">How it works</a><a href="/#pricing">Pricing</a><a href="/#compare">Compare</a><a href="/#lakes">Lakes</a><a class="cta" href="/#get">Get the app</a></div>
+</nav>
+<main>
+<section class="lakehero"><div class="wrap">
+  <div class="crumbs"><a href="/">Anglers Edge</a> · <a href="/lakes">Lakes</a> · <a href="/lakes#CA-QC">Quebec</a></div>
+  <div class="eyebrow">Lanaudière, Quebec</div>
+  <h1>Tourbis, Lac fishing map</h1>
+  <p class="lede">Surveyed depth, structure and ranked fishing spots for Tourbis, Lac — scored for your species and the day&#x27;s conditions, and it all works with no signal. Free.</p>
+  <div class="cta-row">
+    <a class="btn primary" href="https://apps.apple.com/app/anglers-edge/id6798728175">Get it free on the App Store</a>
+    <a class="btn ghost" href="/#how">How the scoring works</a>
+  </div>
+</div></section>
+
+<section class="lakemap-sec"><div class="wrap">
+  <figure class="lakemap">
+    <svg viewBox="0 0 571 688" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Outline of Tourbis, Lac with its top ranked fishing spots"><rect width="571" height="688" fill="#F3ECDB" rx="14"/><path d="M436.3 43.1 L441.7 41.7 L442.7 51.3 L444.8 56.2 L444.2 57.0 L443.1 56.0 L441.2 59.8 L433.2 66.3 L425.6 75.0 L424.3 77.4 L425.4 81.6 L422.4 82.9 L418.2 81.0 L416.7 81.7 L416.4 84.1 L418.0 89.8 L416.7 94.8 L413.4 96.5 L408.9 96.0 L406.1 93.1 L405.8 88.5 L403.7 87.4 L395.8 89.0 L393.1 90.8 L396.0 94.2 L399.3 92.5 L403.7 94.5 L408.3 98.1 L410.5 101.9 L410.2 105.7 L406.6 106.4 L406.2 108.4 L408.2 112.5 L405.5 115.1 L406.3 119.1 L405.2 122.4 L400.9 124.0 L398.7 122.9 L393.1 123.5 L387.1 126.5 L378.9 123.7 L383.9 132.2 L384.4 136.5 L374.4 141.6 L366.6 147.5 L361.1 149.7 L358.8 152.2 L355.1 157.1 L359.6 165.9 L359.8 168.9 L356.9 172.6 L352.4 173.9 L351.8 175.4 L352.3 180.2 L354.9 182.7 L362.1 186.6 L370.0 189.3 L372.2 188.7 L371.4 187.6 L372.8 185.5 L376.7 186.0 L382.6 194.4 L381.8 197.1 L378.9 197.5 L377.9 199.1 L377.5 209.3 L371.7 211.9 L361.1 222.9 L361.7 223.7 L365.3 222.1 L368.1 224.9 L374.8 221.1 L381.0 225.1 L385.4 230.0 L380.4 245.4 L375.4 251.1 L377.4 258.4 L376.2 264.4 L370.3 263.0 L371.1 257.7 L369.9 256.4 L367.7 257.0 L366.1 259.9 L365.8 263.7 L368.1 267.1 L369.3 272.1 L365.8 278.9 L366.7 281.9 L368.8 284.5 L383.3 289.2 L390.9 294.6 L397.6 304.5 L403.5 308.6 L405.0 312.4 L404.2 321.2 L400.5 330.6 L396.2 331.5 L390.0 335.3 L386.0 339.7 L386.4 343.7 L385.4 345.8 L383.9 346.4 L382.9 345.4 L380.4 347.8 L379.1 346.8 L378.1 349.5 L377.3 349.1 L377.4 351.7 L380.2 356.1 L379.4 360.5 L381.2 369.1 L379.5 370.6 L380.2 375.1 L377.5 377.0 L377.6 380.7 L380.1 384.1 L382.0 383.8 L382.0 381.5 L387.0 381.5 L393.2 387.5 L393.6 391.4 L395.6 388.8 L395.0 384.6 L400.1 381.7 L412.4 401.6 L416.5 403.4 L420.4 400.1 L422.9 401.2 L420.4 409.4 L418.4 410.6 L417.9 412.7 L421.3 413.1 L423.4 416.7 L427.6 418.5 L428.3 424.1 L431.2 424.1 L434.1 422.2 L435.5 424.6 L430.9 431.2 L423.1 437.4 L422.6 441.8 L420.1 442.1 L418.2 444.0 L416.4 449.9 L416.7 459.0 L418.4 460.7 L426.2 456.7 L434.2 458.1 L435.4 465.9 L441.8 470.4 L452.9 468.3 L471.8 456.6 L477.4 455.1 L480.6 446.1 L482.1 443.9 L485.9 442.6 L488.5 436.7 L492.7 432.5 L496.9 420.2 L506.0 410.5 L508.6 405.8 L511.6 406.9 L516.8 402.9 L523.0 404.1 L523.9 400.6 L526.2 398.8 L524.3 401.2 L525.0 403.1 L545.7 413.5 L546.0 422.1 L547.4 425.0 L544.7 426.7 L537.3 425.4 L534.3 421.2 L530.3 421.0 L515.5 429.3 L508.9 436.6 L496.6 444.7 L490.9 454.7 L491.1 462.4 L489.4 465.4 L477.6 478.2 L470.6 491.4 L460.4 500.3 L456.5 501.5 L452.6 499.5 L451.8 496.9 L454.2 494.7 L454.2 492.4 L453.1 491.0 L451.7 492.4 L448.2 489.8 L448.7 485.2 L447.8 483.7 L446.1 486.2 L441.7 485.6 L441.2 483.4 L437.4 483.7 L434.9 480.8 L435.8 475.6 L428.5 468.7 L420.5 466.1 L416.7 466.1 L413.8 469.7 L411.2 469.1 L408.9 470.5 L414.0 474.9 L414.4 477.1 L417.8 480.5 L417.8 489.4 L413.0 492.8 L403.9 493.0 L400.6 491.8 L397.5 488.7 L395.1 485.1 L394.2 476.6 L403.0 466.8 L411.2 462.8 L414.1 463.1 L416.6 460.4 L413.6 458.2 L410.7 458.0 L407.9 455.5 L404.0 456.6 L405.2 452.1 L404.5 451.0 L402.5 455.2 L399.9 453.9 L399.2 451.5 L400.3 448.8 L402.6 448.3 L404.7 449.7 L407.9 444.3 L406.8 442.3 L406.5 444.6 L405.0 444.9 L403.8 440.5 L400.1 434.7 L397.5 435.0 L395.3 433.2 L392.2 436.2 L387.0 436.7 L385.3 438.7 L367.6 442.5 L364.7 444.3 L362.8 447.8 L361.3 443.4 L364.5 435.5 L363.2 433.2 L364.4 428.7 L363.4 424.2 L360.3 422.3 L350.5 422.0 L349.0 422.9 L347.6 425.1 L346.9 430.6 L348.6 447.5 L346.6 450.7 L346.3 454.1 L348.4 460.2 L354.9 469.7 L355.6 472.5 L354.4 474.1 L338.3 459.4 L338.8 448.9 L337.2 446.7 L335.2 447.9 L333.0 446.2 L333.0 436.0 L330.0 431.8 L327.9 430.9 L322.0 439.6 L319.1 437.9 L316.9 438.1 L312.3 443.4 L311.9 448.3 L314.5 452.8 L312.8 458.7 L316.1 466.7 L315.9 471.2 L317.4 471.8 L318.1 470.1 L324.8 469.9 L330.7 475.6 L339.1 488.0 L342.9 491.6 L349.8 495.8 L356.1 496.2 L362.8 502.2 L357.9 506.9 L354.8 508.0 L352.7 507.0 L352.7 511.4 L344.7 506.4 L338.7 500.7 L334.0 489.4 L328.5 480.6 L322.6 478.7 L318.4 474.7 L312.5 472.6 L310.7 469.9 L307.1 469.1 L302.5 470.8 L297.4 464.7 L291.0 463.4 L285.6 453.9 L283.3 454.4 L276.7 460.1 L274.8 458.2 L276.7 453.1 L274.7 447.7 L272.7 448.0 L270.8 450.3 L272.5 455.2 L268.4 457.5 L265.2 463.0 L259.5 464.8 L258.9 463.5 L260.0 462.2 L256.8 462.4 L253.7 464.1 L251.7 468.1 L244.3 471.0 L239.7 474.4 L233.0 474.7 L230.0 473.6 L229.2 475.1 L228.6 480.6 L231.5 484.3 L233.1 491.8 L233.7 509.3 L232.1 509.8 L230.3 505.9 L228.9 505.6 L224.4 513.4 L223.0 514.0 L222.3 510.5 L224.6 502.0 L220.6 504.4 L220.4 512.8 L222.7 517.4 L220.8 530.9 L223.1 528.6 L225.1 531.9 L221.0 537.4 L219.4 543.0 L215.8 544.4 L213.9 548.5 L211.6 549.6 L210.1 555.1 L210.3 556.6 L212.4 557.1 L214.9 554.7 L225.5 555.6 L227.7 554.9 L230.9 559.2 L227.1 563.0 L221.7 565.2 L219.6 568.0 L209.9 573.0 L202.0 583.7 L184.4 615.5 L180.1 627.6 L180.4 629.0 L174.1 638.0 L167.7 650.9 L165.6 645.5 L168.3 636.8 L165.3 636.9 L164.5 635.4 L166.4 629.0 L173.9 614.4 L175.0 614.9 L176.7 611.9 L181.2 608.2 L192.9 578.8 L203.4 563.1 L207.0 555.8 L208.0 546.7 L205.8 546.4 L198.9 550.1 L199.4 544.9 L197.6 542.2 L194.7 548.8 L192.5 546.5 L191.2 547.9 L190.4 549.5 L188.5 548.5 L188.8 531.7 L187.8 530.4 L185.5 533.2 L183.3 533.2 L178.6 523.0 L175.4 525.3 L173.1 529.6 L163.8 532.7 L162.4 535.7 L155.5 535.4 L151.2 533.7 L144.4 533.8 L133.4 540.8 L130.4 546.5 L135.9 559.8 L142.0 566.2 L143.0 569.2 L142.9 591.5 L139.0 597.7 L139.3 599.2 L140.8 599.5 L140.9 601.6 L146.9 607.7 L148.1 610.3 L143.5 621.7 L141.2 622.8 L138.9 621.7 L132.7 623.3 L130.4 622.4 L133.0 614.7 L133.0 613.4 L131.5 612.5 L133.3 607.5 L132.2 600.7 L131.0 599.8 L128.8 603.3 L126.7 600.3 L127.0 596.6 L124.4 595.1 L118.3 598.2 L115.0 603.1 L111.2 604.3 L110.3 606.1 L107.4 606.2 L103.0 613.4 L99.3 613.1 L100.6 609.5 L98.9 608.6 L89.8 612.6 L90.3 614.2 L97.0 614.4 L97.1 616.7 L95.5 617.1 L97.1 618.7 L91.6 622.4 L87.1 621.9 L85.3 623.3 L83.8 626.5 L83.1 633.1 L85.4 635.9 L79.5 638.8 L78.8 632.7 L74.6 625.1 L71.2 621.6 L71.0 619.6 L77.4 610.4 L78.2 603.4 L76.5 601.5 L82.2 594.5 L81.6 591.6 L68.6 599.8 L65.4 604.0 L60.5 607.7 L55.8 622.7 L50.3 624.5 L49.4 628.9 L43.0 634.9 L43.8 636.4 L43.5 641.7 L42.1 647.6 L38.9 653.1 L39.7 655.6 L41.4 656.9 L45.6 650.3 L50.0 650.1 L53.2 654.0 L52.6 657.0 L45.3 664.0 L43.8 662.8 L42.3 663.6 L40.2 662.6 L36.1 663.0 L34.3 661.0 L37.0 656.1 L37.5 652.5 L37.6 644.8 L38.8 643.6 L37.6 637.0 L31.4 632.1 L28.3 633.5 L24.6 638.3 L25.2 633.5 L29.1 626.4 L28.0 623.3 L28.4 618.7 L24.0 618.3 L28.2 617.9 L31.3 619.6 L33.5 618.7 L36.8 614.7 L37.9 609.5 L44.8 600.7 L43.8 596.9 L46.1 592.7 L47.4 586.1 L47.0 583.0 L48.6 579.4 L46.6 564.9 L48.5 560.0 L49.8 547.2 L54.3 544.6 L57.0 538.6 L66.6 533.1 L71.9 521.4 L88.3 517.0 L99.9 508.2 L108.5 498.9 L111.6 489.2 L125.1 474.5 L132.3 464.2 L133.5 460.3 L131.7 454.7 L130.3 453.8 L129.8 448.5 L134.2 435.7 L137.2 433.8 L149.6 432.7 L156.0 437.9 L154.8 443.0 L160.7 447.7 L167.0 456.5 L172.3 455.8 L172.5 452.8 L174.0 452.2 L179.8 456.1 L180.1 457.6 L175.6 460.6 L179.1 464.4 L186.6 461.9 L192.0 455.7 L203.8 455.2 L203.1 458.2 L204.6 458.2 L204.7 455.9 L209.6 453.3 L214.6 448.2 L215.4 445.3 L212.4 443.6 L210.8 439.7 L211.3 428.5 L212.8 422.7 L212.2 418.0 L214.3 412.3 L215.6 413.3 L216.2 416.3 L218.5 417.4 L219.8 416.1 L221.5 403.8 L221.2 402.2 L217.6 399.6 L212.9 390.9 L217.0 388.6 L217.3 392.3 L218.6 393.4 L221.5 391.8 L225.4 392.6 L228.4 390.1 L233.7 378.8 L234.3 365.7 L236.4 361.9 L236.2 360.7 L234.8 360.8 L235.5 355.5 L234.8 345.3 L232.4 343.4 L230.5 339.4 L226.7 338.6 L225.2 340.7 L224.8 332.6 L222.9 326.4 L223.2 325.3 L224.6 325.2 L229.0 327.9 L232.5 318.7 L234.2 321.8 L237.7 322.6 L239.3 318.4 L239.5 312.4 L242.9 311.7 L244.6 312.7 L244.5 320.5 L246.7 324.4 L256.7 329.1 L257.8 325.9 L259.7 325.4 L263.7 326.9 L268.7 325.4 L271.6 327.1 L274.7 326.1 L279.6 319.1 L283.2 317.4 L284.8 314.3 L290.5 311.1 L293.5 311.7 L295.2 308.2 L299.3 305.7 L307.6 309.6 L313.8 309.1 L318.1 310.9 L318.9 316.7 L317.1 319.6 L315.9 321.0 L312.9 318.7 L311.1 321.2 L312.7 325.6 L308.0 323.8 L305.4 326.9 L303.4 332.1 L305.3 341.9 L300.4 347.4 L299.1 344.3 L297.2 343.0 L296.5 349.0 L293.8 355.8 L292.3 356.4 L288.7 354.8 L287.7 357.8 L284.8 359.2 L284.2 363.7 L282.5 365.4 L281.5 363.7 L282.2 353.7 L281.1 351.0 L277.0 350.7 L273.4 356.4 L269.7 355.3 L269.2 364.2 L267.7 364.5 L266.8 361.5 L265.7 361.6 L266.2 375.8 L265.2 381.0 L260.2 381.2 L257.9 385.0 L257.6 365.8 L255.3 358.3 L253.5 355.5 L252.0 355.2 L251.4 364.7 L252.5 372.7 L254.1 375.5 L252.7 378.9 L250.1 378.8 L248.9 377.3 L248.0 378.1 L249.8 380.2 L250.9 385.6 L248.9 396.3 L251.2 395.8 L251.7 391.9 L253.0 391.3 L257.4 395.3 L259.4 400.1 L263.9 400.1 L266.5 402.9 L272.5 404.2 L273.6 402.6 L275.0 403.7 L276.3 397.8 L278.7 401.6 L281.2 402.3 L283.2 406.7 L287.3 411.3 L292.3 412.4 L303.4 417.8 L319.7 421.6 L320.8 413.2 L324.4 407.6 L324.6 400.4 L329.7 400.3 L335.5 397.1 L336.1 385.2 L334.9 377.9 L338.0 356.7 L339.8 354.7 L337.5 350.7 L336.3 337.3 L334.7 333.6 L332.6 332.6 L330.5 326.9 L329.0 325.9 L327.7 326.9 L326.9 318.8 L322.5 317.6 L321.5 313.9 L325.0 312.2 L326.6 313.7 L333.6 305.7 L333.3 301.6 L328.7 296.4 L331.5 273.7 L336.4 267.3 L336.8 261.2 L334.9 259.5 L334.8 248.0 L340.9 233.4 L340.2 227.9 L348.4 221.8 L352.0 214.1 L350.0 210.9 L351.9 202.5 L344.1 194.7 L343.6 190.5 L339.3 186.3 L338.3 181.5 L342.9 165.5 L347.3 159.9 L347.1 154.7 L342.2 149.8 L342.0 146.9 L344.3 142.9 L344.0 141.7 L342.6 141.8 L348.9 137.3 L351.9 137.6 L353.1 135.9 L356.1 135.8 L358.2 132.8 L358.2 128.4 L361.3 124.5 L370.5 118.8 L373.1 118.2 L375.4 119.2 L379.2 116.4 L382.7 112.1 L383.0 109.0 L385.4 106.0 L378.6 96.2 L377.3 88.2 L371.2 70.9 L367.3 67.6 L358.4 54.7 L359.2 45.1 L363.2 40.7 L367.0 41.0 L367.3 39.8 L365.0 37.4 L367.2 32.6 L371.8 30.5 L377.1 30.5 L385.3 27.4 L390.8 27.5 L392.1 24.7 L394.7 24.0 L401.7 25.6 L408.4 31.8 L411.7 32.1 L414.4 33.9 L426.3 44.2 L435.0 44.1 L436.3 43.1ZM348.9 377.6 L346.6 379.0 L346.4 383.0 L349.8 378.2 L348.9 377.6ZM396.4 415.6 L397.0 416.2 L397.6 414.7 L395.6 410.5 L394.1 410.0 L394.2 411.7 L396.4 415.6ZM208.0 541.0 L210.1 541.3 L209.4 537.6 L208.2 536.9 L206.9 537.9 L208.0 541.0ZM250.4 410.8 L248.9 410.0 L247.1 411.7 L250.4 414.2 L253.0 412.8 L252.3 411.3 L250.4 410.8ZM367.8 207.1 L363.6 205.9 L360.3 208.1 L360.4 209.6 L363.0 210.9 L364.1 209.5 L367.8 208.6 L367.8 207.1ZM337.7 411.3 L336.7 410.6 L335.7 412.1 L335.0 416.0 L337.0 421.1 L338.7 419.9 L337.7 411.3ZM196.2 518.0 L194.9 516.8 L192.8 518.3 L193.3 523.6 L194.6 524.5 L195.1 526.7 L197.4 524.1 L196.2 518.0ZM392.2 395.0 L392.4 396.5 L391.0 397.0 L390.9 398.2 L392.8 399.8 L392.2 402.8 L394.9 406.1 L396.2 403.5 L394.7 393.2 L394.3 392.4 L392.1 393.5 L392.2 395.0ZM151.3 458.4 L149.0 454.9 L146.4 459.4 L149.8 469.1 L148.8 470.5 L151.0 471.0 L151.3 472.6 L155.1 471.5 L157.6 465.3 L155.8 460.2 L151.3 458.4Z" fill="#9EBCCB" stroke="#5F7F8E" stroke-width="1.2" fill-rule="evenodd"/><g><circle cx="370.2" cy="360.8" r="13" fill="#217A4B" stroke="#FFFDF6" stroke-width="2.5"/><text x="370.2" y="365.3" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">1</text></g><g><circle cx="315.0" cy="436.0" r="13" fill="#217A4B" stroke="#FFFDF6" stroke-width="2.5"/><text x="315.0" y="440.5" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">2</text></g><g><circle cx="57.1" cy="610.4" r="13" fill="#217A4B" stroke="#FFFDF6" stroke-width="2.5"/><text x="57.1" y="614.9" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">3</text></g><g><circle cx="359.2" cy="281.9" r="13" fill="#217A4B" stroke="#FFFDF6" stroke-width="2.5"/><text x="359.2" y="286.4" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">4</text></g><g><circle cx="364.4" cy="257.7" r="13" fill="#217A4B" stroke="#FFFDF6" stroke-width="2.5"/><text x="364.4" y="262.2" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">5</text></g><g><circle cx="474.1" cy="480.5" r="13" fill="#217A4B" stroke="#FFFDF6" stroke-width="2.5"/><text x="474.1" y="485.0" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">6</text></g><g><circle cx="116.5" cy="547.1" r="13" fill="#217A4B" stroke="#FFFDF6" stroke-width="2.5"/><text x="116.5" y="551.6" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">7</text></g><g><circle cx="352.6" cy="377.4" r="13" fill="#217A4B" stroke="#FFFDF6" stroke-width="2.5"/><text x="352.6" y="381.9" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">8</text></g></svg>
+    <figcaption>Top 8 ranked spots for Smallmouth Bass in summer, on the surveyed outline. Analysis only — not for navigation.</figcaption>
+  </figure>
+  <dl class="facts"><div><dt>Water area</dt><dd>13.87 km²</dd></div><div><dt>Deepest sounding</dt><dd>48.5 m</dd></div><div><dt>Survey</dt><dd>2011<small>Échosondeur à faisceau unique</small></dd></div><div><dt>Soundings</dt><dd>5,455<small>measured depth points</small></dd></div><div><dt>Model accuracy</dt><dd>±0.562 m<small>cross-validated</small></dd></div><div><dt>Data</dt><dd>Survey Grade<small>free download · 3.5 MB</small></dd></div></dl>
+</div></section>
+
+<section class="spots-sec"><div class="wrap">
+  <div class="eyebrow">Where it rates, and why</div>
+  <h2>The top spots on Tourbis, Lac, explained.</h2>
+  <p class="lede">Every spot carries its reasons. In the app the ranking changes with your species, the season, the date, wind and pressure — this is the default read.</p>
+  <ol class="spots"><li><div class="rank good">1</div><div><div class="meta"><b>7.75 m</b> deep · score <b>0.66</b> · good</div><ul><li>Depth 7.8 m in band 4-12 m</li><li>Steep break (14 deg mean) 2 m away</li><li>Point (397 m, 8 m contour) 5 m away</li></ul></div></li><li><div class="rank good">2</div><div><div class="meta"><b>10.21 m</b> deep · score <b>0.66</b> · good</div><ul><li>Depth 10.2 m in band 4-12 m</li><li>Steep break (11 deg mean) 22 m away</li><li>Point (318 m, 8 m contour) 4 m away</li></ul></div></li><li><div class="rank good">3</div><div><div class="meta"><b>10.08 m</b> deep · score <b>0.65</b> · good</div><ul><li>Depth 10.1 m in band 4-12 m</li><li>Steep break (11 deg mean) 33 m away</li><li>Point (312 m, 8 m contour) 3 m away</li></ul></div></li><li><div class="rank good">4</div><div><div class="meta"><b>11.03 m</b> deep · score <b>0.64</b> · good</div><ul><li>Depth 11.0 m in band 4-12 m</li><li>Steep break (15 deg mean) 40 m away</li><li>Point (238 m, 10 m contour) 2 m away</li></ul></div></li><li><div class="rank good">5</div><div><div class="meta"><b>8 m</b> deep · score <b>0.64</b> · good</div><ul><li>Depth 8.0 m in band 4-12 m</li><li>Steep break (14 deg mean) 41 m away</li><li>Point (239 m, 6 m contour) 4 m away</li></ul></div></li><li><div class="rank good">6</div><div><div class="meta"><b>8.94 m</b> deep · score <b>0.62</b> · good</div><ul><li>Depth 8.9 m in band 4-12 m</li><li>Steep break (13 deg mean) 41 m away</li><li>Point (281 m, 6 m contour) 5 m away</li></ul></div></li><li><div class="rank good">7</div><div><div class="meta"><b>11.88 m</b> deep · score <b>0.62</b> · good</div><ul><li>Depth 11.9 m in band 4-12 m</li><li>Steep break (14 deg mean) 13 m away</li><li>Point (235 m, 12 m contour) 0 m away</li></ul></div></li><li><div class="rank good">8</div><div><div class="meta"><b>11.87 m</b> deep · score <b>0.62</b> · good</div><ul><li>Depth 11.9 m in band 4-12 m</li><li>Steep break (12 deg mean) 20 m away</li><li>Saddle at 18.0 m (hump-shore) 70 m away</li></ul></div></li></ol>
+</div></section>
+
+<section class="inapp-sec"><div class="wrap two">
+  <div>
+    <div class="eyebrow">In the app</div>
+    <h2>Tourbis, Lac is a free download inside Anglers Edge.</h2>
+    <p>One tap in the lake picker fetches the 3.5 MB pack on Wi-Fi; after that it works fully offline, forever.</p>
+    <ul class="ticks">
+      <li>Full-resolution depth map, contours and hillshade</li>
+      <li>Humps, saddles, breaklines, points, flats and weed as layers</li>
+      <li>Every spot re-scored for your species, date, wind and pressure</li>
+      <li>48-hour bite window, one-tap catch log, waypoints and GPX export</li>
+      <li>Works with no signal, forever</li>
+    </ul>
+    <a class="btn primary" href="https://apps.apple.com/app/anglers-edge/id6798728175">Download Anglers Edge</a>
+  </div>
+  <div class="side">
+    <h3>Species scored here</h3>
+    <p class="tags"><span>Smallmouth Bass</span><span>Largemouth Bass</span><span>Walleye</span><span>Northern Pike</span><span>Lake Trout</span><span>Lake Whitefish</span><span>Muskellunge</span></p>
+    
+    <h3>Nearby lakes</h3>
+    <p class="nearby"><a href="/lakes/qc-nemiscachingue">Némiscachingue, Lac</a> <a href="/lakes/qc-ouareau">Ouareau, Lac</a> <a href="/lakes/qc-tremblant">Tremblant, Lac</a> <a href="/lakes/qc-brome">Brome, Lac</a> <a href="/lakes/qc-memphremagog">Memphrémagog, Lac</a> <a href="/lakes/qc-massawippi">Massawippi, Lac</a></p>
+  </div>
+</div></section>
+
+<section class="honest-sec"><div class="wrap">
+  <div class="eyebrow">Where the data comes from</div>
+  <p class="dim">Bathymetry for Tourbis, Lac comes from a 2011 Échosondeur à faisceau unique with 5,455 measured soundings; the depth model cross-validates to ±0.562 m on held-out points. Source: Gouvernement du Québec bathymetric survey data (Données Québec). Anglers Edge is an analysis tool, not a navigation aid — carry official charts.</p>
+</div></section>
+</main>
+<footer><div class="wrap row">
+  <div>© 2026 Anglers Edge · Analysis only — not for navigation.</div>
+  <div><a href="/privacy.html">Privacy</a><a href="mailto:jlr@backroadscarclub.com">Support</a><a href="/#top">Top</a></div>
+</div></footer>
+</body>
+</html>
