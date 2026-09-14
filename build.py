@@ -127,8 +127,8 @@ def index_page():
         for area, ars in sorted(areas.items()):
             body += f'<h3>{esc(area)}</h3><ul class="lakes">' + ''.join(
                 f'<li><a href="/lakes/{r["id"]}">{esc(r["name"])}</a><small>{(str(r["area_km2"]) + " km²") if r.get("area_km2") else ""}</small></li>' for r in sorted(ars, key=lambda x: x['name'])) + '</ul>'
-    title = f"Fishing Maps for {len(LAKES)} Lakes in Ontario & Quebec | Anglers Edge"
-    desc = f"Every lake in Anglers Edge, by province and area: {len(LAKES)} lakes with surveyed depth maps, structure layers and ranked fishing spots, all offline and free."
+    title = f"Fishing Maps for {len(LAKES)} Lakes Across Canada & the US | Anglers Edge"
+    desc = f"Every lake in Anglers Edge by province, state and area: {len(LAKES)} lakes across Canada and the United States with surveyed depth maps, structure layers and ranked fishing spots, all offline and free."
     out = lake_tpl.split('<main>')[0] + f'<main class="wrap lakes-index" style="padding:120px 20px 60px"><div class="eyebrow">Lakes we cover</div><h1>{len(LAKES)} lakes, each with its own map and ranked spots.</h1><p class="lede">Tap a lake for its depth map, top spots and data sources. Every one is free in the app.</p>{body}</main>' + FOOTER + '</body></html>'
     for k, v in {'TITLE': esc(title), 'DESC': esc(desc), 'URL': SITE + '/lakes', 'CSS': css, 'NAV': NAV,
                  'JSONLD': json.dumps({"@context": "https://schema.org", "@type": "CollectionPage", "name": title, "url": SITE + "/lakes"})}.items():
