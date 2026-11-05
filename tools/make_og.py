@@ -41,7 +41,9 @@ for f in sorted((root / 'data/lakes').glob('*.json')):
     sub = f"Surveyed depth map and {len(r['spots'])} ranked fishing spots, with the reasons. Works with no signal."
     html = tpl % {'region': reg, 'name': r['name'], 'sub': sub, 'icon': icon, 'svg': svg_of(r, 460, 458)}
     with tempfile.NamedTemporaryFile('w', suffix='.html', delete=False) as t: t.write(html); path = t.name
-    subprocess.run([CHROME, '--headless=new', '--disable-gpu', '--hide-scrollbars', '--window-size=1200,630',
+    # own throwaway profile: without it Chrome hands the launch to an already-running
+    # instance and opens a VISIBLE window per lake (happened 2026-11-04)
+    subprocess.run([CHROME, '--headless=new', f'--user-data-dir={tempfile.mkdtemp(prefix="og-chrome-")}', '--no-first-run', '--disable-gpu', '--hide-scrollbars', '--window-size=1200,630',
                     '--allow-file-access-from-files', f'--screenshot={out / (r["id"] + ".png")}', 'file://' + path],
                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     n += 1

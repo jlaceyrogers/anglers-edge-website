@@ -31,6 +31,14 @@ AREAS = {**{k: 'Muskoka' for k in 'muskoka rosseau joseph bays bigwind fairy mar
   'qc-tremblant': 'Laurentians', 'qc-iles': 'Laurentians', 'qc-ouareau': 'Lanaudière',
   'qc-nemiscachingue': 'Lanaudière', 'qc-tourbis': 'Lanaudière'}
 
+# single source of truth for local area names: the app's regions.js AREAS table
+# (the catalog carries no region field; the app and this site must agree)
+_APP_REGIONS = APP.parent / 'js' / 'regions.js'
+if _APP_REGIONS.exists():
+    import re as _re
+    _m = _re.search(r'var AREAS = \{(.*?)\};', _APP_REGIONS.read_text(encoding='utf-8'), _re.S)
+    AREAS.update({k: v for k, v in _re.findall(r"'?([a-z0-9-]+)'?\s*:\s*'([^']+)'", _m.group(1))})
+
 def region(l):
     r = l.get('region') or {}
     admin = r.get('admin') if r.get('admin') in ADMINS else None

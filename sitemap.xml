@@ -14,13 +14,17 @@
   <url><loc>https://anglersedge.fishing/lakes/boshkung</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/qc-brome</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/buckhorn</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/ab-buffalo</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/cameron</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/charleston</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/chemong</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/crane</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/qc-demontigny</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/dougherty</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/drag</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/dryberry</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/fairy</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/ab-gull</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/haybay</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/head</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/kakagi</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -28,6 +32,7 @@
   <url><loc>https://anglersedge.fishing/lakes/kawagama</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/kennisis</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/kushog</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/qc-kenogami</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/lacdesmillelacs</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/bernard</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/joseph</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -40,6 +45,7 @@
   <url><loc>https://anglersedge.fishing/lakes/wanapitei</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/bays</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/long</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/longbow</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/lowerbuckhorn</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/mary</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/qc-massawippi</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -47,6 +53,7 @@
   <url><loc>https://anglersedge.fishing/lakes/qc-memphremagog</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/mindemoya</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/minnitaki</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/qc-mitchinamecus</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/mountain</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/muldrew</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/newboro</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -58,19 +65,26 @@
   <url><loc>https://anglersedge.fishing/lakes/perrault</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/pickerel</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/pigeon</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/ab-pigeon</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/qc-preissac</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/rain</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/ramsey</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/rice</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/sharbot</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/skeleton</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/stony</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/ab-sturgeon</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/sturgeon</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/ab-sylvan</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/qc-tourbis</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/qc-tremblant</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/trout</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/twelvemile</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/vermilion</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/ab-wabamun</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/wabaskang</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/wabigoon</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/white</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/ab-whitefish</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/qc-iles</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

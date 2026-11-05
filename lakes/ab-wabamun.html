@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wabamun Lake Fishing Map — Depth, Structure &amp; Ranked Spots | Anglers Edge</title>
+<meta name="description" content="Free offline fishing map for Wabamun Lake (Central Alberta, Alberta): surveyed depth, humps, breaklines and 6 ranked spots with reasons, for Smallmouth Bass, Largemouth Bass, Walleye. Analysis only, not for navigation.">
+<link rel="canonical" href="https://anglersedge.fishing/lakes/ab-wabamun">
+<meta name="apple-itunes-app" content="app-id=6798728175">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Anglers Edge">
+<meta property="og:url" content="https://anglersedge.fishing/lakes/ab-wabamun">
+<meta property="og:title" content="Wabamun Lake Fishing Map — Depth, Structure &amp; Ranked Spots | Anglers Edge">
+<meta property="og:description" content="Free offline fishing map for Wabamun Lake (Central Alberta, Alberta): surveyed depth, humps, breaklines and 6 ranked spots with reasons, for Smallmouth Bass, Largemouth Bass, Walleye. Analysis only, not for navigation.">
+<meta property="og:image" content="https://anglersedge.fishing/assets/og/ab-wabamun.png?v=2ffcb831">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wabamun Lake Fishing Map — Depth, Structure &amp; Ranked Spots | Anglers Edge">
+<meta name="twitter:description" content="Free offline fishing map for Wabamun Lake (Central Alberta, Alberta): surveyed depth, humps, breaklines and 6 ranked spots with reasons, for Smallmouth Bass, Largemouth Bass, Walleye. Analysis only, not for navigation.">
+<meta name="twitter:image" content="https://anglersedge.fishing/assets/og/ab-wabamun.png?v=2ffcb831">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,600;0,8..60,700;1,8..60,600&display=swap">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Anglers Edge", "item": "https://anglersedge.fishing/"}, {"@type": "ListItem", "position": 2, "name": "Lakes", "item": "https://anglersedge.fishing/lakes"}, {"@type": "ListItem", "position": 3, "name": "Wabamun Lake", "item": "https://anglersedge.fishing/lakes/ab-wabamun"}]}, {"@context": "https://schema.org", "@type": "LakeBodyOfWater", "name": "Wabamun Lake", "geo": {"@type": "GeoCoordinates", "latitude": 53.5363, "longitude": -114.5688}, "containedInPlace": {"@type": "AdministrativeArea", "name": "Alberta"}, "subjectOf": {"@type": "WebPage", "url": "https://anglersedge.fishing/lakes/ab-wabamun", "name": "Wabamun Lake Fishing Map — Depth, Structure & Ranked Spots | Anglers Edge"}}]</script>
+<style>:root{--paper:#F7F2E6;--card:#FFFDF6;--inset:#EFE7D4;--ink:#22301F;--dim:#5F6D5C;--pine:#2C5942;--deep:#1B2A21;--orange:#D9480F;--ochre:#C08A12;--good:#217A4B;--bad:#A63A2B;--line:rgba(38,48,38,.16);--serif:"Source Serif 4",ui-serif,Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--pine)}h1,h2,h3,.serif{font-family:var(--serif);letter-spacing:-.01em;text-wrap:balance}
+h2{font-size:clamp(30px,4.2vw,44px);line-height:1.08;margin:0 0 14px;font-weight:700}
+h3{font-size:22px;margin:0 0 6px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:10px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+.lede{font-size:19px;color:var(--dim);max-width:62ch;margin:0}
+/* nav */
+.nav{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;pointer-events:none}
+.nav>*{pointer-events:auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:var(--serif);font-weight:700;font-size:20px}
+.brand img{width:36px;height:36px;border-radius:10px}
+.nav-links{display:flex;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px;box-shadow:0 2px 8px rgba(40,40,20,.12)}
+.nav-links a{text-decoration:none;color:var(--ink);font-weight:600;font-size:14px;padding:8px 14px;border-radius:999px}
+.nav-links a:hover{background:var(--inset)}
+.nav-links a.cta{background:var(--ink);color:var(--paper)}
+@media(max-width:760px){.nav-links a:not(.cta){display:none}}
+/* hero */
+.hero{position:relative;height:100svh;min-height:640px;overflow:hidden;background:var(--paper)}
+.stage{position:absolute;inset:0}
+#lake{position:absolute;inset:0;cursor:crosshair;opacity:0;transition:opacity .8s ease}
+#lake.ready{opacity:1}#lake canvas{display:block;width:100%!important;height:100%!important}
+.hero-copy{position:absolute;left:24px;top:96px;max-width:520px;z-index:5;pointer-events:none}
+.hero-copy>*{pointer-events:auto}
+.hero h1{font-size:clamp(42px,6.4vw,76px);line-height:1.0;margin:0 0 14px;font-weight:700}
+.hero h1 em{font-style:italic;color:var(--orange)}
+.hero p{font-size:18px;color:var(--dim);max-width:44ch;margin:0 0 20px}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:14px 22px;font-weight:700;text-decoration:none;font-size:15px;border:1px solid transparent;cursor:pointer;font-family:var(--sans)}
+.btn.primary{background:var(--ink);color:var(--paper)}.btn.ghost{background:var(--card);color:var(--ink);border-color:var(--line)}
+.btn.orange{background:var(--orange);color:#fff}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap}
+.game-hud{position:absolute;right:24px;top:96px;z-index:5;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 18px;box-shadow:0 2px 8px rgba(40,40,20,.12);min-width:220px}
+.game-hud .gh-t{font-family:var(--serif);font-weight:700;font-size:18px;margin-bottom:6px}
+.game-hud .gh-row{display:flex;justify-content:space-between;font-size:14px;color:var(--dim);margin:3px 0}
+.game-hud b{color:var(--ink);font-variant-numeric:tabular-nums}
+.game-hud .gh-hint{font-size:12px;color:var(--dim);margin-top:8px;border-top:1px solid var(--line);padding-top:8px}
+.cast-card{position:absolute;left:50%;bottom:110px;transform:translate(-50%,20px);z-index:5;background:var(--ink);color:var(--paper);border-radius:16px;padding:14px 20px;box-shadow:0 10px 30px rgba(40,40,20,.25);opacity:0;transition:all .25s ease;text-align:center;max-width:90vw}
+.cast-card.show{opacity:1;transform:translate(-50%,0)}
+.cast-card .cc-title{font-family:var(--serif);font-weight:700;font-size:24px}
+.cast-card.excellent .cc-title,.cast-card.good .cc-title{color:#8FD0A8}.cast-card.fair .cc-title{color:#E0B860}.cast-card.poor .cc-title{color:#E59A8A}
+.cast-card .cc-sub{font-size:13px;opacity:.8;margin-top:2px}
+.reveal{position:absolute;inset:0;z-index:8;display:flex;align-items:center;justify-content:center;background:rgba(247,242,230,.72);backdrop-filter:blur(4px);opacity:0;pointer-events:none;transition:opacity .35s ease}
+.reveal.show{opacity:1;pointer-events:auto}
+.reveal .rv{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px 30px;max-width:520px;text-align:center;box-shadow:0 10px 40px rgba(40,40,20,.2);margin:0 20px}
+.reveal .rv-nums{display:flex;gap:28px;justify-content:center;margin:12px 0}
+.reveal .rv-nums div{font-family:var(--serif);font-size:44px;font-weight:700;line-height:1}.reveal .rv-nums b{font-weight:700}
+.reveal .rv-nums span{display:block;font:600 12px var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-top:6px}
+.reveal .rv-you{color:var(--ink)}.reveal .rv-model{color:var(--pine)}
+.reveal p{color:var(--dim);margin:8px 0 18px}
+.scroll-hint{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:5;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+@media(max-width:760px){
+.hero{height:auto;min-height:0;display:flex;flex-direction:column;padding-top:76px}
+.hero-copy{position:static!important;order:-1;max-width:none;padding:8px 20px 18px;top:auto;left:auto}
+.hero h1{font-size:40px}.hero p{font-size:16px;max-width:none}
+.stage{position:relative;inset:auto;height:64vh;min-height:420px;margin:0 12px 22px;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 10px 30px rgba(40,40,20,.14);background:#EDE6D6}
+.game-hud{position:absolute;left:10px;top:10px;right:auto;bottom:auto;min-width:0;padding:10px 12px;border-radius:14px}
+.game-hud .gh-t{font-size:15px;margin-bottom:2px}.game-hud .gh-row{font-size:12px;gap:14px}.game-hud .gh-hint{font-size:11px;margin-top:6px;padding-top:6px}
+.cast-card{bottom:14px;padding:10px 16px}.cast-card .cc-title{font-size:20px}
+.reveal .rv{padding:22px 18px}.reveal .rv-nums div{font-size:36px}
+.scroll-hint{display:none}
+}
+/* pillars */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:860px){.grid3{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px 24px;box-shadow:0 1px 2px rgba(40,40,20,.06)}
+.card .n{width:44px;height:44px;border-radius:14px;background:var(--pine);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:700;font-size:20px;margin-bottom:14px}
+.card p{color:var(--dim);margin:6px 0 0;font-size:15px}
+/* factors */
+.factors{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:22px}
+.factor{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:14px}
+.factor b{display:block;font-family:var(--serif);font-size:16px}
+.factor span{color:var(--dim);font-size:13px}
+/* split */
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+@media(max-width:860px){.split{grid-template-columns:1fr}}
+.phone{width:min(300px,80%);height:auto;border-radius:36px;border:8px solid var(--deep);box-shadow:0 20px 50px rgba(40,40,20,.25);display:block;margin:0 auto}
+.check li{margin:10px 0;padding-left:28px;position:relative;color:var(--ink)}
+.check li::before{content:"";position:absolute;left:0;top:10px;width:14px;height:14px;border-radius:50%;background:var(--good)}
+.check{list-style:none;padding:0;margin:18px 0 0}
+/* pricing */
+.dark{background:var(--deep);color:var(--paper)}.dark .lede,.dark .card p{color:#B8C4B5}.dark .eyebrow{color:#E0A83C}.dark h2{color:var(--paper)}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}.tiers.two{grid-template-columns:repeat(2,1fr);max-width:820px}
+@media(max-width:860px){.tiers,.tiers.two{grid-template-columns:1fr}}
+.tier{background:var(--card);color:var(--ink);border-radius:20px;padding:26px 24px}
+.tier.free{background:#E9F0EA}
+.tier h3{margin-bottom:2px}.tier .price{color:var(--orange);font-weight:700;margin-bottom:12px}
+.tier ul{padding-left:18px;margin:0}.tier li{margin:7px 0;font-size:15px;color:#33402F}
+.promise{margin-top:26px;font-family:var(--serif);font-style:italic;font-size:20px;color:#E0A83C;text-align:center}
+/* table */
+.cmp{width:100%;min-width:600px;border-collapse:collapse;margin-top:22px;font-size:15px;overflow:hidden;border-radius:16px;box-shadow:0 1px 2px rgba(40,40,20,.06)}
+.cmp th,.cmp td{padding:12px 14px;text-align:center;border-bottom:1px solid var(--line);background:var(--card)}
+.cmp th{background:var(--pine);color:var(--paper);font-family:var(--serif);font-size:15px}
+.cmp td:first-child{text-align:left;font-weight:600}.cmp td.us{background:#E9F0EA;color:var(--pine);font-weight:700}
+.cmp .y{color:var(--good);font-weight:700}.cmp .n{color:var(--bad)}.cmp .p{color:var(--ochre)}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -24px;padding:0 24px}
+/* gallery */
+.gallery{display:flex;gap:18px;overflow-x:auto;padding:12px 4px 20px;scroll-snap-type:x mandatory;scrollbar-width:none}
+.gallery::-webkit-scrollbar{display:none}
+.gallery figure{flex:none;margin:0;scroll-snap-align:start;width:220px}
+.gallery img{width:100%;height:auto;border-radius:22px;border:6px solid var(--deep);display:block;box-shadow:0 10px 30px rgba(40,40,20,.18)}
+.gallery figcaption{font-size:13px;color:var(--dim);margin-top:10px;text-align:center}
+/* faq */
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:10px 0}
+.faq summary{cursor:pointer;font-weight:700;font-family:var(--serif);font-size:18px}
+.faq p{color:var(--dim);margin:8px 0 0}
+/* footer */
+footer{padding:48px 0 60px;border-top:1px solid var(--line);color:var(--dim);font-size:14px}
+footer .row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer a{margin-right:16px}
+.badge{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--paper);border-radius:12px;padding:10px 16px;text-decoration:none;font-weight:700}
+.badge small{display:block;font-weight:500;font-size:11px;opacity:.75;line-height:1}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cast-card,.reveal,#lake{transition:none}}
+
+.hint-touch{display:none}@media(hover:none){.hint-mouse{display:none}.hint-touch{display:inline}}
+
+.lakes{list-style:none;padding:0;margin:22px 0 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:8px 18px}
+.lakes li{font-size:15px;padding:8px 0;border-bottom:1px solid var(--line);color:var(--ink)}
+
+.pricing-layout{display:grid;grid-template-columns:1.45fr 1fr;gap:18px;max-width:980px;margin:30px auto 0;align-items:stretch}
+.tier.big{padding:30px 32px}.big-price{font-family:var(--serif);font-weight:700;font-size:84px;line-height:1;color:var(--pine);display:flex;align-items:baseline;gap:6px;margin-bottom:6px}
+.big-price .cur{font-size:40px}.big-price .per{font:600 13px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-left:8px}
+.tier.big h3{font-size:24px;margin:4px 0 14px}
+.tier ul.two-col{display:grid;grid-template-columns:1fr 1fr;gap:4px 24px}
+.tier .fine{margin-top:18px;padding-top:14px;border-top:1px solid var(--line);font-size:14px;color:var(--dim)}
+.tier.partners{display:flex;flex-direction:column}.tier.partners ul{flex:1}.tier.partners .eyebrow{margin-bottom:6px}
+@media(max-width:860px){.pricing-layout{grid-template-columns:1fr}.tier ul.two-col{grid-template-columns:1fr}.big-price{font-size:64px}}
+
+/* ---------- lake pages ---------- */
+.lakepage main{display:block}
+.crumbs{font-size:13px;color:var(--dim);margin-bottom:14px}.crumbs a{color:var(--dim);text-decoration:none}.crumbs a:hover{color:var(--pine)}
+.lakehero{padding:120px 0 28px}.lakehero h1{font-size:clamp(36px,6vw,64px);line-height:1.02;margin:0 0 14px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.lakemap-sec{padding:0 0 40px}.lakemap{margin:0;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:0 2px 8px rgba(40,40,20,.08)}
+.lakemap svg{display:block;width:100%;height:auto;max-height:520px}
+.lakemap figcaption{font-size:13px;color:var(--dim);margin-top:10px;text-align:center}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:18px 0 0}
+.facts div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.facts dt{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.facts dd{margin:4px 0 0;font-family:var(--serif);font-size:22px;font-weight:700;color:var(--ink);line-height:1.15}
+.facts dd small{display:block;font:500 12px/1.4 var(--sans);color:var(--dim);margin-top:2px}
+.spots-sec{padding:20px 0 40px}.spots{list-style:none;padding:0;margin:22px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.spots li{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px}
+.spots .rank{flex:none;width:40px;height:40px;border-radius:12px;color:#FDF9EE;font-family:var(--serif);font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center}
+.spots .rank.good{background:var(--good)}.spots .rank.fair{background:var(--ochre)}
+.spots .meta{font-size:13px;color:var(--dim);margin-bottom:4px}.spots .meta b{color:var(--ink)}
+.spots ul{margin:0;padding-left:18px;font-size:14px;color:var(--ink)}.spots ul li{display:list-item;background:none;border:0;padding:0;margin:0}
+.inapp-sec{padding:30px 0 40px}.inapp-sec .two{display:grid;grid-template-columns:1.3fr 1fr;gap:40px}
+.inapp-sec .side{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px}
+.inapp-sec h3{font-size:16px;margin:0 0 8px}.inapp-sec .side h3+p{margin-top:0}.inapp-sec .side p{margin:0 0 20px;font-size:14px;color:var(--dim)}
+.tags,.nearby{line-height:2}.tags span{display:inline-block;background:var(--inset);border-radius:999px;padding:2px 10px;font-size:13px;color:var(--ink);margin:0 6px 4px 0}
+.nearby a{display:inline-block;margin:0 10px 4px 0;font-weight:600}
+.ticks{list-style:none;padding:0;margin:0 0 22px}.ticks li{padding-left:24px;position:relative;margin:6px 0;color:var(--ink)}.ticks li::before{content:"✓";position:absolute;left:0;color:var(--good);font-weight:700}
+.honest-sec{padding:0 0 60px}.honest-sec p{font-size:14px;max-width:70ch}
+.lakes-index h1{font-size:clamp(34px,5vw,56px)}.lakes-index h2{font-size:26px;margin:36px 0 8px}.lakes-index h3{font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin:22px 0 8px}
+.lakes-index .lakes{margin-top:0}.lakes-index .lakes a{text-decoration:none;color:var(--ink);font-weight:600}.lakes-index .lakes li{display:flex;justify-content:space-between;gap:10px}.lakes-index .lakes small{color:var(--dim);font-weight:500}
+@media (max-width:760px){.inapp-sec .two{grid-template-columns:1fr}.lakehero{padding-top:96px}}
+</style>
+</head>
+<body class="lakepage">
+<nav class="nav">
+  <a class="brand" href="/#top"><img src="/assets/icon.png?v=757a77b5" alt="">Anglers Edge</a>
+  <div class="nav-links"><a href="/#why">Why</a><a href="/#how">How it works</a><a href="/#pricing">Pricing</a><a href="/#compare">Compare</a><a href="/#lakes">Lakes</a><a class="cta" href="/#get">Get the app</a></div>
+</nav>
+<main>
+<section class="lakehero"><div class="wrap">
+  <div class="crumbs"><a href="/">Anglers Edge</a> · <a href="/lakes">Lakes</a> · <a href="/lakes#CA-AB">Alberta</a></div>
+  <div class="eyebrow">Central Alberta, Alberta</div>
+  <h1>Wabamun Lake fishing map</h1>
+  <p class="lede">Surveyed depth, structure and ranked fishing spots for Wabamun Lake — scored for your species and the day&#x27;s conditions, and it all works with no signal. Free.</p>
+  <div class="cta-row">
+    <a class="btn primary" href="https://apps.apple.com/app/anglers-edge/id6798728175">Get it free on the App Store</a>
+    <a class="btn ghost" href="/#how">How the scoring works</a>
+  </div>
+</div></section>
+
+<section class="lakemap-sec"><div class="wrap">
+  <figure class="lakemap">
+    <svg viewBox="0 0 688 357" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Outline of Wabamun Lake with its top ranked fishing spots"><rect width="688" height="357" fill="#F3ECDB" rx="14"/><path d="M24.5 121.2 L24.0 112.8 L25.1 102.6 L27.1 92.5 L30.0 84.1 L38.1 76.4 L42.7 74.8 L44.7 71.9 L54.0 66.1 L55.8 65.7 L66.8 53.6 L69.2 52.4 L72.6 48.8 L74.7 47.5 L76.6 44.5 L80.7 41.2 L84.1 39.4 L90.7 34.6 L97.3 31.1 L105.2 29.5 L116.7 34.1 L123.3 32.0 L134.2 30.6 L137.8 29.5 L140.1 29.9 L144.2 28.4 L148.8 24.6 L150.9 24.0 L155.0 25.3 L157.4 26.9 L160.7 27.5 L170.8 33.0 L176.9 34.3 L184.3 37.2 L191.7 37.9 L194.5 37.5 L199.4 39.0 L204.2 42.3 L209.2 49.3 L212.8 52.3 L214.7 57.0 L215.6 67.1 L213.9 72.2 L214.7 75.4 L217.7 81.8 L220.3 83.2 L221.8 85.7 L224.0 86.2 L227.0 89.2 L234.4 74.7 L235.9 73.1 L239.5 63.9 L244.8 56.0 L248.1 53.2 L251.8 52.4 L257.5 49.5 L262.1 48.2 L264.0 48.2 L269.8 50.4 L272.8 52.4 L277.5 50.4 L279.1 50.8 L286.6 55.2 L288.0 55.5 L293.4 61.7 L295.7 63.4 L297.7 62.8 L307.4 62.6 L310.8 63.4 L313.7 65.2 L318.8 65.9 L322.3 64.8 L330.9 66.4 L336.6 69.6 L338.1 71.8 L343.3 67.8 L351.2 62.7 L355.5 61.0 L358.6 61.6 L360.3 61.3 L364.7 62.3 L375.6 68.1 L383.8 71.6 L384.3 72.3 L390.0 74.2 L394.9 77.4 L400.0 76.5 L410.8 78.0 L414.4 79.9 L416.4 80.0 L419.0 81.6 L423.4 86.8 L427.7 90.1 L429.5 90.2 L433.0 92.9 L439.1 101.4 L446.6 105.5 L448.9 108.0 L453.7 109.3 L457.4 113.8 L462.6 113.5 L465.5 112.6 L469.8 112.6 L471.5 113.6 L473.5 116.9 L476.2 117.8 L478.2 120.5 L482.7 121.5 L485.0 122.9 L490.6 123.1 L493.1 124.6 L495.8 125.3 L497.5 125.2 L507.5 116.6 L511.0 114.8 L514.7 114.0 L518.2 114.2 L517.2 113.3 L517.6 112.5 L520.6 112.9 L521.5 114.1 L526.3 114.7 L526.1 111.5 L522.3 113.4 L519.8 111.4 L520.4 111.1 L528.4 109.8 L531.9 110.6 L532.4 111.1 L531.7 112.8 L528.9 114.3 L531.6 115.7 L532.2 118.4 L533.9 108.6 L533.8 111.7 L539.8 112.3 L540.1 116.6 L539.1 123.8 L542.2 112.6 L543.5 109.7 L543.6 108.1 L544.1 107.8 L544.5 105.5 L546.3 102.3 L547.6 101.0 L552.5 100.2 L552.3 101.5 L548.9 101.6 L547.5 102.2 L545.7 105.8 L545.0 105.9 L544.3 107.9 L544.9 108.1 L542.8 113.8 L540.4 123.8 L541.8 118.7 L543.5 116.4 L543.5 115.1 L545.3 113.9 L547.5 118.4 L547.3 119.4 L545.4 120.6 L545.6 125.3 L549.9 129.7 L554.5 131.9 L557.0 132.0 L560.2 133.5 L561.2 134.6 L563.3 135.0 L564.2 134.5 L572.6 137.1 L573.6 136.2 L573.2 135.3 L570.4 131.4 L567.3 129.0 L568.4 124.8 L566.8 122.6 L568.2 120.1 L569.0 119.9 L569.1 118.4 L561.7 111.4 L561.1 107.5 L561.6 107.3 L561.6 105.4 L561.0 105.2 L560.6 101.9 L557.3 101.6 L557.1 101.0 L560.5 101.1 L561.3 101.8 L561.4 104.2 L562.0 104.9 L561.8 109.5 L562.7 111.8 L580.2 126.1 L580.9 122.3 L578.9 121.6 L578.1 122.2 L573.9 118.3 L578.0 117.6 L578.9 115.5 L583.7 113.6 L586.1 114.2 L587.1 112.5 L587.6 113.3 L588.8 112.7 L589.7 113.4 L590.6 113.1 L591.6 114.1 L592.8 114.1 L595.1 112.9 L594.9 112.0 L596.1 110.6 L595.2 110.2 L595.3 108.9 L595.7 110.3 L596.2 109.0 L596.6 109.1 L596.7 111.6 L598.8 112.1 L599.7 111.2 L599.9 109.8 L603.1 109.0 L603.7 106.7 L604.8 106.8 L605.9 109.6 L609.0 109.3 L610.2 108.5 L608.9 107.4 L610.1 107.4 L614.2 109.5 L614.6 110.5 L616.5 111.1 L617.7 109.6 L618.0 110.7 L619.6 109.9 L620.5 112.3 L622.0 112.0 L622.6 111.2 L622.1 110.4 L623.6 109.6 L625.7 110.7 L626.6 110.6 L625.4 108.6 L627.8 106.4 L627.9 105.3 L625.3 102.5 L624.9 97.7 L625.7 87.6 L626.7 85.1 L629.9 80.9 L634.5 76.8 L636.9 75.3 L639.4 74.7 L641.1 73.1 L644.0 72.6 L651.4 75.6 L654.1 75.3 L661.6 78.4 L664.0 82.1 L663.3 85.8 L663.8 88.5 L651.4 102.2 L647.2 104.0 L638.6 106.4 L638.4 111.5 L636.7 115.9 L636.7 120.2 L636.4 120.6 L634.8 118.9 L634.1 119.5 L635.4 122.7 L633.6 124.2 L631.6 124.9 L631.5 126.0 L632.6 126.7 L637.4 126.8 L640.0 130.8 L641.9 139.5 L642.6 146.7 L641.1 156.4 L649.6 168.7 L650.3 173.1 L649.9 178.2 L647.6 186.9 L647.3 191.4 L645.7 194.5 L645.8 196.0 L644.1 197.0 L643.6 199.2 L637.8 208.2 L637.7 209.3 L634.9 212.7 L632.1 214.5 L629.6 215.2 L628.5 217.3 L627.5 217.2 L620.7 212.6 L616.1 210.5 L615.2 209.4 L608.4 206.8 L603.1 200.5 L601.2 200.2 L602.0 199.1 L602.2 197.0 L595.7 197.4 L591.8 196.5 L587.3 196.4 L582.2 194.1 L579.6 190.6 L579.9 187.7 L578.6 184.0 L574.2 187.0 L572.3 190.4 L569.4 192.9 L566.3 193.8 L563.1 193.4 L562.2 194.5 L556.9 195.2 L552.5 203.2 L548.1 215.9 L543.6 225.9 L533.9 243.7 L519.8 262.5 L518.7 263.3 L517.6 263.2 L522.0 267.6 L524.7 277.5 L524.6 285.1 L520.3 295.1 L514.3 303.5 L510.3 307.5 L486.0 326.7 L482.8 330.2 L478.0 332.7 L476.2 332.8 L462.3 331.4 L456.9 325.4 L453.6 317.2 L447.4 306.6 L444.3 302.2 L442.7 301.8 L442.3 299.2 L437.6 289.1 L437.3 278.6 L435.0 270.2 L433.5 268.2 L429.1 266.6 L420.8 260.7 L420.6 257.6 L422.6 251.7 L421.4 253.0 L419.0 260.0 L418.0 260.3 L420.6 251.0 L417.9 258.0 L416.6 258.7 L414.7 258.5 L403.7 254.8 L402.9 253.8 L400.5 253.3 L398.5 251.7 L392.7 249.8 L388.2 249.3 L385.0 248.1 L381.4 248.8 L379.7 248.6 L375.2 245.2 L373.6 242.0 L371.0 240.9 L368.2 238.6 L363.7 238.5 L360.2 237.6 L356.6 234.2 L351.5 227.4 L347.5 218.6 L346.5 209.7 L342.7 206.5 L341.4 203.8 L337.5 204.0 L324.9 199.2 L319.8 198.3 L313.5 198.6 L312.0 198.0 L309.3 199.4 L309.4 200.6 L309.8 200.9 L310.3 200.1 L311.5 201.5 L311.4 203.5 L307.5 207.3 L306.0 208.2 L303.6 208.2 L301.7 206.8 L301.4 200.2 L293.3 200.0 L288.4 197.5 L284.8 191.7 L284.2 188.3 L282.9 185.6 L278.5 185.6 L273.3 184.3 L262.4 184.3 L257.9 182.8 L253.8 183.3 L243.8 182.1 L238.2 183.8 L233.2 184.0 L229.6 185.1 L227.2 185.0 L223.4 186.5 L214.2 186.7 L208.4 185.8 L203.4 187.5 L199.6 187.7 L192.6 183.4 L190.2 180.5 L189.9 179.1 L191.9 177.2 L191.5 175.2 L188.2 174.1 L185.6 174.4 L182.3 171.7 L180.6 167.5 L180.5 164.3 L180.9 162.5 L182.6 159.6 L177.5 156.7 L174.6 157.2 L162.1 156.3 L160.6 156.7 L152.2 156.4 L148.0 155.3 L144.4 156.2 L140.1 155.1 L136.8 153.1 L133.6 153.4 L126.2 152.8 L121.5 156.2 L119.3 156.2 L110.5 159.5 L108.2 159.1 L102.4 156.2 L102.2 156.5 L103.6 157.1 L102.6 158.0 L101.3 157.3 L101.3 154.7 L100.7 155.3 L94.2 155.0 L88.8 152.3 L82.2 148.0 L79.9 144.3 L77.9 143.0 L71.2 134.5 L68.0 131.6 L65.3 131.7 L59.2 133.1 L55.6 132.5 L57.4 136.0 L58.7 136.9 L61.9 137.2 L63.9 139.4 L63.6 141.9 L61.3 145.2 L59.3 146.8 L56.5 148.0 L53.2 147.9 L43.5 145.4 L40.5 146.2 L40.2 147.6 L39.0 148.1 L38.4 149.7 L38.6 148.5 L37.5 148.0 L38.9 148.0 L39.6 147.3 L38.9 146.1 L39.9 147.1 L40.5 145.7 L41.6 145.2 L41.9 143.3 L41.2 141.0 L42.6 137.9 L43.7 137.0 L43.5 134.2 L42.0 132.7 L39.6 133.5 L38.9 133.2 L38.3 131.7 L38.6 128.5 L37.4 126.8 L35.8 130.0 L37.6 132.5 L36.7 137.2 L35.4 137.7 L34.2 136.1 L32.0 135.6 L31.2 136.2 L33.8 137.3 L32.5 140.1 L34.9 140.6 L35.3 142.2 L34.6 142.8 L31.8 142.4 L31.4 144.5 L30.6 144.8 L29.7 144.3 L31.3 144.2 L31.2 142.7 L31.8 141.9 L34.0 142.5 L34.8 142.0 L34.5 140.7 L32.1 140.2 L33.1 137.9 L31.2 137.0 L31.0 135.9 L31.6 135.1 L33.4 135.5 L35.6 137.2 L36.2 137.0 L37.2 133.6 L35.3 130.6 L36.0 125.3 L34.1 124.5 L32.0 126.9 L28.5 129.1 L26.4 127.3 L24.5 121.2ZM633.6 118.8 L634.3 118.3 L633.6 116.9 L630.3 113.6 L629.8 114.0 L630.2 114.9 L633.6 118.8ZM626.5 115.5 L627.7 113.2 L628.5 113.3 L629.5 112.4 L629.8 110.6 L628.5 110.4 L627.1 112.3 L626.9 113.9 L625.5 113.5 L625.3 113.9 L626.5 115.5ZM578.1 127.7 L579.1 126.9 L570.0 118.9 L571.0 120.4 L573.8 125.1 L578.1 127.7Z" fill="#9EBCCB" stroke="#5F7F8E" stroke-width="1.2" fill-rule="evenodd"/><g><circle cx="153.4" cy="59.3" r="13" fill="#217A4B" stroke="#FFFDF6" stroke-width="2.5"/><text x="153.4" y="63.8" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">1</text></g><g><circle cx="469.2" cy="189.4" r="13" fill="#217A4B" stroke="#FFFDF6" stroke-width="2.5"/><text x="469.2" y="193.9" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">2</text></g><g><circle cx="478.8" cy="182.3" r="13" fill="#C08A12" stroke="#FFFDF6" stroke-width="2.5"/><text x="478.8" y="186.8" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">3</text></g><g><circle cx="478.5" cy="192.7" r="13" fill="#C08A12" stroke="#FFFDF6" stroke-width="2.5"/><text x="478.5" y="197.2" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">4</text></g><g><circle cx="467.2" cy="178.6" r="13" fill="#C08A12" stroke="#FFFDF6" stroke-width="2.5"/><text x="467.2" y="183.1" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">5</text></g><g><circle cx="318.6" cy="179.3" r="13" fill="#C08A12" stroke="#FFFDF6" stroke-width="2.5"/><text x="318.6" y="183.8" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">6</text></g></svg>
+    <figcaption>Top 6 ranked spots for Smallmouth Bass in summer, on the surveyed outline. Analysis only — not for navigation.</figcaption>
+  </figure>
+  <dl class="facts"><div><dt>Water area</dt><dd>79.26 km²</dd></div><div><dt>Data</dt><dd>Contour Derived<small>free download · 8.6 MB</small></dd></div></dl>
+</div></section>
+
+<section class="spots-sec"><div class="wrap">
+  <div class="eyebrow">Where it rates, and why</div>
+  <h2>The top spots on Wabamun Lake, explained.</h2>
+  <p class="lede">Every spot carries its reasons. In the app the ranking changes with your species, the season, the date, wind and pressure — this is the default read.</p>
+  <ol class="spots"><li><div class="rank good">1</div><div><div class="meta"><b>5.3 m</b> deep · score <b>0.67</b> · good</div><ul><li>Depth 5.3 m in band 4-12 m</li><li>On 5.3 m rise hump (crown 4.4 m)</li><li>Point (320 m, 5 m contour) 0 m away</li></ul></div></li><li><div class="rank good">2</div><div><div class="meta"><b>4.95 m</b> deep · score <b>0.60</b> · good</div><ul><li>Depth 5.0 m in band 4-12 m</li><li>On 2.9 m rise hump (crown 4.5 m)</li><li>Point (819 m, 5 m contour) 3 m away</li></ul></div></li><li><div class="rank fair">3</div><div><div class="meta"><b>5.95 m</b> deep · score <b>0.54</b> · fair</div><ul><li>Depth 6.0 m in band 4-12 m</li><li>43 m from 2.9 m rise hump (crown 4.5 m)</li><li>Point (1738 m, 6 m contour) 3 m away</li></ul></div></li><li><div class="rank fair">4</div><div><div class="meta"><b>5.94 m</b> deep · score <b>0.53</b> · fair</div><ul><li>Depth 5.9 m in band 4-12 m</li><li>71 m from 2.9 m rise hump (crown 4.5 m)</li><li>Point (1738 m, 6 m contour) 3 m away</li></ul></div></li><li><div class="rank fair">5</div><div><div class="meta"><b>5.92 m</b> deep · score <b>0.53</b> · fair</div><ul><li>Depth 5.9 m in band 4-12 m</li><li>43 m from 2.9 m rise hump (crown 4.5 m)</li><li>Point (1738 m, 6 m contour) 15 m away</li></ul></div></li><li><div class="rank fair">6</div><div><div class="meta"><b>5.67 m</b> deep · score <b>0.51</b> · fair</div><ul><li>Depth 5.7 m in band 4-12 m</li><li>Point (318 m, 6 m contour) 5 m away</li><li>Inside turn 7 m away</li></ul></div></li></ol>
+</div></section>
+
+<section class="inapp-sec"><div class="wrap two">
+  <div>
+    <div class="eyebrow">In the app</div>
+    <h2>Wabamun Lake is a free download inside Anglers Edge.</h2>
+    <p>One tap in the lake picker fetches the 8.6 MB pack on Wi-Fi; after that it works fully offline, forever.</p>
+    <ul class="ticks">
+      <li>Full-resolution depth map, contours and hillshade</li>
+      <li>Humps, saddles, breaklines, points, flats and weed as layers</li>
+      <li>Every spot re-scored for your species, date, wind and pressure</li>
+      <li>48-hour bite window, one-tap catch log, waypoints and GPX export</li>
+      <li>Works with no signal, forever</li>
+    </ul>
+    <a class="btn primary" href="https://apps.apple.com/app/anglers-edge/id6798728175">Download Anglers Edge</a>
+  </div>
+  <div class="side">
+    <h3>Species scored here</h3>
+    <p class="tags"><span>Smallmouth Bass</span><span>Largemouth Bass</span><span>Walleye</span><span>Northern Pike</span><span>Lake Trout</span><span>Lake Whitefish</span><span>Muskellunge</span></p>
+    
+    <h3>Nearby lakes</h3>
+    <p class="nearby"><a href="/lakes/ab-pigeon">Pigeon Lake</a> <a href="/lakes/ab-gull">Gull Lake</a> <a href="/lakes/ab-sylvan">Sylvan Lake</a> <a href="/lakes/ab-buffalo">Buffalo Lake</a></p>
+  </div>
+</div></section>
+
+<section class="honest-sec"><div class="wrap">
+  <div class="eyebrow">Where the data comes from</div>
+  <p class="dim">Bathymetry for Wabamun Lake is built from the provincial open-data survey record; where soundings are sparse the app marks cells unsurveyed rather than guessing. Anglers Edge is an analysis tool, not a navigation aid — carry official charts.</p>
+</div></section>
+</main>
+<footer><div class="wrap row">
+  <div>© 2026 Anglers Edge · Analysis only — not for navigation.</div>
+  <div><a href="/privacy.html">Privacy</a><a href="mailto:jlr@backroadscarclub.com">Support</a><a href="/#top">Top</a></div>
+</div></footer>
+</body>
+</html>
