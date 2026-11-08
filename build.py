@@ -75,6 +75,15 @@ def spots_of(r):
         out += (f'<li><div class="rank {tier(sp["score"])}">{sp["rank"]}</div><div><div class="meta">{depth}score <b>{sp["score"]:.2f}</b> · {"good" if tier(sp["score"]) == "good" else "fair"}</div>'
                 f'<ul>{"".join("<li>" + esc(x) + "</li>" for x in sp["reasons"])}</ul></div></li>')
     return out
+def stocking_block(r):
+    st = r.get('stocking')
+    if not st: return ''
+    if not st.get('species'):
+        return '<h3>Stocking record</h3><p class="dim small">' + esc(st.get('note') or 'No provincial stocking record for this water.') + '</p>'
+    rows = ''.join(f'<li><b>{esc(x["species"])}</b><span>{x["events"]} stocking{"s" if x["events"] != 1 else ""} · {x["first"] if x["first"] == x["last"] else str(x["first"]) + "–" + str(x["last"])}</span></li>' for x in st['species'])
+    recent = st.get('last') and (2026 - st['last']) <= 5
+    tail = (f"Stocked recently (last {st['last']})." if recent else f"Not stocked since {st['last']}.") + f" Ontario MNRF stocking records {st['first']}–{st['last']}."
+    return f'<h3>Stocking record</h3><ul class="stock">{rows}</ul><p class="dim small">{esc(tail)}</p>'
 def region_label(r): return (r['region']['area'] + ', ' if r['region'].get('area') else '') + r['region']['name']
 def render_lake(r):
     reg = r['region']; name = r['name']
@@ -113,6 +122,7 @@ def render_lake(r):
                  'FACTS': facts_of(r), 'NAME': esc(name), 'SPOTS': spots_of(r), 'INAPP_H2': esc(inapp_h2), 'INAPP_P': esc(inapp_p),
                  'SPECIES': ''.join(f'<span>{esc(x)}</span>' for x in r['species']) or '<span>Default profiles</span>',
                  'PLACES_BLOCK': (f'<h3>Named water</h3><p class="tags">{places}</p>' if places else ''),
+                 'STOCKING_BLOCK': stocking_block(r),
                  'NEARBY': nearby, 'HONEST': honest, 'JSONLD': jsonld}.items():
         out = out.replace('{{' + k + '}}', v)
     return out

@@ -9,6 +9,7 @@ packs (a folder per pack id holding lake_outline.geojson, hotspots_default
 """
 import json, math, os, sys, pathlib
 APP = pathlib.Path(sys.argv[1]); PACKS = pathlib.Path(sys.argv[2])
+STOCK = pathlib.Path(sys.argv[3]) if len(sys.argv) > 3 else None   # stocking/<id>.json sidecars (optional)
 OUT = pathlib.Path(__file__).resolve().parent.parent / 'data' / 'lakes'
 OUT.mkdir(parents=True, exist_ok=True)
 
@@ -79,6 +80,18 @@ def rings_of(geom):
     if geom['type'] == 'MultiPolygon': return [r for poly in geom['coordinates'] for r in poly]
     return []
 
+def stocking_of(lake_id, d):
+    """Compact stocking summary from the pack's config/stocking.json or the sidecar dir."""
+    for cand in [d / 'config' / 'stocking.json'] + ([STOCK / (lake_id + '.json')] if STOCK else []):
+        if cand.exists():
+            try: st = json.load(open(cand))
+            except Exception: return None
+            sm = st.get('summary') or {}
+            return {'events': sm.get('events', 0), 'first': sm.get('first_year'), 'last': sm.get('last_year'),
+                    'species': [{'species': x['species'], 'events': x['events'], 'first': x['first'], 'last': x['last']} for x in (st.get('species') or [])[:6]],
+                    'note': st.get('note'), 'by_name': 'name + distance' in (st.get('join') or '')}
+    return None
+
 def build(l, d):
     outline = json.load(open(d / 'lake_outline.geojson'))
     rings = [r for f in outline['features'] for r in rings_of(f['geometry'])]
@@ -134,7 +147,7 @@ def build(l, d):
             'species': sp, 'places': names, 'blurb': l.get('blurb') or '',
             'lead_species': lead_species, 'lead_season': lead_season,
             'rings': [[[round(x), round(y)] for x, y in r] for r in simp], 'bbox': [round(v) for v in bbox],
-            'spots': spots}
+            'spots': spots, 'stocking': stocking_of(l['id'], d)}
 
 bundled = json.load(open(APP / 'lakes.json'))['lakes']
 catalog = json.load(open(PACKS / 'catalog.json'))['packs']
