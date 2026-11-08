@@ -27,8 +27,10 @@
   <url><loc>https://anglersedge.fishing/lakes/dryberry</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/fairy</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/golden</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/mn-green</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/ab-gull</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/gull</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/mn-gull</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/haybay</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/head</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/kakagi</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -42,8 +44,12 @@
   <url><loc>https://anglersedge.fishing/lakes/bernard</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/joseph</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/manitou</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/mn-miltona</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/mn-minnetonka</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/mn-minnewaska</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/muskoka</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/nosbonsing</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/mn-osakis</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/rosseau</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/scugog</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/temagami</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -93,6 +99,7 @@
   <url><loc>https://anglersedge.fishing/lakes/ab-wabamun</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/wabaskang</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/wabigoon</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/mn-westbattle</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/white</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/ab-whitefish</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/qc-iles</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>

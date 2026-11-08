@@ -103,6 +103,8 @@ def render_lake(r):
               f"Bathymetry for {name} is built from the provincial open-data survey record; where soundings are sparse the app marks cells unsurveyed rather than guessing.")
     if reg['admin'] == 'CA-ON': honest += ' Source: Land Information Ontario (Open Government Licence – Ontario).'
     elif reg['admin'] == 'CA-QC': honest += ' Source: Gouvernement du Québec bathymetric survey data (Données Québec).'
+    elif reg['admin'] == 'CA-AB': honest += ' Source: Alberta Geological Survey lake bathymetry (Open Government Licence – Alberta).'
+    elif reg['admin'] == 'US-MN': honest += ' Source: Minnesota DNR Lake Bathymetric Outlines, Contours and DEM (Minnesota Geospatial Commons).'
     places = ''.join(f'<span>{esc(pn)}</span>' for pn in r['places'] if pn != name)
     jsonld = json.dumps([
         {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
