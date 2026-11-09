@@ -105,6 +105,9 @@ def render_lake(r):
     elif reg['admin'] == 'CA-QC': honest += ' Source: Gouvernement du Québec bathymetric survey data (Données Québec).'
     elif reg['admin'] == 'CA-AB': honest += ' Source: Alberta Geological Survey lake bathymetry (Open Government Licence – Alberta).'
     elif reg['admin'] == 'US-MN': honest += ' Source: Minnesota DNR Lake Bathymetric Outlines, Contours and DEM (Minnesota Geospatial Commons).'
+    elif reg['admin'] == 'US-MI': honest += ' Source: Michigan DNR Institute for Fisheries Research inland lake contours (Michigan GIS Open Data) with the USGS National Hydrography Dataset outline.'
+    elif reg['admin'] == 'US-NH': honest += ' Source: NH GRANIT lake bathymetry (NH Department of Environmental Services GPS depth surveys).'
+    elif reg['admin'] == 'US-CT': honest += ' Source: Connecticut DEEP Lake Bathymetry Contours (CT ECO).'
     places = ''.join(f'<span>{esc(pn)}</span>' for pn in r['places'] if pn != name)
     jsonld = json.dumps([
         {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [

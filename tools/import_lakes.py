@@ -17,9 +17,10 @@ ADMINS = {'CA-ON': ('Ontario', 'ON', 'Canada'), 'CA-MB': ('Manitoba', 'MB', 'Can
   'CA-QC': ('Quebec', 'QC', 'Canada'), 'CA-SK': ('Saskatchewan', 'SK', 'Canada'),
   'CA-AB': ('Alberta', 'AB', 'Canada'), 'CA-BC': ('British Columbia', 'BC', 'Canada'),
   'US-MN': ('Minnesota', 'MN', 'United States'), 'US-MI': ('Michigan', 'MI', 'United States'),
-  'US-WI': ('Wisconsin', 'WI', 'United States'), 'US-NY': ('New York', 'NY', 'United States')}
+  'US-WI': ('Wisconsin', 'WI', 'United States'), 'US-NY': ('New York', 'NY', 'United States'),
+  'US-NH': ('New Hampshire', 'NH', 'United States'), 'US-CT': ('Connecticut', 'CT', 'United States'), 'US-OH': ('Ohio', 'OH', 'United States')}
 PREFIX = {'qc': 'CA-QC', 'mb': 'CA-MB', 'sk': 'CA-SK', 'ab': 'CA-AB', 'bc': 'CA-BC',
-  'mn': 'US-MN', 'mi': 'US-MI', 'wi': 'US-WI', 'ny': 'US-NY'}
+  'mn': 'US-MN', 'mi': 'US-MI', 'wi': 'US-WI', 'ny': 'US-NY', 'nh': 'US-NH', 'ct': 'US-CT', 'oh': 'US-OH'}
 AREAS = {**{k: 'Muskoka' for k in 'muskoka rosseau joseph bays bigwind fairy mary muldrew peninsula skeleton vernon lakeofbays'.split()},
   **{k: 'Haliburton' for k in 'kawagama kushog drag kashagawigamog kennisis boshkung head mountain twelvemile'.split()},
   **{k: 'Kawarthas' for k in 'rice scugog balsam chemong pigeon buckhorn lowerbuckhorn cameron stony sturgeon'.split()},
