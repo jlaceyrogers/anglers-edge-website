@@ -3,6 +3,13 @@
   <url><loc>https://anglersedge.fishing/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://anglersedge.fishing/lakes</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://anglersedge.fishing/privacy.html</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/alberta</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/ontario</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/quebec</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/connecticut</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/michigan</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/minnesota</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/new-hampshire</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/abram</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/agnew</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/ahmic</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>

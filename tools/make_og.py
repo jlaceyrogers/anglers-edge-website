@@ -35,8 +35,11 @@ p{font-size:22px;line-height:1.4;color:#5F6D5C;margin:0 0 26px}
 <div class="map">%(svg)s</div></body></html>"""
 icon = root / 'assets' / 'icon.png'
 n = 0
+import sys
+ALL = '--all' in sys.argv   # default: only lakes that have no image yet
 for f in sorted((root / 'data/lakes').glob('*.json')):
     r = json.load(open(f))
+    if not ALL and (out / (r['id'] + '.png')).exists(): continue
     reg = (r['region'].get('area') + ', ' if r['region'].get('area') else '') + r['region']['name']
     sub = f"Surveyed depth map and {len(r['spots'])} ranked fishing spots, with the reasons. Works with no signal."
     html = tpl % {'region': reg, 'name': r['name'], 'sub': sub, 'icon': icon, 'svg': svg_of(r, 460, 458)}

@@ -87,6 +87,19 @@ def stocking_block(r):
               'CA-AB': 'Alberta stocking records', 'CA-QC': 'Quebec stocking records'}.get((r.get('region') or {}).get('admin'), 'Ontario MNRF stocking records')
     tail = (f"Stocked recently (last {st['last']})." if recent else f"Not stocked since {st['last']}.") + f" {agency} {st['first']}–{st['last']}."
     return f'<h3>Stocking record</h3><ul class="stock">{rows}</ul><p class="dim small">{esc(tail)}</p>'
+BATHY_SOURCE = {
+    'CA-ON': 'Land Information Ontario (Open Government Licence – Ontario).',
+    'CA-QC': 'Gouvernement du Québec bathymetric survey data (Données Québec).',
+    'CA-AB': 'Alberta Geological Survey lake bathymetry (Open Government Licence – Alberta).',
+    'US-MN': 'Minnesota DNR Lake Bathymetric Outlines, Contours and DEM (Minnesota Geospatial Commons).',
+    'US-MI': 'Michigan DNR Institute for Fisheries Research inland lake contours (Michigan GIS Open Data) with the USGS National Hydrography Dataset outline.',
+    'US-NH': 'NH GRANIT lake bathymetry (NH Department of Environmental Services GPS depth surveys).',
+    'US-CT': 'Connecticut DEEP Lake Bathymetry Contours (CT ECO).'}
+STOCK_AGENCY = {'CA-ON': 'Ontario MNRF', 'US-MN': 'the Minnesota DNR', 'US-MI': 'the Michigan DNR',
+                'US-NH': 'New Hampshire Fish and Game', 'US-CT': 'Connecticut DEEP'}
+import unicodedata as _ud
+def slug(s): return re.sub(r'[^a-z0-9]+', '-', _ud.normalize('NFKD', s).encode('ascii', 'ignore').decode().lower()).strip('-')
+def state_url(reg): return f"/lakes/{slug(reg['name'])}"
 def region_label(r): return (r['region']['area'] + ', ' if r['region'].get('area') else '') + r['region']['name']
 def render_lake(r):
     reg = r['region']; name = r['name']
@@ -104,13 +117,7 @@ def render_lake(r):
     honest = (f"Bathymetry for {name} comes from a {r['survey_year']} {esc(r.get('survey_method') or 'survey')} with {r['soundings']:,} measured soundings; the depth model cross-validates to ±{r['mae_m']:g} m on held-out points."
               if r.get('survey_year') and r.get('soundings') and r.get('mae_m') else
               f"Bathymetry for {name} is built from the provincial open-data survey record; where soundings are sparse the app marks cells unsurveyed rather than guessing.")
-    if reg['admin'] == 'CA-ON': honest += ' Source: Land Information Ontario (Open Government Licence – Ontario).'
-    elif reg['admin'] == 'CA-QC': honest += ' Source: Gouvernement du Québec bathymetric survey data (Données Québec).'
-    elif reg['admin'] == 'CA-AB': honest += ' Source: Alberta Geological Survey lake bathymetry (Open Government Licence – Alberta).'
-    elif reg['admin'] == 'US-MN': honest += ' Source: Minnesota DNR Lake Bathymetric Outlines, Contours and DEM (Minnesota Geospatial Commons).'
-    elif reg['admin'] == 'US-MI': honest += ' Source: Michigan DNR Institute for Fisheries Research inland lake contours (Michigan GIS Open Data) with the USGS National Hydrography Dataset outline.'
-    elif reg['admin'] == 'US-NH': honest += ' Source: NH GRANIT lake bathymetry (NH Department of Environmental Services GPS depth surveys).'
-    elif reg['admin'] == 'US-CT': honest += ' Source: Connecticut DEEP Lake Bathymetry Contours (CT ECO).'
+    if reg['admin'] in BATHY_SOURCE: honest += ' Source: ' + BATHY_SOURCE[reg['admin']]
     places = ''.join(f'<span>{esc(pn)}</span>' for pn in r['places'] if pn != name)
     jsonld = json.dumps([
         {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
@@ -123,7 +130,7 @@ def render_lake(r):
          "subjectOf": {"@type": "WebPage", "url": f"{SITE}/lakes/{r['id']}", "name": title}}], ensure_ascii=False)
     out = lake_tpl.replace('https://anglersedge.fishing/assets/og.png', og_of(r))
     for k, v in {'TITLE': esc(title), 'DESC': esc(desc), 'URL': f"{SITE}/lakes/{r['id']}", 'CSS': css, 'NAV': NAV, 'FOOTER': FOOTER,
-                 'ADMIN': reg['admin'], 'ADMIN_NAME': esc(reg['name']), 'EYEBROW': esc(region_label(r)), 'H1': esc(name) + ' fishing map',
+                 'ADMIN': reg['admin'], 'ADMIN_URL': state_url(reg), 'ADMIN_NAME': esc(reg['name']), 'EYEBROW': esc(region_label(r)), 'H1': esc(name) + ' fishing map',
                  'LEDE': esc(f"Surveyed depth, structure and ranked fishing spots for {name} — scored for your species and the day's conditions, and it all works with no signal. Free."),
                  'APPSTORE': APPSTORE, 'SVG': svg_of(r), 'N_SPOTS': str(len(r['spots'])),
                  'LEAD_SPECIES': esc((r.get('lead_species') or 'smallmouth_bass').replace('_', ' ').title()), 'LEAD_SEASON': esc(r.get('lead_season') or 'summer'),
@@ -137,17 +144,48 @@ def render_lake(r):
 (root / 'lakes').mkdir(exist_ok=True)
 for r in LAKES: (root / 'lakes' / (r['id'] + '.html')).write_text(render_lake(r))
 # lakes index
-def index_page():
+def area_lists(rs):
+    areas = {}
+    for r in rs: areas.setdefault(r['region'].get('area') or 'Other', []).append(r)
+    return ''.join(f'<h3>{esc(area)}</h3><ul class="lakes">' + ''.join(
+        f'<li><a href="/lakes/{r["id"]}">{esc(r["name"])}</a><small>{(str(r["area_km2"]) + " km²") if r.get("area_km2") else ""}</small></li>' for r in sorted(ars, key=lambda x: x['name'])) + '</ul>'
+        for area, ars in sorted(areas.items()))
+def region_groups():
     groups = {}
     for r in LAKES: groups.setdefault((r['region']['country'], r['region']['admin'], r['region']['name']), []).append(r)
+    return sorted(groups.items(), key=lambda kv: (['Canada', 'United States'].index(kv[0][0]) if kv[0][0] in ('Canada', 'United States') else 9, kv[0][2]))
+def state_page(country, admin, aname, rs):
+    n = len(rs); url = state_url(rs[0]['region']); kind = 'province' if country == 'Canada' else 'state'
+    title = f"{aname} Lake Fishing Maps — {n} Lake{'s' if n != 1 else ''} with Depth, Structure & Ranked Spots | Anglers Edge"
+    desc = (f"Free offline fishing maps for {n} {aname} lake{'s' if n != 1 else ''}: surveyed depth, humps, breaklines and ranked spots with reasons, "
+            f"built from the {kind}'s own survey data. Works with no signal.")
+    src = BATHY_SOURCE.get(admin); ag = STOCK_AGENCY.get(admin)
+    lede = (f"{n} {aname} lake{'s' if n != 1 else ''} in Anglers Edge, each with a surveyed depth map, structure layers and ranked fishing spots "
+            f"scored for your species and the day's conditions. Every lake is free, downloads once and works fully offline.")
+    notes = (f"<p class=\"dim\">Depth data: {esc(src)}</p>" if src else '') + (f"<p class=\"dim\">Stocking records on each lake page come from {esc(ag)}.</p>" if ag else '')
+    big = sorted([r for r in rs if r.get('area_km2')], key=lambda r: -r['area_km2'])[:6]
+    feat = ('<h2>Start here</h2><ul class="lakes">' + ''.join(f'<li><a href="/lakes/{r["id"]}">{esc(r["name"])}</a><small>{r["area_km2"]} km² · {len(r["spots"])} spot{"s" if len(r["spots"]) != 1 else ""}</small></li>' for r in big) + '</ul>') if big else ''
+    jsonld = json.dumps([
+        {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Anglers Edge", "item": SITE + "/"},
+            {"@type": "ListItem", "position": 2, "name": "Lakes", "item": SITE + "/lakes"},
+            {"@type": "ListItem", "position": 3, "name": aname, "item": SITE + url}]},
+        {"@context": "https://schema.org", "@type": "CollectionPage", "name": title, "url": SITE + url,
+         "about": {"@type": "AdministrativeArea", "name": aname}}], ensure_ascii=False)
+    out = lake_tpl.split('<main>')[0] + (f'<main class="wrap lakes-index" style="padding:120px 20px 60px"><div class="crumbs"><a href="/">Anglers Edge</a> · <a href="/lakes">Lakes</a> · {esc(aname)}</div>'
+           f'<div class="eyebrow">{esc(country)}</div><h1>{esc(aname)} fishing maps</h1><p class="lede">{esc(lede)}</p>{notes}{feat}<h2>Every {esc(aname)} lake, by area</h2>{area_lists(rs)}'
+           f'<p class="dim small" style="margin-top:28px">Analysis only — not for navigation. <a href="/lakes">All {len(LAKES)} lakes</a>.</p></main>') + FOOTER + '</body></html>'
+    for k, v in {'TITLE': esc(title), 'DESC': esc(desc), 'URL': SITE + url, 'CSS': css, 'NAV': NAV, 'JSONLD': jsonld}.items():
+        out = out.replace('{{' + k + '}}', v)
+    return out
+STATE_PAGES = []
+for (country, admin, aname), rs in region_groups():
+    u = state_url(rs[0]['region']); STATE_PAGES.append(u)
+    (root / 'lakes' / (u.split('/')[-1] + '.html')).write_text(state_page(country, admin, aname, rs))
+def index_page():
     body = ''
-    for (country, admin, aname), rs in sorted(groups.items(), key=lambda kv: (['Canada', 'United States'].index(kv[0][0]) if kv[0][0] in ('Canada', 'United States') else 9, kv[0][2])):
-        body += f'<h2 id="{admin}">{esc(aname)} <span class="dim" style="font-weight:500;font-size:16px">· {len(rs)} lake{"s" if len(rs) != 1 else ""}</span></h2>'
-        areas = {}
-        for r in rs: areas.setdefault(r['region'].get('area') or 'Other', []).append(r)
-        for area, ars in sorted(areas.items()):
-            body += f'<h3>{esc(area)}</h3><ul class="lakes">' + ''.join(
-                f'<li><a href="/lakes/{r["id"]}">{esc(r["name"])}</a><small>{(str(r["area_km2"]) + " km²") if r.get("area_km2") else ""}</small></li>' for r in sorted(ars, key=lambda x: x['name'])) + '</ul>'
+    for (country, admin, aname), rs in region_groups():
+        body += f'<h2 id="{admin}"><a href="{state_url(rs[0]["region"])}">{esc(aname)}</a> <span class="dim" style="font-weight:500;font-size:16px">· {len(rs)} lake{"s" if len(rs) != 1 else ""}</span></h2>' + area_lists(rs)
     title = f"Fishing Maps for {len(LAKES)} Lakes Across Canada & the US | Anglers Edge"
     desc = f"Every lake in Anglers Edge by province, state and area: {len(LAKES)} lakes across Canada and the United States with surveyed depth maps, structure layers and ranked fishing spots, all offline and free."
     out = lake_tpl.split('<main>')[0] + f'<main class="wrap lakes-index" style="padding:120px 20px 60px"><div class="eyebrow">Lakes we cover</div><h1>{len(LAKES)} lakes, each with its own map and ranked spots.</h1><p class="lede">Tap a lake for its depth map, top spots and data sources. Every one is free in the app.</p>{body}</main>' + FOOTER + '</body></html>'
@@ -157,7 +195,7 @@ def index_page():
     return out
 (root / 'lakes.html').write_text(index_page())
 # sitemap
-urls = [(SITE + '/', 'weekly', '1.0'), (SITE + '/lakes', 'weekly', '0.8'), (SITE + '/privacy.html', 'yearly', '0.2')] + [(f"{SITE}/lakes/{r['id']}", 'monthly', '0.7') for r in LAKES]
+urls = [(SITE + '/', 'weekly', '1.0'), (SITE + '/lakes', 'weekly', '0.8'), (SITE + '/privacy.html', 'yearly', '0.2')] + [(SITE + u, 'weekly', '0.8') for u in STATE_PAGES] + [(f"{SITE}/lakes/{r['id']}", 'monthly', '0.7') for r in LAKES]
 (root / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(f'  <url><loc>{u}</loc><changefreq>{c}</changefreq><priority>{p}</priority></url>\n' for u, c, p in urls) + '</urlset>\n')
 # home page lake list + counts
 LAKE_LIST = '<ul class="lakes">' + ''.join(f'<li><a href="/lakes/{r["id"]}">{esc(r["name"])}</a></li>' for r in LAKES) + '</ul>'
