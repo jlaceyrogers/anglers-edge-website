@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lake Clear Fishing Map — Depth, Structure &amp; Ranked Spots | Anglers Edge</title>
+<meta name="description" content="Free offline fishing map for Lake Clear (Ottawa Valley, Ontario): surveyed depth, humps, breaklines and 8 ranked spots with reasons, for Smallmouth Bass, Largemouth Bass, Walleye. Analysis only, not for navigation.">
+<link rel="canonical" href="https://anglersedge.fishing/lakes/lakeclear">
+<meta name="apple-itunes-app" content="app-id=6798728175">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Anglers Edge">
+<meta property="og:url" content="https://anglersedge.fishing/lakes/lakeclear">
+<meta property="og:title" content="Lake Clear Fishing Map — Depth, Structure &amp; Ranked Spots | Anglers Edge">
+<meta property="og:description" content="Free offline fishing map for Lake Clear (Ottawa Valley, Ontario): surveyed depth, humps, breaklines and 8 ranked spots with reasons, for Smallmouth Bass, Largemouth Bass, Walleye. Analysis only, not for navigation.">
+<meta property="og:image" content="https://anglersedge.fishing/assets/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lake Clear Fishing Map — Depth, Structure &amp; Ranked Spots | Anglers Edge">
+<meta name="twitter:description" content="Free offline fishing map for Lake Clear (Ottawa Valley, Ontario): surveyed depth, humps, breaklines and 8 ranked spots with reasons, for Smallmouth Bass, Largemouth Bass, Walleye. Analysis only, not for navigation.">
+<meta name="twitter:image" content="https://anglersedge.fishing/assets/og.png">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,600;0,8..60,700;1,8..60,600&display=swap">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Anglers Edge", "item": "https://anglersedge.fishing/"}, {"@type": "ListItem", "position": 2, "name": "Lakes", "item": "https://anglersedge.fishing/lakes"}, {"@type": "ListItem", "position": 3, "name": "Lake Clear", "item": "https://anglersedge.fishing/lakes/lakeclear"}]}, {"@context": "https://schema.org", "@type": "LakeBodyOfWater", "name": "Lake Clear", "geo": {"@type": "GeoCoordinates", "latitude": 45.4398, "longitude": -77.1993}, "containedInPlace": {"@type": "AdministrativeArea", "name": "Ontario"}, "subjectOf": {"@type": "WebPage", "url": "https://anglersedge.fishing/lakes/lakeclear", "name": "Lake Clear Fishing Map — Depth, Structure & Ranked Spots | Anglers Edge"}}]</script>
+<style>:root{--paper:#F7F2E6;--card:#FFFDF6;--inset:#EFE7D4;--ink:#22301F;--dim:#5F6D5C;--pine:#2C5942;--deep:#1B2A21;--orange:#D9480F;--ochre:#C08A12;--good:#217A4B;--bad:#A63A2B;--line:rgba(38,48,38,.16);--serif:"Source Serif 4",ui-serif,Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--pine)}h1,h2,h3,.serif{font-family:var(--serif);letter-spacing:-.01em;text-wrap:balance}
+h2{font-size:clamp(30px,4.2vw,44px);line-height:1.08;margin:0 0 14px;font-weight:700}
+h3{font-size:22px;margin:0 0 6px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:10px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+.lede{font-size:19px;color:var(--dim);max-width:62ch;margin:0}
+/* nav */
+.nav{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;pointer-events:none}
+.nav>*{pointer-events:auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:var(--serif);font-weight:700;font-size:20px}
+.brand img{width:36px;height:36px;border-radius:10px}
+.nav-links{display:flex;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px;box-shadow:0 2px 8px rgba(40,40,20,.12)}
+.nav-links a{text-decoration:none;color:var(--ink);font-weight:600;font-size:14px;padding:8px 14px;border-radius:999px}
+.nav-links a:hover{background:var(--inset)}
+.nav-links a.cta{background:var(--ink);color:var(--paper)}
+@media(max-width:760px){.nav-links a:not(.cta){display:none}}
+/* hero */
+.hero{position:relative;height:100svh;min-height:640px;overflow:hidden;background:var(--paper)}
+.stage{position:absolute;inset:0}
+#lake{position:absolute;inset:0;cursor:crosshair;opacity:0;transition:opacity .8s ease}
+#lake.ready{opacity:1}#lake canvas{display:block;width:100%!important;height:100%!important}
+.hero-copy{position:absolute;left:24px;top:96px;max-width:520px;z-index:5;pointer-events:none}
+.hero-copy>*{pointer-events:auto}
+.hero h1{font-size:clamp(42px,6.4vw,76px);line-height:1.0;margin:0 0 14px;font-weight:700}
+.hero h1 em{font-style:italic;color:var(--orange)}
+.hero p{font-size:18px;color:var(--dim);max-width:44ch;margin:0 0 20px}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:14px 22px;font-weight:700;text-decoration:none;font-size:15px;border:1px solid transparent;cursor:pointer;font-family:var(--sans)}
+.btn.primary{background:var(--ink);color:var(--paper)}.btn.ghost{background:var(--card);color:var(--ink);border-color:var(--line)}
+.btn.orange{background:var(--orange);color:#fff}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap}
+.game-hud{position:absolute;right:24px;top:96px;z-index:5;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 18px;box-shadow:0 2px 8px rgba(40,40,20,.12);min-width:220px}
+.game-hud .gh-t{font-family:var(--serif);font-weight:700;font-size:18px;margin-bottom:6px}
+.game-hud .gh-row{display:flex;justify-content:space-between;font-size:14px;color:var(--dim);margin:3px 0}
+.game-hud b{color:var(--ink);font-variant-numeric:tabular-nums}
+.game-hud .gh-hint{font-size:12px;color:var(--dim);margin-top:8px;border-top:1px solid var(--line);padding-top:8px}
+.cast-card{position:absolute;left:50%;bottom:110px;transform:translate(-50%,20px);z-index:5;background:var(--ink);color:var(--paper);border-radius:16px;padding:14px 20px;box-shadow:0 10px 30px rgba(40,40,20,.25);opacity:0;transition:all .25s ease;text-align:center;max-width:90vw}
+.cast-card.show{opacity:1;transform:translate(-50%,0)}
+.cast-card .cc-title{font-family:var(--serif);font-weight:700;font-size:24px}
+.cast-card.excellent .cc-title,.cast-card.good .cc-title{color:#8FD0A8}.cast-card.fair .cc-title{color:#E0B860}.cast-card.poor .cc-title{color:#E59A8A}
+.cast-card .cc-sub{font-size:13px;opacity:.8;margin-top:2px}
+.reveal{position:absolute;inset:0;z-index:8;display:flex;align-items:center;justify-content:center;background:rgba(247,242,230,.72);backdrop-filter:blur(4px);opacity:0;pointer-events:none;transition:opacity .35s ease}
+.reveal.show{opacity:1;pointer-events:auto}
+.reveal .rv{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px 30px;max-width:520px;text-align:center;box-shadow:0 10px 40px rgba(40,40,20,.2);margin:0 20px}
+.reveal .rv-nums{display:flex;gap:28px;justify-content:center;margin:12px 0}
+.reveal .rv-nums div{font-family:var(--serif);font-size:44px;font-weight:700;line-height:1}.reveal .rv-nums b{font-weight:700}
+.reveal .rv-nums span{display:block;font:600 12px var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-top:6px}
+.reveal .rv-you{color:var(--ink)}.reveal .rv-model{color:var(--pine)}
+.reveal p{color:var(--dim);margin:8px 0 18px}
+.scroll-hint{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:5;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+@media(max-width:760px){
+.hero{height:auto;min-height:0;display:flex;flex-direction:column;padding-top:76px}
+.hero-copy{position:static!important;order:-1;max-width:none;padding:8px 20px 18px;top:auto;left:auto}
+.hero h1{font-size:40px}.hero p{font-size:16px;max-width:none}
+.stage{position:relative;inset:auto;height:64vh;min-height:420px;margin:0 12px 22px;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 10px 30px rgba(40,40,20,.14);background:#EDE6D6}
+.game-hud{position:absolute;left:10px;top:10px;right:auto;bottom:auto;min-width:0;padding:10px 12px;border-radius:14px}
+.game-hud .gh-t{font-size:15px;margin-bottom:2px}.game-hud .gh-row{font-size:12px;gap:14px}.game-hud .gh-hint{font-size:11px;margin-top:6px;padding-top:6px}
+.cast-card{bottom:14px;padding:10px 16px}.cast-card .cc-title{font-size:20px}
+.reveal .rv{padding:22px 18px}.reveal .rv-nums div{font-size:36px}
+.scroll-hint{display:none}
+}
+/* pillars */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:860px){.grid3{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px 24px;box-shadow:0 1px 2px rgba(40,40,20,.06)}
+.card .n{width:44px;height:44px;border-radius:14px;background:var(--pine);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:700;font-size:20px;margin-bottom:14px}
+.card p{color:var(--dim);margin:6px 0 0;font-size:15px}
+/* factors */
+.factors{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:22px}
+.factor{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:14px}
+.factor b{display:block;font-family:var(--serif);font-size:16px}
+.factor span{color:var(--dim);font-size:13px}
+/* split */
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+@media(max-width:860px){.split{grid-template-columns:1fr}}
+.phone{width:min(300px,80%);height:auto;border-radius:36px;border:8px solid var(--deep);box-shadow:0 20px 50px rgba(40,40,20,.25);display:block;margin:0 auto}
+.check li{margin:10px 0;padding-left:28px;position:relative;color:var(--ink)}
+.check li::before{content:"";position:absolute;left:0;top:10px;width:14px;height:14px;border-radius:50%;background:var(--good)}
+.check{list-style:none;padding:0;margin:18px 0 0}
+/* pricing */
+.dark{background:var(--deep);color:var(--paper)}.dark .lede,.dark .card p{color:#B8C4B5}.dark .eyebrow{color:#E0A83C}.dark h2{color:var(--paper)}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}.tiers.two{grid-template-columns:repeat(2,1fr);max-width:820px}
+@media(max-width:860px){.tiers,.tiers.two{grid-template-columns:1fr}}
+.tier{background:var(--card);color:var(--ink);border-radius:20px;padding:26px 24px}
+.tier.free{background:#E9F0EA}
+.tier h3{margin-bottom:2px}.tier .price{color:var(--orange);font-weight:700;margin-bottom:12px}
+.tier ul{padding-left:18px;margin:0}.tier li{margin:7px 0;font-size:15px;color:#33402F}
+.promise{margin-top:26px;font-family:var(--serif);font-style:italic;font-size:20px;color:#E0A83C;text-align:center}
+/* table */
+.cmp{width:100%;min-width:600px;border-collapse:collapse;margin-top:22px;font-size:15px;overflow:hidden;border-radius:16px;box-shadow:0 1px 2px rgba(40,40,20,.06)}
+.cmp th,.cmp td{padding:12px 14px;text-align:center;border-bottom:1px solid var(--line);background:var(--card)}
+.cmp th{background:var(--pine);color:var(--paper);font-family:var(--serif);font-size:15px}
+.cmp td:first-child{text-align:left;font-weight:600}.cmp td.us{background:#E9F0EA;color:var(--pine);font-weight:700}
+.cmp .y{color:var(--good);font-weight:700}.cmp .n{color:var(--bad)}.cmp .p{color:var(--ochre)}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -24px;padding:0 24px}
+/* gallery */
+.gallery{display:flex;gap:18px;overflow-x:auto;padding:12px 4px 20px;scroll-snap-type:x mandatory;scrollbar-width:none}
+.gallery::-webkit-scrollbar{display:none}
+.gallery figure{flex:none;margin:0;scroll-snap-align:start;width:220px}
+.gallery img{width:100%;height:auto;border-radius:22px;border:6px solid var(--deep);display:block;box-shadow:0 10px 30px rgba(40,40,20,.18)}
+.gallery figcaption{font-size:13px;color:var(--dim);margin-top:10px;text-align:center}
+/* faq */
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:10px 0}
+.faq summary{cursor:pointer;font-weight:700;font-family:var(--serif);font-size:18px}
+.faq p{color:var(--dim);margin:8px 0 0}
+/* footer */
+footer{padding:48px 0 60px;border-top:1px solid var(--line);color:var(--dim);font-size:14px}
+footer .row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer a{margin-right:16px}
+.badge{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--paper);border-radius:12px;padding:10px 16px;text-decoration:none;font-weight:700}
+.badge small{display:block;font-weight:500;font-size:11px;opacity:.75;line-height:1}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cast-card,.reveal,#lake{transition:none}}
+
+.hint-touch{display:none}@media(hover:none){.hint-mouse{display:none}.hint-touch{display:inline}}
+
+.lakes{list-style:none;padding:0;margin:22px 0 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:8px 18px}
+.lakes li{font-size:15px;padding:8px 0;border-bottom:1px solid var(--line);color:var(--ink)}
+
+.pricing-layout{display:grid;grid-template-columns:1.45fr 1fr;gap:18px;max-width:980px;margin:30px auto 0;align-items:stretch}
+.tier.big{padding:30px 32px}.big-price{font-family:var(--serif);font-weight:700;font-size:84px;line-height:1;color:var(--pine);display:flex;align-items:baseline;gap:6px;margin-bottom:6px}
+.big-price .cur{font-size:40px}.big-price .per{font:600 13px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-left:8px}
+.tier.big h3{font-size:24px;margin:4px 0 14px}
+.tier ul.two-col{display:grid;grid-template-columns:1fr 1fr;gap:4px 24px}
+.tier .fine{margin-top:18px;padding-top:14px;border-top:1px solid var(--line);font-size:14px;color:var(--dim)}
+.tier.partners{display:flex;flex-direction:column}.tier.partners ul{flex:1}.tier.partners .eyebrow{margin-bottom:6px}
+@media(max-width:860px){.pricing-layout{grid-template-columns:1fr}.tier ul.two-col{grid-template-columns:1fr}.big-price{font-size:64px}}
+
+/* ---------- lake pages ---------- */
+.lakepage main{display:block}
+.crumbs{font-size:13px;color:var(--dim);margin-bottom:14px}.crumbs a{color:var(--dim);text-decoration:none}.crumbs a:hover{color:var(--pine)}
+.lakehero{padding:120px 0 28px}.lakehero h1{font-size:clamp(36px,6vw,64px);line-height:1.02;margin:0 0 14px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.lakemap-sec{padding:0 0 40px}.lakemap{margin:0;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:0 2px 8px rgba(40,40,20,.08)}
+.lakemap svg{display:block;width:100%;height:auto;max-height:520px}
+.lakemap figcaption{font-size:13px;color:var(--dim);margin-top:10px;text-align:center}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:18px 0 0}
+.facts div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.facts dt{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.facts dd{margin:4px 0 0;font-family:var(--serif);font-size:22px;font-weight:700;color:var(--ink);line-height:1.15}
+.facts dd small{display:block;font:500 12px/1.4 var(--sans);color:var(--dim);margin-top:2px}
+.spots-sec{padding:20px 0 40px}.spots{list-style:none;padding:0;margin:22px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.spots li{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px}
+.spots .rank{flex:none;width:40px;height:40px;border-radius:12px;color:#FDF9EE;font-family:var(--serif);font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center}
+.spots .rank.good{background:var(--good)}.spots .rank.fair{background:var(--ochre)}
+.spots .meta{font-size:13px;color:var(--dim);margin-bottom:4px}.spots .meta b{color:var(--ink)}
+.spots ul{margin:0;padding-left:18px;font-size:14px;color:var(--ink)}.spots ul li{display:list-item;background:none;border:0;padding:0;margin:0}
+.inapp-sec{padding:30px 0 40px}.inapp-sec .two{display:grid;grid-template-columns:1.3fr 1fr;gap:40px}
+.inapp-sec .side{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px}
+.inapp-sec h3{font-size:16px;margin:0 0 8px}.inapp-sec .side h3+p{margin-top:0}.inapp-sec .side p{margin:0 0 20px;font-size:14px;color:var(--dim)}
+.tags,.nearby{line-height:2}.tags span{display:inline-block;background:var(--inset);border-radius:999px;padding:2px 10px;font-size:13px;color:var(--ink);margin:0 6px 4px 0}
+.nearby a{display:inline-block;margin:0 10px 4px 0;font-weight:600}
+.ticks{list-style:none;padding:0;margin:0 0 22px}.ticks li{padding-left:24px;position:relative;margin:6px 0;color:var(--ink)}.ticks li::before{content:"✓";position:absolute;left:0;color:var(--good);font-weight:700}
+.honest-sec{padding:0 0 60px}.honest-sec p{font-size:14px;max-width:70ch}
+.lakes-index h1{font-size:clamp(34px,5vw,56px)}.lakes-index h2{font-size:26px;margin:36px 0 8px}.lakes-index h3{font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin:22px 0 8px}
+.lakes-index .lakes{margin-top:0}.lakes-index .lakes a{text-decoration:none;color:var(--ink);font-weight:600}.lakes-index .lakes li{display:flex;justify-content:space-between;gap:10px}.lakes-index .lakes small{color:var(--dim);font-weight:500}
+@media (max-width:760px){.inapp-sec .two{grid-template-columns:1fr}.lakehero{padding-top:96px}}
+.stock{list-style:none;padding:0;margin:8px 0 6px;display:grid;gap:6px}.stock li{display:flex;justify-content:space-between;gap:12px;font-size:14px;border-bottom:1px solid var(--line);padding:5px 0}.stock li span{color:var(--dim);text-align:right}.small{font-size:12px}
+</style>
+</head>
+<body class="lakepage">
+<nav class="nav">
+  <a class="brand" href="/#top"><img src="/assets/icon.png?v=757a77b5" alt="">Anglers Edge</a>
+  <div class="nav-links"><a href="/#why">Why</a><a href="/#how">How it works</a><a href="/#pricing">Pricing</a><a href="/#compare">Compare</a><a href="/#lakes">Lakes</a><a class="cta" href="/#get">Get the app</a></div>
+</nav>
+<main>
+<section class="lakehero"><div class="wrap">
+  <div class="crumbs"><a href="/">Anglers Edge</a> · <a href="/lakes">Lakes</a> · <a href="/lakes#CA-ON">Ontario</a></div>
+  <div class="eyebrow">Ottawa Valley, Ontario</div>
+  <h1>Lake Clear fishing map</h1>
+  <p class="lede">Surveyed depth, structure and ranked fishing spots for Lake Clear — scored for your species and the day&#x27;s conditions, and it all works with no signal. Free.</p>
+  <div class="cta-row">
+    <a class="btn primary" href="https://apps.apple.com/app/anglers-edge/id6798728175">Get it free on the App Store</a>
+    <a class="btn ghost" href="/#how">How the scoring works</a>
+  </div>
+</div></section>
+
+<section class="lakemap-sec"><div class="wrap">
+  <figure class="lakemap">
+    <svg viewBox="0 0 688 490" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Outline of Lake Clear with its top ranked fishing spots"><rect width="688" height="490" fill="#F3ECDB" rx="14"/><path d="M563.9 232.4 L557.3 225.1 L549.8 223.1 L546.1 225.7 L540.0 245.9 L537.4 249.9 L532.2 249.1 L524.6 251.8 L516.3 258.1 L500.9 253.0 L495.6 253.1 L492.8 245.2 L490.8 244.7 L488.5 247.0 L488.2 240.6 L490.5 243.3 L493.0 243.2 L494.9 239.9 L504.2 242.5 L517.4 237.6 L518.1 232.4 L510.1 224.1 L515.4 214.9 L517.7 201.0 L514.6 199.3 L509.1 202.4 L506.4 207.3 L503.3 208.3 L501.4 207.4 L505.1 198.6 L502.3 196.2 L502.6 189.9 L497.1 184.6 L495.6 176.9 L493.4 176.2 L489.7 178.3 L486.5 173.9 L480.4 171.7 L470.1 179.8 L467.6 175.6 L460.1 173.7 L456.7 164.5 L450.5 165.1 L447.3 160.8 L440.8 157.9 L434.6 149.8 L431.8 149.7 L429.8 153.5 L423.1 150.1 L423.5 148.2 L429.6 147.9 L429.8 142.9 L427.3 137.5 L422.2 138.2 L421.7 144.9 L418.1 148.3 L416.1 147.6 L414.8 144.2 L418.0 140.9 L417.4 138.0 L412.7 130.4 L387.1 124.7 L381.4 119.1 L377.1 119.1 L375.9 116.9 L370.5 114.6 L362.2 117.2 L355.2 123.2 L345.1 121.5 L328.6 124.6 L316.8 116.9 L312.9 112.3 L298.6 106.7 L277.6 107.2 L271.3 111.2 L267.4 115.4 L267.0 118.4 L263.6 120.8 L254.0 116.5 L247.7 106.7 L244.2 104.8 L237.3 106.3 L228.7 112.4 L209.7 112.9 L206.5 115.2 L207.2 116.2 L205.5 118.2 L192.0 114.7 L185.5 110.0 L181.6 98.7 L186.4 81.8 L194.9 74.3 L214.4 64.1 L217.3 60.8 L227.8 54.6 L229.9 52.6 L229.5 49.3 L223.6 46.3 L205.8 48.4 L203.1 46.9 L200.4 47.9 L194.9 46.3 L193.4 50.4 L190.8 52.2 L182.9 45.0 L166.6 33.9 L149.1 26.6 L134.0 24.0 L120.7 25.2 L113.1 28.0 L110.4 30.7 L110.7 32.4 L107.5 34.5 L106.7 40.2 L75.3 51.7 L64.6 60.1 L53.7 72.5 L49.6 79.2 L50.4 86.0 L36.7 108.0 L29.3 129.0 L24.2 158.7 L24.0 182.5 L28.2 203.7 L31.3 209.4 L36.4 212.0 L47.7 212.4 L59.4 221.8 L64.2 222.5 L75.7 216.7 L83.7 215.6 L159.1 232.2 L180.1 239.1 L192.2 240.3 L202.2 246.4 L212.7 261.2 L225.9 272.4 L247.3 296.8 L254.6 301.0 L267.8 316.2 L272.3 319.2 L278.2 318.6 L283.8 321.6 L289.7 330.2 L294.3 334.0 L293.8 345.1 L302.8 353.9 L324.4 384.0 L329.4 388.5 L336.7 389.6 L343.1 393.5 L354.5 392.1 L362.2 396.2 L369.5 396.0 L381.7 400.8 L393.9 399.8 L401.0 397.4 L403.5 400.5 L406.2 409.5 L424.8 418.1 L429.8 427.0 L433.1 427.6 L438.5 426.4 L447.0 421.7 L451.4 422.4 L453.1 420.0 L456.0 419.6 L458.3 419.4 L473.5 426.7 L478.9 424.7 L482.7 420.8 L493.2 431.1 L497.5 429.9 L500.0 432.8 L503.1 432.5 L503.1 427.3 L506.3 426.3 L513.1 434.4 L516.4 436.0 L516.9 431.9 L510.1 428.5 L510.4 422.7 L512.4 419.3 L522.6 413.4 L526.6 416.4 L534.9 416.8 L535.9 421.4 L531.4 434.8 L541.9 440.5 L543.4 455.0 L538.3 459.5 L531.9 459.3 L528.5 465.7 L536.4 463.7 L545.1 456.4 L545.7 448.2 L548.3 443.3 L551.4 441.1 L551.9 437.5 L550.1 433.6 L546.8 431.7 L545.6 419.8 L544.0 416.0 L542.2 415.9 L544.7 411.2 L539.9 407.7 L534.8 406.5 L529.3 401.9 L514.7 395.3 L515.6 387.9 L519.4 385.6 L522.4 388.4 L523.9 386.8 L526.0 376.8 L527.5 376.9 L528.8 380.8 L532.8 378.5 L536.2 380.5 L541.0 377.2 L543.9 377.5 L548.5 373.0 L557.0 373.6 L563.3 368.0 L565.5 372.2 L569.3 374.8 L568.4 387.9 L573.4 386.4 L579.4 380.1 L590.1 378.8 L599.5 380.8 L603.1 387.2 L621.3 375.5 L622.2 369.1 L623.7 368.2 L629.9 377.2 L630.8 383.1 L634.9 387.8 L643.0 391.5 L648.4 396.0 L650.9 396.2 L655.9 396.0 L659.5 393.8 L655.9 387.3 L660.0 383.6 L662.9 383.5 L664.0 380.2 L663.8 372.3 L660.0 367.3 L657.3 368.0 L654.5 366.0 L649.0 354.2 L629.4 328.0 L625.1 328.2 L615.6 323.1 L607.9 322.9 L598.7 319.4 L596.7 317.4 L594.3 309.4 L592.0 310.2 L588.6 326.3 L578.1 334.0 L575.9 339.2 L572.3 337.3 L570.7 330.7 L569.0 331.2 L568.4 333.5 L565.6 329.6 L563.1 334.5 L561.8 333.2 L556.8 318.5 L556.7 310.1 L555.1 309.7 L552.9 312.1 L551.6 303.0 L554.7 297.8 L555.8 292.8 L557.2 292.2 L555.3 303.2 L556.4 306.1 L566.4 308.5 L578.0 303.1 L580.7 299.4 L583.7 299.6 L584.6 296.3 L580.1 286.7 L579.4 275.2 L585.6 260.0 L582.7 258.2 L580.0 259.9 L579.2 259.1 L580.4 253.6 L578.7 251.1 L572.2 252.7 L568.3 248.1 L561.8 249.9 L561.2 248.3 L558.4 250.4 L552.2 248.0 L553.6 244.5 L564.7 239.6 L563.9 232.4ZM418.5 251.4 L409.7 260.5 L410.5 267.6 L409.0 268.6 L406.8 267.4 L404.2 271.5 L397.4 272.4 L398.1 270.1 L392.5 263.2 L385.5 260.5 L385.6 246.7 L393.6 243.6 L397.6 234.5 L404.4 232.6 L412.2 221.6 L415.6 218.7 L420.4 210.5 L425.1 206.7 L426.5 200.1 L440.4 186.1 L444.4 186.2 L446.8 184.0 L447.6 185.0 L446.1 191.7 L439.8 201.7 L436.1 213.0 L436.7 215.9 L441.9 219.5 L439.5 222.4 L439.1 221.0 L436.7 220.7 L436.5 227.9 L431.8 236.8 L429.3 246.9 L418.5 251.4ZM465.2 343.9 L464.6 339.9 L469.3 325.8 L476.9 325.4 L486.8 321.4 L488.2 327.2 L484.8 333.1 L472.6 344.5 L469.2 350.9 L463.9 356.4 L461.1 363.6 L462.3 366.4 L467.1 368.0 L467.9 374.0 L465.6 375.9 L463.5 375.2 L459.6 373.6 L450.6 374.6 L439.4 380.9 L438.9 379.2 L431.9 375.4 L434.0 370.2 L437.0 367.6 L445.7 366.2 L454.4 358.7 L456.8 352.3 L465.3 349.4 L466.5 346.1 L465.2 343.9ZM516.9 327.2 L514.3 325.7 L513.6 322.6 L525.8 322.8 L526.7 319.1 L526.1 316.9 L515.6 316.9 L510.4 320.7 L510.3 311.8 L514.8 303.5 L520.4 305.5 L528.7 300.1 L532.7 302.4 L538.9 301.1 L541.9 305.4 L542.2 310.3 L540.5 314.7 L544.2 319.4 L536.1 325.3 L531.8 331.6 L527.1 332.1 L525.2 330.5 L525.7 328.1 L530.5 326.9 L531.2 324.0 L523.2 327.9 L519.4 328.6 L516.9 327.2ZM324.4 309.5 L324.5 299.4 L327.8 296.5 L331.9 295.8 L338.6 298.2 L340.3 302.6 L340.6 308.1 L337.1 311.4 L339.1 314.4 L340.4 322.1 L338.6 323.9 L334.4 324.2 L331.8 327.1 L330.3 334.3 L328.8 335.3 L327.5 331.4 L321.3 326.6 L321.0 322.5 L322.6 320.6 L327.2 319.8 L333.2 322.4 L324.4 309.5ZM423.5 342.3 L419.8 345.3 L414.8 344.8 L411.9 333.2 L412.3 329.8 L419.4 321.1 L421.1 315.7 L425.2 315.8 L428.8 320.1 L430.0 324.2 L427.7 326.1 L426.5 331.2 L424.6 331.9 L425.1 337.1 L423.5 342.3ZM366.7 269.1 L364.1 268.4 L363.9 266.2 L365.0 263.1 L368.8 262.9 L369.8 260.9 L367.0 256.6 L368.0 251.1 L374.2 251.1 L376.4 255.4 L375.6 260.3 L369.9 269.1 L366.7 269.1ZM242.7 186.9 L240.8 185.4 L235.8 185.8 L234.1 184.6 L232.6 180.5 L236.8 180.5 L245.9 180.6 L251.6 182.6 L250.7 184.4 L242.7 186.9ZM410.0 218.2 L408.5 218.5 L408.6 213.6 L410.2 210.3 L412.2 209.7 L414.5 209.0 L414.8 210.6 L410.0 218.2ZM554.2 286.1 L553.0 286.7 L553.8 280.1 L555.1 277.2 L556.8 277.2 L556.9 281.1 L554.2 286.1ZM336.3 338.0 L334.4 333.6 L336.0 330.0 L337.8 330.4 L338.1 334.9 L336.3 338.0ZM580.6 338.5 L579.6 338.1 L580.5 336.5 L586.1 339.3 L586.0 342.8 L584.6 343.2 L580.6 338.5ZM311.9 175.4 L317.4 173.1 L317.8 174.1 L313.9 179.1 L311.9 175.4ZM550.6 294.0 L548.6 287.7 L549.2 286.0 L550.9 285.8 L551.2 287.7 L552.6 289.5 L550.9 290.0 L550.6 294.0ZM565.8 336.0 L566.4 334.4 L568.4 335.1 L568.7 339.9 L567.6 341.1 L566.8 340.0 L565.8 336.0Z" fill="#9EBCCB" stroke="#5F7F8E" stroke-width="1.2" fill-rule="evenodd"/><g><circle cx="417.2" cy="309.4" r="13" fill="#217A4B" stroke="#FFFDF6" stroke-width="2.5"/><text x="417.2" y="313.9" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">1</text></g><g><circle cx="367.1" cy="243.7" r="13" fill="#217A4B" stroke="#FFFDF6" stroke-width="2.5"/><text x="367.1" y="248.2" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">2</text></g><g><circle cx="457.3" cy="334.9" r="13" fill="#217A4B" stroke="#FFFDF6" stroke-width="2.5"/><text x="457.3" y="339.4" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">3</text></g><g><circle cx="428.4" cy="337.3" r="13" fill="#217A4B" stroke="#FFFDF6" stroke-width="2.5"/><text x="428.4" y="341.8" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">4</text></g><g><circle cx="486.4" cy="336.6" r="13" fill="#217A4B" stroke="#FFFDF6" stroke-width="2.5"/><text x="486.4" y="341.1" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">5</text></g><g><circle cx="563.0" cy="345.0" r="13" fill="#217A4B" stroke="#FFFDF6" stroke-width="2.5"/><text x="563.0" y="349.5" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">6</text></g><g><circle cx="280.8" cy="153.2" r="13" fill="#217A4B" stroke="#FFFDF6" stroke-width="2.5"/><text x="280.8" y="157.7" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">7</text></g><g><circle cx="232.1" cy="227.2" r="13" fill="#217A4B" stroke="#FFFDF6" stroke-width="2.5"/><text x="232.1" y="231.7" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">8</text></g></svg>
+    <figcaption>Top 8 ranked spots for Smallmouth Bass in summer, on the surveyed outline. Analysis only — not for navigation.</figcaption>
+  </figure>
+  <dl class="facts"><div><dt>Water area</dt><dd>17.41 km²</dd></div><div><dt>Data</dt><dd>Contour Derived<small>free download · 2.8 MB</small></dd></div></dl>
+</div></section>
+
+<section class="spots-sec"><div class="wrap">
+  <div class="eyebrow">Where it rates, and why</div>
+  <h2>The top spots on Lake Clear, explained.</h2>
+  <p class="lede">Every spot carries its reasons. In the app the ranking changes with your species, the season, the date, wind and pressure — this is the default read.</p>
+  <ol class="spots"><li><div class="rank good">1</div><div><div class="meta"><b>11.77 m</b> deep · score <b>0.67</b> · good</div><ul><li>Depth 11.8 m in band 4-12 m</li><li>Steep break (11 deg mean) 39 m away</li><li>Point (678 m, 10 m contour) 4 m away</li></ul></div></li><li><div class="rank good">2</div><div><div class="meta"><b>11.96 m</b> deep · score <b>0.64</b> · good</div><ul><li>Depth 12.0 m in band 4-12 m</li><li>Steep break (11 deg mean) 20 m away</li><li>Point (239 m, 12 m contour) 3 m away</li></ul></div></li><li><div class="rank good">3</div><div><div class="meta"><b>11.93 m</b> deep · score <b>0.64</b> · good</div><ul><li>Depth 11.9 m in band 4-12 m</li><li>Steep break (11 deg mean) 45 m away</li><li>Point (637 m, 10 m contour) 26 m away</li></ul></div></li><li><div class="rank good">4</div><div><div class="meta"><b>7.96 m</b> deep · score <b>0.64</b> · good</div><ul><li>Depth 8.0 m in band 4-12 m</li><li>Steep break (12 deg mean) 41 m away</li><li>Point (319 m, 2 m contour) 38 m away</li></ul></div></li><li><div class="rank good">5</div><div><div class="meta"><b>11.14 m</b> deep · score <b>0.63</b> · good</div><ul><li>Depth 11.1 m in band 4-12 m</li><li>Steep break (12 deg mean) 41 m away</li><li>Point (677 m, 14 m contour) 4 m away</li></ul></div></li><li><div class="rank good">6</div><div><div class="meta"><b>11.18 m</b> deep · score <b>0.62</b> · good</div><ul><li>Depth 11.2 m in band 4-12 m</li><li>Steep break (12 deg mean) 53 m away</li><li>Point (400 m, 12 m contour) 3 m away</li></ul></div></li><li><div class="rank good">7</div><div><div class="meta"><b>4.36 m</b> deep · score <b>0.62</b> · good</div><ul><li>Depth 4.4 m in band 4-12 m</li><li>25 m from 4.2 m rise hump (crown 1.9 m)</li><li>Point (425 m, 4 m contour) 2 m away</li></ul></div></li><li><div class="rank good">8</div><div><div class="meta"><b>8.26 m</b> deep · score <b>0.60</b> · good</div><ul><li>Depth 8.3 m in band 4-12 m</li><li>Steep break (11 deg mean) 32 m away</li><li>Point (560 m, 8 m contour) 3 m away</li></ul></div></li></ol>
+</div></section>
+
+<section class="inapp-sec"><div class="wrap two">
+  <div>
+    <div class="eyebrow">In the app</div>
+    <h2>Lake Clear is a free download inside Anglers Edge.</h2>
+    <p>One tap in the lake picker fetches the 2.8 MB pack on Wi-Fi; after that it works fully offline, forever.</p>
+    <ul class="ticks">
+      <li>Full-resolution depth map, contours and hillshade</li>
+      <li>Humps, saddles, breaklines, points, flats and weed as layers</li>
+      <li>Every spot re-scored for your species, date, wind and pressure</li>
+      <li>48-hour bite window, one-tap catch log, waypoints and GPX export</li>
+      <li>Works with no signal, forever</li>
+    </ul>
+    <a class="btn primary" href="https://apps.apple.com/app/anglers-edge/id6798728175">Download Anglers Edge</a>
+  </div>
+  <div class="side">
+    <h3>Species scored here</h3>
+    <p class="tags"><span>Smallmouth Bass</span><span>Largemouth Bass</span><span>Walleye</span><span>Northern Pike</span><span>Lake Trout</span><span>Lake Whitefish</span><span>Muskellunge</span><span>Brook Trout</span></p>
+    <h3>Named water</h3><p class="tags"><span>Hardwood Bay</span><span>Mud Lake</span><span>Blueberry Island</span><span>Cherry Island</span><span>Frenchs Island</span></p>
+    <h3>Stocking record</h3><ul class="stock"><li><b>Lake Trout</b><span>34 stockings · 1947–2006</span></li><li><b>Walleye</b><span>29 stockings · 1988–1990</span></li><li><b>Smallmouth Bass</b><span>3 stockings · 1955–1956</span></li></ul><p class="dim small">Not stocked since 2006. Ontario MNRF stocking records 1947–2006.</p>
+    <h3>Nearby lakes</h3>
+    <p class="nearby"><a href="/lakes/golden">Golden Lake</a> <a href="/lakes/muskrat">Muskrat Lake</a> <a href="/lakes/roundkillaloe">Round Lake</a> <a href="/lakes/calabogie">Calabogie Lake</a> <a href="/lakes/bark">Bark Lake</a></p>
+  </div>
+</div></section>
+
+<section class="honest-sec"><div class="wrap">
+  <div class="eyebrow">Where the data comes from</div>
+  <p class="dim">Bathymetry for Lake Clear is built from the provincial open-data survey record; where soundings are sparse the app marks cells unsurveyed rather than guessing. Source: Land Information Ontario (Open Government Licence – Ontario). Anglers Edge is an analysis tool, not a navigation aid — carry official charts.</p>
+</div></section>
+</main>
+<footer><div class="wrap row">
+  <div>© 2026 Anglers Edge · Analysis only — not for navigation.</div>
+  <div><a href="/privacy.html">Privacy</a><a href="mailto:jlr@backroadscarclub.com">Support</a><a href="/#top">Top</a></div>
+</div></footer>
+</body>
+</html>

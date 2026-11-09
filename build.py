@@ -82,7 +82,10 @@ def stocking_block(r):
         return '<h3>Stocking record</h3><p class="dim small">' + esc(st.get('note') or 'No provincial stocking record for this water.') + '</p>'
     rows = ''.join(f'<li><b>{esc(x["species"])}</b><span>{x["events"]} stocking{"s" if x["events"] != 1 else ""} · {x["first"] if x["first"] == x["last"] else str(x["first"]) + "–" + str(x["last"])}</span></li>' for x in st['species'])
     recent = st.get('last') and (2026 - st['last']) <= 5
-    tail = (f"Stocked recently (last {st['last']})." if recent else f"Not stocked since {st['last']}.") + f" Ontario MNRF stocking records {st['first']}–{st['last']}."
+    agency = {'US-MN': 'Minnesota DNR LakeFinder stocking report', 'US-MI': 'Michigan DNR fish stocking database',
+              'US-NH': 'New Hampshire Fish and Game stocking report', 'US-CT': 'Connecticut DEEP stocked-lakes list',
+              'CA-AB': 'Alberta stocking records', 'CA-QC': 'Quebec stocking records'}.get((r.get('region') or {}).get('admin'), 'Ontario MNRF stocking records')
+    tail = (f"Stocked recently (last {st['last']})." if recent else f"Not stocked since {st['last']}.") + f" {agency} {st['first']}–{st['last']}."
     return f'<h3>Stocking record</h3><ul class="stock">{rows}</ul><p class="dim small">{esc(tail)}</p>'
 def region_label(r): return (r['region']['area'] + ', ' if r['region'].get('area') else '') + r['region']['name']
 def render_lake(r):

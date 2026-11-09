@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ahmic Lake Fishing Map — Depth, Structure &amp; Ranked Spots | Anglers Edge</title>
+<meta name="description" content="Free offline fishing map for Ahmic Lake (Almaguin, Ontario): surveyed depth, humps, breaklines and 8 ranked spots with reasons, for Smallmouth Bass, Largemouth Bass, Walleye. Analysis only, not for navigation.">
+<link rel="canonical" href="https://anglersedge.fishing/lakes/ahmic">
+<meta name="apple-itunes-app" content="app-id=6798728175">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Anglers Edge">
+<meta property="og:url" content="https://anglersedge.fishing/lakes/ahmic">
+<meta property="og:title" content="Ahmic Lake Fishing Map — Depth, Structure &amp; Ranked Spots | Anglers Edge">
+<meta property="og:description" content="Free offline fishing map for Ahmic Lake (Almaguin, Ontario): surveyed depth, humps, breaklines and 8 ranked spots with reasons, for Smallmouth Bass, Largemouth Bass, Walleye. Analysis only, not for navigation.">
+<meta property="og:image" content="https://anglersedge.fishing/assets/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ahmic Lake Fishing Map — Depth, Structure &amp; Ranked Spots | Anglers Edge">
+<meta name="twitter:description" content="Free offline fishing map for Ahmic Lake (Almaguin, Ontario): surveyed depth, humps, breaklines and 8 ranked spots with reasons, for Smallmouth Bass, Largemouth Bass, Walleye. Analysis only, not for navigation.">
+<meta name="twitter:image" content="https://anglersedge.fishing/assets/og.png">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,600;0,8..60,700;1,8..60,600&display=swap">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Anglers Edge", "item": "https://anglersedge.fishing/"}, {"@type": "ListItem", "position": 2, "name": "Lakes", "item": "https://anglersedge.fishing/lakes"}, {"@type": "ListItem", "position": 3, "name": "Ahmic Lake", "item": "https://anglersedge.fishing/lakes/ahmic"}]}, {"@context": "https://schema.org", "@type": "LakeBodyOfWater", "name": "Ahmic Lake", "geo": {"@type": "GeoCoordinates", "latitude": 45.6399, "longitude": -79.6653}, "containedInPlace": {"@type": "AdministrativeArea", "name": "Ontario"}, "subjectOf": {"@type": "WebPage", "url": "https://anglersedge.fishing/lakes/ahmic", "name": "Ahmic Lake Fishing Map — Depth, Structure & Ranked Spots | Anglers Edge"}}]</script>
+<style>:root{--paper:#F7F2E6;--card:#FFFDF6;--inset:#EFE7D4;--ink:#22301F;--dim:#5F6D5C;--pine:#2C5942;--deep:#1B2A21;--orange:#D9480F;--ochre:#C08A12;--good:#217A4B;--bad:#A63A2B;--line:rgba(38,48,38,.16);--serif:"Source Serif 4",ui-serif,Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--pine)}h1,h2,h3,.serif{font-family:var(--serif);letter-spacing:-.01em;text-wrap:balance}
+h2{font-size:clamp(30px,4.2vw,44px);line-height:1.08;margin:0 0 14px;font-weight:700}
+h3{font-size:22px;margin:0 0 6px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:10px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+.lede{font-size:19px;color:var(--dim);max-width:62ch;margin:0}
+/* nav */
+.nav{position:fixed;inset:0 0 auto 0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;pointer-events:none}
+.nav>*{pointer-events:auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:var(--serif);font-weight:700;font-size:20px}
+.brand img{width:36px;height:36px;border-radius:10px}
+.nav-links{display:flex;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px;box-shadow:0 2px 8px rgba(40,40,20,.12)}
+.nav-links a{text-decoration:none;color:var(--ink);font-weight:600;font-size:14px;padding:8px 14px;border-radius:999px}
+.nav-links a:hover{background:var(--inset)}
+.nav-links a.cta{background:var(--ink);color:var(--paper)}
+@media(max-width:760px){.nav-links a:not(.cta){display:none}}
+/* hero */
+.hero{position:relative;height:100svh;min-height:640px;overflow:hidden;background:var(--paper)}
+.stage{position:absolute;inset:0}
+#lake{position:absolute;inset:0;cursor:crosshair;opacity:0;transition:opacity .8s ease}
+#lake.ready{opacity:1}#lake canvas{display:block;width:100%!important;height:100%!important}
+.hero-copy{position:absolute;left:24px;top:96px;max-width:520px;z-index:5;pointer-events:none}
+.hero-copy>*{pointer-events:auto}
+.hero h1{font-size:clamp(42px,6.4vw,76px);line-height:1.0;margin:0 0 14px;font-weight:700}
+.hero h1 em{font-style:italic;color:var(--orange)}
+.hero p{font-size:18px;color:var(--dim);max-width:44ch;margin:0 0 20px}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:14px 22px;font-weight:700;text-decoration:none;font-size:15px;border:1px solid transparent;cursor:pointer;font-family:var(--sans)}
+.btn.primary{background:var(--ink);color:var(--paper)}.btn.ghost{background:var(--card);color:var(--ink);border-color:var(--line)}
+.btn.orange{background:var(--orange);color:#fff}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap}
+.game-hud{position:absolute;right:24px;top:96px;z-index:5;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 18px;box-shadow:0 2px 8px rgba(40,40,20,.12);min-width:220px}
+.game-hud .gh-t{font-family:var(--serif);font-weight:700;font-size:18px;margin-bottom:6px}
+.game-hud .gh-row{display:flex;justify-content:space-between;font-size:14px;color:var(--dim);margin:3px 0}
+.game-hud b{color:var(--ink);font-variant-numeric:tabular-nums}
+.game-hud .gh-hint{font-size:12px;color:var(--dim);margin-top:8px;border-top:1px solid var(--line);padding-top:8px}
+.cast-card{position:absolute;left:50%;bottom:110px;transform:translate(-50%,20px);z-index:5;background:var(--ink);color:var(--paper);border-radius:16px;padding:14px 20px;box-shadow:0 10px 30px rgba(40,40,20,.25);opacity:0;transition:all .25s ease;text-align:center;max-width:90vw}
+.cast-card.show{opacity:1;transform:translate(-50%,0)}
+.cast-card .cc-title{font-family:var(--serif);font-weight:700;font-size:24px}
+.cast-card.excellent .cc-title,.cast-card.good .cc-title{color:#8FD0A8}.cast-card.fair .cc-title{color:#E0B860}.cast-card.poor .cc-title{color:#E59A8A}
+.cast-card .cc-sub{font-size:13px;opacity:.8;margin-top:2px}
+.reveal{position:absolute;inset:0;z-index:8;display:flex;align-items:center;justify-content:center;background:rgba(247,242,230,.72);backdrop-filter:blur(4px);opacity:0;pointer-events:none;transition:opacity .35s ease}
+.reveal.show{opacity:1;pointer-events:auto}
+.reveal .rv{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px 30px;max-width:520px;text-align:center;box-shadow:0 10px 40px rgba(40,40,20,.2);margin:0 20px}
+.reveal .rv-nums{display:flex;gap:28px;justify-content:center;margin:12px 0}
+.reveal .rv-nums div{font-family:var(--serif);font-size:44px;font-weight:700;line-height:1}.reveal .rv-nums b{font-weight:700}
+.reveal .rv-nums span{display:block;font:600 12px var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-top:6px}
+.reveal .rv-you{color:var(--ink)}.reveal .rv-model{color:var(--pine)}
+.reveal p{color:var(--dim);margin:8px 0 18px}
+.scroll-hint{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:5;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+@media(max-width:760px){
+.hero{height:auto;min-height:0;display:flex;flex-direction:column;padding-top:76px}
+.hero-copy{position:static!important;order:-1;max-width:none;padding:8px 20px 18px;top:auto;left:auto}
+.hero h1{font-size:40px}.hero p{font-size:16px;max-width:none}
+.stage{position:relative;inset:auto;height:64vh;min-height:420px;margin:0 12px 22px;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 10px 30px rgba(40,40,20,.14);background:#EDE6D6}
+.game-hud{position:absolute;left:10px;top:10px;right:auto;bottom:auto;min-width:0;padding:10px 12px;border-radius:14px}
+.game-hud .gh-t{font-size:15px;margin-bottom:2px}.game-hud .gh-row{font-size:12px;gap:14px}.game-hud .gh-hint{font-size:11px;margin-top:6px;padding-top:6px}
+.cast-card{bottom:14px;padding:10px 16px}.cast-card .cc-title{font-size:20px}
+.reveal .rv{padding:22px 18px}.reveal .rv-nums div{font-size:36px}
+.scroll-hint{display:none}
+}
+/* pillars */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:860px){.grid3{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px 24px;box-shadow:0 1px 2px rgba(40,40,20,.06)}
+.card .n{width:44px;height:44px;border-radius:14px;background:var(--pine);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:700;font-size:20px;margin-bottom:14px}
+.card p{color:var(--dim);margin:6px 0 0;font-size:15px}
+/* factors */
+.factors{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:22px}
+.factor{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:14px}
+.factor b{display:block;font-family:var(--serif);font-size:16px}
+.factor span{color:var(--dim);font-size:13px}
+/* split */
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+@media(max-width:860px){.split{grid-template-columns:1fr}}
+.phone{width:min(300px,80%);height:auto;border-radius:36px;border:8px solid var(--deep);box-shadow:0 20px 50px rgba(40,40,20,.25);display:block;margin:0 auto}
+.check li{margin:10px 0;padding-left:28px;position:relative;color:var(--ink)}
+.check li::before{content:"";position:absolute;left:0;top:10px;width:14px;height:14px;border-radius:50%;background:var(--good)}
+.check{list-style:none;padding:0;margin:18px 0 0}
+/* pricing */
+.dark{background:var(--deep);color:var(--paper)}.dark .lede,.dark .card p{color:#B8C4B5}.dark .eyebrow{color:#E0A83C}.dark h2{color:var(--paper)}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}.tiers.two{grid-template-columns:repeat(2,1fr);max-width:820px}
+@media(max-width:860px){.tiers,.tiers.two{grid-template-columns:1fr}}
+.tier{background:var(--card);color:var(--ink);border-radius:20px;padding:26px 24px}
+.tier.free{background:#E9F0EA}
+.tier h3{margin-bottom:2px}.tier .price{color:var(--orange);font-weight:700;margin-bottom:12px}
+.tier ul{padding-left:18px;margin:0}.tier li{margin:7px 0;font-size:15px;color:#33402F}
+.promise{margin-top:26px;font-family:var(--serif);font-style:italic;font-size:20px;color:#E0A83C;text-align:center}
+/* table */
+.cmp{width:100%;min-width:600px;border-collapse:collapse;margin-top:22px;font-size:15px;overflow:hidden;border-radius:16px;box-shadow:0 1px 2px rgba(40,40,20,.06)}
+.cmp th,.cmp td{padding:12px 14px;text-align:center;border-bottom:1px solid var(--line);background:var(--card)}
+.cmp th{background:var(--pine);color:var(--paper);font-family:var(--serif);font-size:15px}
+.cmp td:first-child{text-align:left;font-weight:600}.cmp td.us{background:#E9F0EA;color:var(--pine);font-weight:700}
+.cmp .y{color:var(--good);font-weight:700}.cmp .n{color:var(--bad)}.cmp .p{color:var(--ochre)}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -24px;padding:0 24px}
+/* gallery */
+.gallery{display:flex;gap:18px;overflow-x:auto;padding:12px 4px 20px;scroll-snap-type:x mandatory;scrollbar-width:none}
+.gallery::-webkit-scrollbar{display:none}
+.gallery figure{flex:none;margin:0;scroll-snap-align:start;width:220px}
+.gallery img{width:100%;height:auto;border-radius:22px;border:6px solid var(--deep);display:block;box-shadow:0 10px 30px rgba(40,40,20,.18)}
+.gallery figcaption{font-size:13px;color:var(--dim);margin-top:10px;text-align:center}
+/* faq */
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:10px 0}
+.faq summary{cursor:pointer;font-weight:700;font-family:var(--serif);font-size:18px}
+.faq p{color:var(--dim);margin:8px 0 0}
+/* footer */
+footer{padding:48px 0 60px;border-top:1px solid var(--line);color:var(--dim);font-size:14px}
+footer .row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer a{margin-right:16px}
+.badge{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--paper);border-radius:12px;padding:10px 16px;text-decoration:none;font-weight:700}
+.badge small{display:block;font-weight:500;font-size:11px;opacity:.75;line-height:1}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.cast-card,.reveal,#lake{transition:none}}
+
+.hint-touch{display:none}@media(hover:none){.hint-mouse{display:none}.hint-touch{display:inline}}
+
+.lakes{list-style:none;padding:0;margin:22px 0 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:8px 18px}
+.lakes li{font-size:15px;padding:8px 0;border-bottom:1px solid var(--line);color:var(--ink)}
+
+.pricing-layout{display:grid;grid-template-columns:1.45fr 1fr;gap:18px;max-width:980px;margin:30px auto 0;align-items:stretch}
+.tier.big{padding:30px 32px}.big-price{font-family:var(--serif);font-weight:700;font-size:84px;line-height:1;color:var(--pine);display:flex;align-items:baseline;gap:6px;margin-bottom:6px}
+.big-price .cur{font-size:40px}.big-price .per{font:600 13px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-left:8px}
+.tier.big h3{font-size:24px;margin:4px 0 14px}
+.tier ul.two-col{display:grid;grid-template-columns:1fr 1fr;gap:4px 24px}
+.tier .fine{margin-top:18px;padding-top:14px;border-top:1px solid var(--line);font-size:14px;color:var(--dim)}
+.tier.partners{display:flex;flex-direction:column}.tier.partners ul{flex:1}.tier.partners .eyebrow{margin-bottom:6px}
+@media(max-width:860px){.pricing-layout{grid-template-columns:1fr}.tier ul.two-col{grid-template-columns:1fr}.big-price{font-size:64px}}
+
+/* ---------- lake pages ---------- */
+.lakepage main{display:block}
+.crumbs{font-size:13px;color:var(--dim);margin-bottom:14px}.crumbs a{color:var(--dim);text-decoration:none}.crumbs a:hover{color:var(--pine)}
+.lakehero{padding:120px 0 28px}.lakehero h1{font-size:clamp(36px,6vw,64px);line-height:1.02;margin:0 0 14px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.lakemap-sec{padding:0 0 40px}.lakemap{margin:0;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:0 2px 8px rgba(40,40,20,.08)}
+.lakemap svg{display:block;width:100%;height:auto;max-height:520px}
+.lakemap figcaption{font-size:13px;color:var(--dim);margin-top:10px;text-align:center}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:18px 0 0}
+.facts div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.facts dt{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.facts dd{margin:4px 0 0;font-family:var(--serif);font-size:22px;font-weight:700;color:var(--ink);line-height:1.15}
+.facts dd small{display:block;font:500 12px/1.4 var(--sans);color:var(--dim);margin-top:2px}
+.spots-sec{padding:20px 0 40px}.spots{list-style:none;padding:0;margin:22px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.spots li{display:flex;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px}
+.spots .rank{flex:none;width:40px;height:40px;border-radius:12px;color:#FDF9EE;font-family:var(--serif);font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center}
+.spots .rank.good{background:var(--good)}.spots .rank.fair{background:var(--ochre)}
+.spots .meta{font-size:13px;color:var(--dim);margin-bottom:4px}.spots .meta b{color:var(--ink)}
+.spots ul{margin:0;padding-left:18px;font-size:14px;color:var(--ink)}.spots ul li{display:list-item;background:none;border:0;padding:0;margin:0}
+.inapp-sec{padding:30px 0 40px}.inapp-sec .two{display:grid;grid-template-columns:1.3fr 1fr;gap:40px}
+.inapp-sec .side{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px}
+.inapp-sec h3{font-size:16px;margin:0 0 8px}.inapp-sec .side h3+p{margin-top:0}.inapp-sec .side p{margin:0 0 20px;font-size:14px;color:var(--dim)}
+.tags,.nearby{line-height:2}.tags span{display:inline-block;background:var(--inset);border-radius:999px;padding:2px 10px;font-size:13px;color:var(--ink);margin:0 6px 4px 0}
+.nearby a{display:inline-block;margin:0 10px 4px 0;font-weight:600}
+.ticks{list-style:none;padding:0;margin:0 0 22px}.ticks li{padding-left:24px;position:relative;margin:6px 0;color:var(--ink)}.ticks li::before{content:"✓";position:absolute;left:0;color:var(--good);font-weight:700}
+.honest-sec{padding:0 0 60px}.honest-sec p{font-size:14px;max-width:70ch}
+.lakes-index h1{font-size:clamp(34px,5vw,56px)}.lakes-index h2{font-size:26px;margin:36px 0 8px}.lakes-index h3{font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin:22px 0 8px}
+.lakes-index .lakes{margin-top:0}.lakes-index .lakes a{text-decoration:none;color:var(--ink);font-weight:600}.lakes-index .lakes li{display:flex;justify-content:space-between;gap:10px}.lakes-index .lakes small{color:var(--dim);font-weight:500}
+@media (max-width:760px){.inapp-sec .two{grid-template-columns:1fr}.lakehero{padding-top:96px}}
+.stock{list-style:none;padding:0;margin:8px 0 6px;display:grid;gap:6px}.stock li{display:flex;justify-content:space-between;gap:12px;font-size:14px;border-bottom:1px solid var(--line);padding:5px 0}.stock li span{color:var(--dim);text-align:right}.small{font-size:12px}
+</style>
+</head>
+<body class="lakepage">
+<nav class="nav">
+  <a class="brand" href="/#top"><img src="/assets/icon.png?v=757a77b5" alt="">Anglers Edge</a>
+  <div class="nav-links"><a href="/#why">Why</a><a href="/#how">How it works</a><a href="/#pricing">Pricing</a><a href="/#compare">Compare</a><a href="/#lakes">Lakes</a><a class="cta" href="/#get">Get the app</a></div>
+</nav>
+<main>
+<section class="lakehero"><div class="wrap">
+  <div class="crumbs"><a href="/">Anglers Edge</a> · <a href="/lakes">Lakes</a> · <a href="/lakes#CA-ON">Ontario</a></div>
+  <div class="eyebrow">Almaguin, Ontario</div>
+  <h1>Ahmic Lake fishing map</h1>
+  <p class="lede">Surveyed depth, structure and ranked fishing spots for Ahmic Lake — scored for your species and the day&#x27;s conditions, and it all works with no signal. Free.</p>
+  <div class="cta-row">
+    <a class="btn primary" href="https://apps.apple.com/app/anglers-edge/id6798728175">Get it free on the App Store</a>
+    <a class="btn ghost" href="/#how">How the scoring works</a>
+  </div>
+</div></section>
+
+<section class="lakemap-sec"><div class="wrap">
+  <figure class="lakemap">
+    <svg viewBox="0 0 688 367" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Outline of Ahmic Lake with its top ranked fishing spots"><rect width="688" height="367" fill="#F3ECDB" rx="14"/><path d="M235.0 38.3 L234.4 39.6 L238.1 42.8 L239.5 41.9 L243.0 43.6 L246.8 43.7 L251.8 48.0 L252.7 49.5 L250.8 53.7 L252.2 56.3 L257.1 56.9 L261.0 60.7 L264.2 62.1 L266.5 62.7 L268.0 60.8 L269.9 62.6 L269.8 63.7 L268.0 63.7 L266.7 65.6 L269.1 69.4 L269.1 72.4 L270.3 74.8 L267.3 78.0 L260.0 77.8 L256.1 80.1 L247.5 81.6 L236.6 76.6 L234.6 76.6 L233.2 79.0 L232.2 79.0 L225.9 75.8 L218.7 70.3 L216.2 70.1 L215.6 69.1 L216.5 66.7 L215.7 65.2 L212.6 65.5 L208.8 63.6 L207.5 64.9 L207.7 63.1 L206.2 61.8 L200.8 59.8 L198.7 62.1 L200.8 63.2 L201.0 62.0 L202.1 62.7 L202.3 64.9 L205.8 67.7 L204.4 69.6 L201.1 66.1 L198.9 67.2 L202.4 70.4 L200.6 73.9 L203.3 74.1 L205.0 75.9 L204.8 77.7 L202.7 78.8 L200.9 76.8 L199.6 77.3 L198.4 75.8 L193.6 74.1 L189.2 71.0 L183.7 65.6 L183.6 63.1 L180.8 61.8 L178.9 58.1 L173.7 53.7 L167.9 55.0 L163.9 52.1 L161.7 55.1 L158.5 55.0 L160.6 52.5 L159.1 40.3 L162.3 36.8 L164.0 32.4 L159.5 30.4 L158.9 28.0 L155.4 26.0 L145.9 24.0 L141.3 24.1 L141.5 27.1 L143.1 29.9 L153.2 39.7 L153.7 43.7 L152.6 48.9 L153.8 51.3 L153.0 53.9 L149.1 55.2 L146.9 54.3 L145.6 52.2 L139.3 50.4 L134.2 45.5 L132.1 46.7 L134.3 49.1 L134.0 50.9 L141.3 56.9 L140.7 57.7 L135.3 55.8 L134.5 57.6 L138.4 57.9 L141.4 59.9 L141.8 62.3 L145.4 65.6 L142.0 65.4 L140.8 66.9 L139.5 66.8 L139.8 65.1 L138.2 63.6 L134.2 65.4 L133.6 67.6 L129.5 67.6 L124.5 64.9 L120.4 60.5 L118.8 61.7 L117.8 60.2 L114.3 61.4 L111.1 61.3 L109.2 63.4 L106.5 63.3 L94.2 58.2 L89.5 54.6 L87.1 53.9 L84.6 55.6 L81.9 52.9 L77.5 55.9 L77.3 58.1 L74.9 59.0 L73.3 62.8 L61.8 59.7 L52.3 55.8 L51.4 56.5 L52.0 58.5 L51.0 58.4 L51.5 62.3 L57.0 65.5 L60.7 65.7 L61.3 67.7 L65.5 69.0 L68.3 73.3 L67.6 76.2 L64.9 77.1 L60.1 74.1 L57.8 71.4 L49.6 71.0 L41.8 68.2 L31.8 69.8 L29.5 68.8 L25.3 69.0 L24.2 69.9 L24.0 73.0 L27.1 75.1 L27.1 77.4 L28.4 79.2 L33.0 79.5 L45.5 77.8 L55.4 81.1 L63.6 81.9 L71.8 85.6 L73.6 87.9 L76.5 89.5 L81.1 95.7 L93.6 100.8 L97.9 99.9 L103.1 102.3 L108.9 103.3 L109.9 102.3 L109.4 100.7 L104.2 96.6 L102.6 93.4 L103.7 92.2 L108.6 94.8 L114.0 95.9 L119.7 100.1 L122.8 100.4 L125.8 104.8 L127.7 104.3 L129.3 106.2 L129.6 107.3 L128.4 106.2 L124.7 105.6 L121.8 107.4 L118.9 107.5 L123.9 114.7 L124.0 116.3 L129.6 121.1 L133.5 122.8 L136.0 121.6 L140.3 122.4 L141.9 123.7 L143.4 127.2 L146.7 128.7 L148.9 127.9 L151.6 128.9 L154.3 127.8 L159.0 129.6 L163.0 126.8 L164.6 126.9 L169.1 131.2 L167.3 134.3 L168.5 137.7 L171.7 140.1 L172.4 142.9 L175.2 146.2 L177.4 146.2 L179.8 147.6 L184.2 152.4 L189.6 151.7 L191.5 150.2 L192.5 148.2 L192.5 145.0 L195.2 142.3 L193.6 139.3 L193.9 138.1 L198.3 136.9 L200.5 137.5 L214.1 133.3 L219.5 134.7 L222.3 133.2 L225.2 128.3 L228.7 126.6 L233.5 125.9 L237.4 133.1 L237.1 147.8 L238.3 151.0 L238.7 163.0 L240.2 164.6 L244.8 165.3 L246.5 168.9 L245.4 171.2 L243.4 172.3 L240.0 172.2 L239.3 174.8 L236.8 174.8 L236.2 177.2 L237.3 179.7 L238.3 179.8 L238.1 182.0 L236.2 183.8 L238.4 186.1 L241.4 180.9 L243.6 180.3 L244.1 179.2 L247.5 178.9 L256.3 174.5 L257.4 172.4 L258.6 172.5 L258.9 171.1 L261.2 170.5 L261.4 169.0 L263.0 168.8 L264.8 164.6 L267.8 166.5 L267.4 167.5 L269.5 169.2 L273.1 169.1 L277.0 171.5 L280.3 175.0 L284.1 189.9 L289.7 192.1 L291.8 196.5 L293.9 197.2 L296.8 201.0 L309.5 206.7 L315.7 210.6 L317.0 213.2 L317.0 218.8 L318.9 220.7 L322.2 217.6 L326.4 218.8 L327.2 222.9 L325.2 223.3 L324.0 224.8 L322.4 224.9 L319.4 220.8 L318.3 223.6 L319.1 226.1 L316.6 228.1 L308.8 230.8 L300.5 231.5 L298.3 233.0 L301.1 233.3 L303.9 234.7 L309.3 234.9 L311.6 236.1 L313.9 241.2 L317.8 241.7 L320.6 243.5 L324.0 243.0 L325.8 244.6 L324.4 248.5 L325.6 249.1 L330.3 250.4 L333.1 249.5 L329.2 249.3 L327.5 246.6 L326.8 238.8 L327.1 237.7 L329.4 236.5 L333.5 238.4 L336.4 238.1 L344.1 246.0 L353.6 244.3 L361.5 246.1 L362.8 245.0 L365.4 245.6 L368.0 244.2 L372.8 246.1 L374.7 249.0 L377.9 249.3 L380.2 251.8 L382.8 251.1 L387.1 252.4 L394.9 249.3 L400.0 248.9 L408.3 249.7 L412.5 251.0 L418.3 250.8 L424.6 248.0 L437.0 252.9 L441.1 256.1 L446.3 258.6 L452.0 258.5 L455.2 259.5 L457.0 263.4 L458.7 263.1 L458.8 261.4 L461.9 260.3 L461.7 259.0 L459.2 257.2 L460.1 255.8 L462.7 254.7 L467.1 254.8 L473.5 253.1 L479.3 254.2 L488.1 252.0 L493.8 253.3 L496.8 251.6 L499.2 253.1 L504.0 253.4 L505.0 254.4 L505.4 255.7 L504.4 258.3 L507.8 263.1 L507.7 266.6 L511.3 268.8 L509.5 278.6 L510.9 285.3 L512.8 287.0 L522.3 290.0 L525.4 294.5 L525.6 291.1 L519.5 287.2 L514.7 285.9 L512.0 281.4 L512.9 277.3 L512.4 273.8 L514.9 266.4 L514.7 263.5 L516.9 261.9 L520.8 263.3 L523.2 262.6 L525.5 260.4 L528.4 261.0 L530.2 263.9 L530.9 262.8 L536.0 261.1 L544.1 264.2 L552.0 264.8 L563.3 271.9 L567.5 268.1 L568.7 264.2 L564.8 259.7 L559.5 255.6 L558.8 253.7 L562.8 251.6 L565.0 251.5 L571.2 256.2 L575.8 263.1 L586.1 269.0 L589.9 274.2 L592.1 275.9 L598.7 276.0 L603.9 279.9 L608.3 285.2 L608.5 287.3 L606.5 288.7 L607.4 289.4 L607.2 290.9 L605.5 291.1 L604.1 289.1 L597.3 287.0 L589.5 281.5 L588.6 279.4 L582.7 276.3 L580.7 277.0 L577.9 275.1 L574.8 275.6 L573.3 278.2 L577.9 285.2 L580.8 291.3 L583.3 293.6 L581.0 297.7 L580.9 304.2 L579.4 305.8 L573.6 306.7 L568.0 309.7 L564.8 308.8 L566.5 310.9 L567.3 314.0 L569.4 316.1 L571.6 315.6 L578.0 317.6 L585.1 322.4 L588.4 326.7 L588.9 328.7 L592.9 332.5 L592.4 333.6 L593.9 333.8 L595.4 336.8 L597.3 337.1 L597.7 339.5 L599.2 340.0 L601.3 339.0 L603.6 341.1 L606.7 341.2 L609.5 343.2 L613.1 341.3 L616.4 336.1 L616.0 330.8 L613.8 322.6 L614.3 319.5 L610.5 318.4 L608.0 316.4 L608.8 314.9 L604.5 307.6 L605.5 305.0 L611.7 306.6 L617.8 314.1 L624.3 317.9 L629.4 326.1 L633.9 329.4 L639.7 330.9 L644.9 336.5 L649.0 336.3 L653.9 333.1 L654.9 331.4 L659.9 328.8 L660.7 327.1 L656.6 330.6 L655.5 328.5 L655.0 320.5 L653.4 319.7 L652.4 316.7 L654.3 313.7 L653.0 313.3 L652.7 311.6 L654.5 309.4 L660.1 309.6 L664.0 303.5 L663.5 300.6 L652.3 289.2 L649.1 288.1 L648.3 284.9 L645.7 284.3 L644.0 280.8 L635.9 278.2 L636.5 277.3 L635.3 274.3 L632.6 270.4 L632.7 269.2 L635.9 266.9 L635.9 264.4 L634.6 264.1 L634.6 260.6 L636.8 260.0 L637.7 257.7 L635.7 253.6 L637.2 246.5 L636.7 245.1 L638.0 245.1 L638.4 243.2 L636.9 239.6 L635.6 238.8 L636.9 237.3 L634.7 235.5 L635.1 234.1 L634.1 234.7 L630.0 232.9 L625.5 233.2 L623.1 235.9 L623.5 238.6 L620.9 240.8 L617.3 240.6 L612.5 242.1 L608.8 236.3 L605.3 234.4 L600.3 233.0 L599.1 233.7 L598.1 232.5 L593.3 231.0 L592.3 233.4 L587.9 232.9 L582.8 227.7 L582.4 223.0 L579.7 222.7 L578.8 225.0 L573.9 222.5 L573.9 221.4 L575.3 220.3 L577.7 221.5 L579.9 220.8 L581.2 218.1 L580.5 213.0 L576.8 209.9 L576.3 207.7 L571.0 208.3 L568.0 210.9 L565.4 210.6 L564.4 210.0 L564.8 206.5 L561.6 204.2 L562.4 199.6 L557.0 196.7 L554.8 198.2 L552.2 196.3 L550.3 196.5 L551.7 193.7 L551.2 190.9 L549.9 189.8 L544.3 190.9 L540.1 189.9 L538.7 188.1 L536.6 183.9 L535.5 178.8 L536.2 173.6 L532.9 171.9 L531.3 169.7 L530.8 165.0 L532.2 161.8 L531.3 160.0 L529.1 159.1 L526.6 160.1 L525.8 159.3 L520.1 158.5 L516.3 155.0 L507.1 159.5 L505.3 164.3 L501.2 162.8 L497.8 158.6 L488.5 152.4 L479.8 141.7 L469.4 133.3 L463.9 130.1 L458.1 122.6 L454.6 121.3 L445.9 114.7 L443.1 115.0 L441.7 116.2 L435.5 113.7 L433.2 113.8 L429.1 107.3 L422.8 105.6 L418.2 106.2 L412.8 111.3 L405.8 114.0 L407.7 116.2 L408.5 122.5 L411.6 124.8 L413.2 128.4 L410.3 134.6 L410.3 137.3 L414.0 142.0 L422.4 146.6 L430.3 149.6 L435.0 154.1 L437.5 152.2 L437.3 155.1 L438.2 156.7 L440.6 157.4 L442.2 156.1 L444.2 156.3 L446.3 159.0 L450.8 157.8 L453.9 160.7 L452.0 161.7 L448.5 161.4 L445.8 159.5 L442.8 159.3 L437.5 161.6 L436.6 163.9 L439.3 169.2 L439.7 171.9 L439.0 173.3 L436.3 174.3 L432.4 173.6 L428.4 174.4 L424.4 172.6 L423.0 168.3 L416.8 161.5 L409.8 161.4 L406.4 160.1 L403.8 160.2 L402.0 161.5 L402.2 163.2 L407.9 168.8 L413.6 171.4 L417.0 175.3 L420.6 177.4 L426.3 184.6 L432.9 185.3 L446.5 189.2 L450.9 193.2 L468.5 195.3 L478.5 199.1 L481.0 200.9 L482.9 202.5 L485.2 207.6 L492.1 211.4 L494.5 215.2 L494.1 219.6 L497.3 225.7 L497.4 229.3 L496.1 232.0 L492.4 233.7 L479.6 233.0 L477.9 233.5 L475.9 235.8 L471.6 236.9 L463.2 236.1 L457.6 233.6 L453.0 234.0 L442.9 231.8 L440.8 230.3 L441.6 227.4 L445.4 225.5 L450.7 218.6 L457.8 216.2 L457.3 214.5 L445.3 211.5 L442.3 212.0 L440.6 210.3 L436.7 211.5 L432.9 210.8 L431.3 211.3 L428.4 208.5 L417.2 207.0 L408.0 203.8 L404.3 204.8 L401.1 208.1 L402.7 209.1 L404.3 212.6 L403.4 214.7 L389.4 214.9 L384.3 213.2 L383.5 214.0 L384.1 217.7 L388.6 220.1 L399.2 223.6 L403.9 223.6 L405.3 226.5 L400.8 228.0 L396.7 228.4 L385.2 226.5 L375.2 226.9 L367.7 225.0 L365.9 225.4 L358.9 219.8 L355.2 219.3 L351.1 217.2 L347.5 214.2 L345.1 209.4 L338.7 205.1 L329.0 196.1 L326.8 194.6 L324.9 194.9 L318.9 192.8 L316.6 189.8 L311.7 186.3 L303.2 177.9 L302.4 173.0 L299.7 168.0 L300.0 164.9 L298.4 163.1 L297.8 159.8 L288.8 149.6 L288.6 146.7 L286.4 143.3 L281.0 137.7 L274.9 135.1 L273.7 135.8 L273.3 133.2 L275.1 132.1 L276.7 127.8 L273.1 123.3 L273.2 122.1 L275.4 120.8 L276.1 114.5 L275.1 112.4 L272.4 111.3 L272.5 110.6 L269.5 108.2 L267.4 104.6 L270.3 103.6 L272.5 104.1 L273.4 102.7 L272.8 100.1 L276.6 98.9 L276.7 94.2 L274.7 91.7 L274.5 89.2 L278.7 88.2 L279.7 87.1 L281.2 79.2 L280.7 75.3 L281.3 73.9 L284.5 72.3 L285.2 70.1 L281.4 65.2 L278.4 63.5 L277.3 60.9 L273.2 59.1 L270.5 55.4 L265.7 53.9 L264.1 52.2 L264.3 49.9 L265.2 49.1 L268.2 47.5 L271.0 47.4 L273.2 45.9 L272.7 42.2 L271.0 41.2 L268.5 41.5 L263.3 45.5 L259.8 45.7 L254.3 43.3 L254.0 42.1 L249.5 41.3 L246.4 37.2 L241.0 36.0 L239.7 37.4 L235.0 38.3ZM535.7 220.0 L533.9 220.2 L528.9 216.7 L525.1 217.4 L518.4 215.1 L515.9 211.0 L513.0 208.4 L513.8 204.0 L511.2 202.2 L506.8 203.2 L505.2 202.5 L499.7 197.0 L494.3 194.8 L486.9 188.1 L486.5 187.1 L487.7 184.6 L483.9 180.4 L482.6 178.0 L486.1 177.7 L487.3 179.8 L491.9 182.6 L493.7 184.8 L496.2 185.1 L502.3 180.0 L504.1 179.9 L508.2 185.3 L508.6 187.9 L514.9 195.9 L516.4 202.2 L517.6 204.0 L524.9 204.7 L528.5 206.2 L531.1 213.8 L535.7 220.0ZM162.9 119.0 L159.5 122.3 L155.1 123.6 L148.5 121.2 L144.1 118.0 L142.0 117.7 L137.3 119.8 L136.1 118.1 L136.5 114.6 L138.9 112.6 L141.4 112.6 L143.3 112.5 L144.4 110.7 L144.0 109.2 L149.9 107.0 L153.8 107.0 L162.1 109.1 L164.1 111.8 L164.6 116.4 L162.9 119.0ZM101.2 77.4 L103.2 76.6 L103.2 75.1 L99.2 73.8 L98.1 74.3 L96.3 72.6 L94.5 72.5 L92.3 66.9 L94.3 65.2 L98.1 66.0 L106.3 71.4 L111.1 73.3 L118.2 78.1 L119.6 79.7 L119.1 80.8 L110.8 77.6 L110.7 79.5 L109.8 79.7 L107.9 78.8 L106.8 76.7 L105.1 75.7 L104.2 76.2 L105.4 78.0 L105.3 80.7 L102.9 80.0 L101.2 77.4ZM461.5 181.7 L459.7 181.9 L450.0 178.8 L448.5 174.4 L449.1 171.5 L454.6 170.1 L460.7 173.3 L463.0 177.9 L462.5 180.9 L461.5 181.7ZM86.0 85.6 L83.3 85.0 L81.1 81.8 L77.9 79.5 L80.4 77.2 L83.0 77.5 L88.2 81.0 L89.5 83.2 L88.4 85.0 L86.0 85.6ZM97.1 89.2 L96.9 90.4 L98.3 90.8 L98.5 92.3 L96.3 90.2 L91.6 90.2 L89.5 87.8 L93.3 85.7 L95.4 87.0 L96.0 89.3 L97.1 89.2ZM444.5 141.3 L445.8 143.9 L444.5 146.4 L442.3 146.2 L440.3 143.9 L440.9 141.3 L444.5 141.3ZM637.3 294.7 L637.1 293.8 L639.1 292.9 L641.8 297.0 L644.1 298.4 L644.6 299.6 L643.4 299.8 L637.3 294.7ZM79.4 65.9 L75.8 64.8 L74.6 63.6 L75.7 63.1 L77.6 63.5 L79.4 65.9ZM345.8 238.8 L346.6 241.5 L345.9 241.9 L344.7 241.0 L343.9 239.3 L345.8 238.8Z" fill="#9EBCCB" stroke="#5F7F8E" stroke-width="1.2" fill-rule="evenodd"/><g><circle cx="624.9" cy="274.7" r="13" fill="#217A4B" stroke="#FFFDF6" stroke-width="2.5"/><text x="624.9" y="279.2" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">1</text></g><g><circle cx="339.0" cy="215.4" r="13" fill="#217A4B" stroke="#FFFDF6" stroke-width="2.5"/><text x="339.0" y="219.9" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">2</text></g><g><circle cx="635.0" cy="289.8" r="13" fill="#217A4B" stroke="#FFFDF6" stroke-width="2.5"/><text x="635.0" y="294.3" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">3</text></g><g><circle cx="499.2" cy="231.5" r="13" fill="#217A4B" stroke="#FFFDF6" stroke-width="2.5"/><text x="499.2" y="236.0" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">4</text></g><g><circle cx="454.3" cy="140.0" r="13" fill="#217A4B" stroke="#FFFDF6" stroke-width="2.5"/><text x="454.3" y="144.5" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">5</text></g><g><circle cx="365.9" cy="227.8" r="13" fill="#217A4B" stroke="#FFFDF6" stroke-width="2.5"/><text x="365.9" y="232.3" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">6</text></g><g><circle cx="244.0" cy="98.9" r="13" fill="#217A4B" stroke="#FFFDF6" stroke-width="2.5"/><text x="244.0" y="103.4" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">7</text></g><g><circle cx="463.5" cy="239.8" r="13" fill="#217A4B" stroke="#FFFDF6" stroke-width="2.5"/><text x="463.5" y="244.3" text-anchor="middle" font-family="Source Serif 4,Georgia,serif" font-weight="700" font-size="13" fill="#FDF9EE">8</text></g></svg>
+    <figcaption>Top 8 ranked spots for Smallmouth Bass in summer, on the surveyed outline. Analysis only — not for navigation.</figcaption>
+  </figure>
+  <dl class="facts"><div><dt>Water area</dt><dd>15.9 km²</dd></div><div><dt>Data</dt><dd>Contour Derived<small>free download · 3.9 MB</small></dd></div></dl>
+</div></section>
+
+<section class="spots-sec"><div class="wrap">
+  <div class="eyebrow">Where it rates, and why</div>
+  <h2>The top spots on Ahmic Lake, explained.</h2>
+  <p class="lede">Every spot carries its reasons. In the app the ranking changes with your species, the season, the date, wind and pressure — this is the default read.</p>
+  <ol class="spots"><li><div class="rank good">1</div><div><div class="meta"><b>9.56 m</b> deep · score <b>0.67</b> · good</div><ul><li>Depth 9.6 m in band 4-12 m</li><li>Steep break (11 deg mean) 36 m away</li><li>Point (319 m, 10 m contour) 3 m away</li></ul></div></li><li><div class="rank good">2</div><div><div class="meta"><b>10.06 m</b> deep · score <b>0.66</b> · good</div><ul><li>Depth 10.1 m in band 4-12 m</li><li>Steep break (11 deg mean) 30 m away</li><li>Point (238 m, 12 m contour) 4 m away</li></ul></div></li><li><div class="rank good">3</div><div><div class="meta"><b>8.47 m</b> deep · score <b>0.65</b> · good</div><ul><li>Depth 8.5 m in band 4-12 m</li><li>Steep break (11 deg mean) 32 m away</li><li>Point (396 m, 8 m contour) 1 m away</li></ul></div></li><li><div class="rank good">4</div><div><div class="meta"><b>11.66 m</b> deep · score <b>0.64</b> · good</div><ul><li>Depth 11.7 m in band 4-12 m</li><li>Steep break (11 deg mean) 41 m away</li><li>Point (365 m, 10 m contour) 15 m away</li></ul></div></li><li><div class="rank good">5</div><div><div class="meta"><b>10.26 m</b> deep · score <b>0.64</b> · good</div><ul><li>Depth 10.3 m in band 4-12 m</li><li>Steep break (11 deg mean) 28 m away</li><li>Point (638 m, 10 m contour) 2 m away</li></ul></div></li><li><div class="rank good">6</div><div><div class="meta"><b>10.62 m</b> deep · score <b>0.64</b> · good</div><ul><li>Depth 10.6 m in band 4-12 m</li><li>Steep break (13 deg mean) 30 m away</li><li>Point (438 m, 12 m contour) 1 m away</li></ul></div></li><li><div class="rank good">7</div><div><div class="meta"><b>4.63 m</b> deep · score <b>0.63</b> · good</div><ul><li>Depth 4.6 m in band 4-12 m</li><li>25 m from 10.2 m rise hump (crown 2.0 m)</li><li>Point (445 m, 5 m contour) 5 m away</li></ul></div></li><li><div class="rank good">8</div><div><div class="meta"><b>10.85 m</b> deep · score <b>0.63</b> · good</div><ul><li>Depth 10.9 m in band 4-12 m</li><li>Steep break (13 deg mean) 44 m away</li><li>Point (399 m, 12 m contour) 1 m away</li></ul></div></li></ol>
+</div></section>
+
+<section class="inapp-sec"><div class="wrap two">
+  <div>
+    <div class="eyebrow">In the app</div>
+    <h2>Ahmic Lake is a free download inside Anglers Edge.</h2>
+    <p>One tap in the lake picker fetches the 3.9 MB pack on Wi-Fi; after that it works fully offline, forever.</p>
+    <ul class="ticks">
+      <li>Full-resolution depth map, contours and hillshade</li>
+      <li>Humps, saddles, breaklines, points, flats and weed as layers</li>
+      <li>Every spot re-scored for your species, date, wind and pressure</li>
+      <li>48-hour bite window, one-tap catch log, waypoints and GPX export</li>
+      <li>Works with no signal, forever</li>
+    </ul>
+    <a class="btn primary" href="https://apps.apple.com/app/anglers-edge/id6798728175">Download Anglers Edge</a>
+  </div>
+  <div class="side">
+    <h3>Species scored here</h3>
+    <p class="tags"><span>Smallmouth Bass</span><span>Largemouth Bass</span><span>Walleye</span><span>Northern Pike</span><span>Lake Trout</span><span>Lake Whitefish</span><span>Muskellunge</span><span>Cisco</span></p>
+    <h3>Named water</h3><p class="tags"><span>Newell Bay</span><span>Old Mill Bay</span><span>The Narrows</span><span>Campbell Island</span><span>Little Island</span></p>
+    <h3>Stocking record</h3><ul class="stock"><li><b>Walleye</b><span>21 stockings · 1946–2024</span></li><li><b>Rainbow Trout</b><span>5 stockings · 1959–1964</span></li><li><b>Smallmouth Bass</b><span>9 stockings · 1946–1960</span></li></ul><p class="dim small">Stocked recently (last 2024). Ontario MNRF stocking records 1946–2024.</p>
+    <h3>Nearby lakes</h3>
+    <p class="nearby"><a href="/lakes/cecebe">Lake Cecebe</a> <a href="/lakes/eaglemachar">Eagle Lake</a> <a href="/lakes/bernard">Lake Bernard</a></p>
+  </div>
+</div></section>
+
+<section class="honest-sec"><div class="wrap">
+  <div class="eyebrow">Where the data comes from</div>
+  <p class="dim">Bathymetry for Ahmic Lake is built from the provincial open-data survey record; where soundings are sparse the app marks cells unsurveyed rather than guessing. Source: Land Information Ontario (Open Government Licence – Ontario). Anglers Edge is an analysis tool, not a navigation aid — carry official charts.</p>
+</div></section>
+</main>
+<footer><div class="wrap row">
+  <div>© 2026 Anglers Edge · Analysis only — not for navigation.</div>
+  <div><a href="/privacy.html">Privacy</a><a href="mailto:jlr@backroadscarclub.com">Support</a><a href="/#top">Top</a></div>
+</div></footer>
+</body>
+</html>
