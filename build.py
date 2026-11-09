@@ -139,7 +139,7 @@ def index_page():
     for r in LAKES: groups.setdefault((r['region']['country'], r['region']['admin'], r['region']['name']), []).append(r)
     body = ''
     for (country, admin, aname), rs in sorted(groups.items(), key=lambda kv: (['Canada', 'United States'].index(kv[0][0]) if kv[0][0] in ('Canada', 'United States') else 9, kv[0][2])):
-        body += f'<h2 id="{admin}">{esc(aname)} <span class="dim" style="font-weight:500;font-size:16px">· {len(rs)} lakes</span></h2>'
+        body += f'<h2 id="{admin}">{esc(aname)} <span class="dim" style="font-weight:500;font-size:16px">· {len(rs)} lake{"s" if len(rs) != 1 else ""}</span></h2>'
         areas = {}
         for r in rs: areas.setdefault(r['region'].get('area') or 'Other', []).append(r)
         for area, ars in sorted(areas.items()):
