@@ -57,6 +57,7 @@
   <url><loc>https://anglersedge.fishing/lakes/mi-gull</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/gull</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/mn-gull</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/halls</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/haybay</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/head</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/mi-higgins</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -98,6 +99,7 @@
   <url><loc>https://anglersedge.fishing/lakes/nh-wentworth</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/mn-winnibigoshish</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/bays</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/larder</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/long</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/longbow</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/loughborough</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -124,6 +126,7 @@
   <url><loc>https://anglersedge.fishing/lakes/qc-nemiscachingue</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/onaping</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/mi-otsego</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/otterparrysound</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/mn-ottertail</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/qc-ouareau</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/pakwash</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -150,6 +153,7 @@
   <url><loc>https://anglersedge.fishing/lakes/ct-rogers</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/roundkillaloe</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/mi-sage</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://anglersedge.fishing/lakes/sandburksfalls</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/sharbot</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/skeleton</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://anglersedge.fishing/lakes/sparrow</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
