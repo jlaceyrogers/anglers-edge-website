@@ -156,8 +156,14 @@ names = {l['name'] for l in bundled}
 n = 0
 for l in bundled:
     rec = build(l, APP / 'lakes' / l['id']); json.dump(rec, open(OUT / (l['id'] + '.json'), 'w'), separators=(',', ':')); n += 1
+import math as _m
+bcenter = {l['name']: l.get('center') for l in bundled}
+def _far(a, b):   # same name, different water: more than 25 km apart is its own lake
+    if not a or not b: return False
+    dy = (a[1] - b[1]) * 111; dx = (a[0] - b[0]) * 111 * _m.cos(_m.radians((a[1] + b[1]) / 2))
+    return (dx * dx + dy * dy) ** 0.5 > 25
 for p in catalog:
-    if p['name'] in names or p['id'] in {l['id'] for l in bundled}:
+    if p['id'] in {l['id'] for l in bundled} or (p['name'] in names and not _far(p.get('center'), bcenter.get(p['name']))):
         print('skip duplicate of a bundled lake:', p['id'], p['name']); continue
     d = PACKS / p['id']
     if not (d / 'manifest.json').exists(): print('missing pack dir', p['id']); continue
